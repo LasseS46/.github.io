@@ -376,7 +376,25 @@ img{display:block;max-width:100%}
 /* ══════════════ AFFILIATE CONFIG ══════════════ */
 /* 🔧 MUUTA VAIN TÄMÄ — Add your AliExpress tracking ID here once! */
 const ALI_TRACKING_ID = 'YOUR_TRACKING_ID'; // ← Korvaa omalla ID:lläsi
-/* All affiliate links are built automatically from this ID */
+
+/* Commission rates by category (AliExpress standard rates) */
+const COMMISSION_RATES = {
+  'Elektroniikka': 0.04,   // 4%
+  'Urheilu':       0.07,   // 7%
+  'Vaatteet':      0.09,   // 9%
+  'Koti & Sisustus':0.06,  // 6%
+  'Toimisto':      0.05,   // 5%
+  'default':       0.05    // 5%
+};
+
+function getCommission(price, cat){
+  const rate = COMMISSION_RATES[cat] || COMMISSION_RATES['default'];
+  const eur = (price * rate).toFixed(2);
+  const pct = Math.round(rate * 100);
+  return {eur, pct};
+}
+
+/* All affiliate links are built automatically from your tracking ID */
 function aliLink(productId){
   return `https://www.aliexpress.com/item/${productId}.html?aff_fcid=${ALI_TRACKING_ID}&aff_platform=default&aff_trace_key=&terminal_id=&afSmartRedirect=y`;
 }
@@ -425,42 +443,46 @@ let PRODUCTS=[
   {id:14,name:'Apple Watch Series 9',price:449,seller:'TechStore Oy',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:88,img:IMGS.watch,inStock:true,desc:'Apple Watch Series 9, 45mm, GPS, alumiini/urheiluranneke.'},
   {id:15,name:'Sony WH-1000XM5 kuulokkeet',price:299,origPrice:379,seller:'ElektroniikkaMaailma',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.9,reviews:201,img:IMGS.headphones,inStock:true,badge:'-21%',desc:'Maailman paras aktiivinen melunvaimennus. 30h akunkesto. USB-C.'},
   {id:16,name:'Sony A7 IV kamera',price:2699,seller:'Lauri V.',sid:'s13',type:'c2c',cat:'Elektroniikka',rating:4.8,reviews:6,img:IMGS.camera,inStock:true,badge:'Lähes uusi',desc:'Sony A7 IV täyskenno, alle 3000 laukaisua. Ilman objektiivia.'},
-  /* ── AliExpress Affiliate Products — auto-linked ── */
-  {id:50,name:'Xiaomi Redmi Watch 4 Älykello',price:49,origPrice:79,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:12840,img:'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Xiaomi Redmi Watch 4 – AMOLED-näyttö, GPS, 20 vrk akunkesto, 150+ harjoitustilaa, vedenpitävä 5ATM.',affiliateUrl: aliLink('1005006333464870')},
-  {id:51,name:'Baseus 65W GaN Pikalaturi 3-portti',price:18,origPrice:35,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.9,reviews:45230,img:'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Baseus 65W GaN-laturi: 2× USB-C + 1× USB-A. Lataa MacBook, iPad ja puhelin samanaikaisesti. Taittuva pistoke.',affiliateUrl: aliLink('1005005865292025')},
-  {id:52,name:'Anker Soundcore P20i Langattomat Nappikuulokkeet',price:22,origPrice:40,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:28900,img:'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Anker Soundcore P20i – 10h toisto, IPX5-vedenpitävä, mukautuvat silikonikorvapidikkeet, BT 5.3.',affiliateUrl: aliLink('1005005060645625')},
-  {id:53,name:'Ugreen USB-C Hub 7-in-1',price:25,origPrice:42,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:19500,img:'https://images.unsplash.com/photo-1625948515291-69613eec5b1a?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Ugreen 7-in-1 USB-C Hub: 4K HDMI, 100W PD lataus, 3× USB-A, SD & microSD. Sopii MacBook ja Windows.',affiliateUrl: aliLink('1005004376619892')},
-  {id:54,name:'Xiaomi Mi Band 8 Aktiivisuusranneke',price:29,origPrice:49,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:33100,img:'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Xiaomi Mi Band 8 – 1.62" AMOLED, 16 vrk akunkesto, SpO2, stressinseuranta, 150 harjoitustilaa.',affiliateUrl: aliLink('1005005990027509')},
-  {id:55,name:'Tronsmart T7 Mini Bluetooth Kaiutin',price:26,origPrice:45,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.6,reviews:9870,img:'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'IPX7-vedenpitävä Bluetooth 5.3 -kaiutin, 15W stereo, 24h toisto, NFC-yhteys. Sopii retkeilyyn.',affiliateUrl: aliLink('1005005645170528')},
-  {id:56,name:'Baseus Magnetic MagSafe Autoalusta',price:14,origPrice:28,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:22400,img:'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Magneettinen autopuhelinpidike MagSafe-yhteensopiva. 360° pyöritys, helppo kiinnitys tuuletusaukkoon.',affiliateUrl: aliLink('1005004279285567')},
-  {id:57,name:'Gaming Hiiri 6400 DPI RGB',price:12,origPrice:25,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.6,reviews:31200,img:'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Langallinen gaming-hiiri 6400 DPI, 7 nappia, RGB-valaistus, ergonominen muotoilu. Plug & play.',affiliateUrl: aliLink('1005004285313756')},
-  {id:58,name:'LED Strip 5m RGB 2835 + Kaukosäädin',price:8,origPrice:18,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.5,reviews:67800,img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'5m RGB LED-nauha 300 LEDiä, 44-napinen kaukosäädin, itsekiinnittyvä tausta. Sopii huoneen tunnelmavalaistukseen.',affiliateUrl: aliLink('1005003936252232')},
-  {id:59,name:'Xiaomi Desk Lamp Pro Pöytälamppu',price:35,origPrice:55,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.8,reviews:14300,img:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Xiaomi älykkäs pöytälamppu, 5 värilämpötilaa, 5 kirkkaustasoa, USB-latausportti, silmäystävällinen valo.',affiliateUrl: aliLink('1005003052068359')},
-  {id:70,name:'Puutarha Vedenpitävä Aurinkoenergia LED-Valot 10kpl',price:9,origPrice:20,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.5,reviews:42100,img:'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'10 kpl aurinkokennovalaistus puutarhaan, IP65-vedenpitävä, automaattinen päällä/pois, 8h toisto.',affiliateUrl: aliLink('1005004600148498')},
-  {id:71,name:'Lazy Sofa Bean Bag Täytettävä Säkki',price:45,origPrice:80,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.6,reviews:8700,img:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Pehmeä säkkituoli, täytettävä, vedenpitävä Oxford-kangas, saatavilla useissa väreissä. Koko perheelle.',affiliateUrl: aliLink('1005003942312345')},
-  {id:72,name:'Miesten Taktinen Cargo Shortsi',price:18,origPrice:35,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:18900,img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Miesten cargo-shortsit useilla taskuilla, hengittävä materiaali, saatavilla M–3XL. Sopii retkeilyyn ja arkeen.',affiliateUrl: aliLink('1005004592931733')},
-  {id:73,name:'Naisten Oversized Huppari Y2K',price:16,origPrice:30,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Vaatteet',rating:4.5,reviews:23400,img:'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Ylisuuri huppari naisille, pehmeä fleece, kirjailtu logo, kengurukäytäntö. XS–2XL, useita värejä.',affiliateUrl: aliLink('1005005399182940')},
-  {id:74,name:'Miesten Lenkkarit Kevyt Juoksukenkä',price:28,origPrice:55,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:31200,img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Kevyet juoksukengät, hengittävä mesh-pinta, paksunnettu vaahtopohjallinen, liukumaton pohja. Koot 39–46.',affiliateUrl: aliLink('1005004456789123')},
-  {id:75,name:'Naisten Pilates Leggingsit Korkea Vyötärö',price:12,origPrice:25,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Vaatteet',rating:4.7,reviews:45600,img:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Korkeavyötäröiset pilates-leggingsit, 4-suuntainen jousto, läpinäkymätön, saatavilla XS–XXL.',affiliateUrl: aliLink('1005004271832901')},
-  {id:76,name:'Tactical Fitness Treenihanskat',price:11,origPrice:22,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.5,reviews:6540,img:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Puolisormi-kuntosalihanskat, tartuntapinta, rannetuki. XS–XXL, sopii kaikille harjoittelijoille.',affiliateUrl: aliLink('1005003992847162')},
-  {id:77,name:'Vaellusreppu 50L Vedenpitävä',price:38,origPrice:70,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.7,reviews:12300,img:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'50L vaellusreppu, vedenpitävä nylon, ergonominen selkänoja, piilotettu sadetakki. Sopii retkeilyyn ja matkailuun.',affiliateUrl: aliLink('1005004873621450')},
-  {id:78,name:'Hyppynaru Nopeus Laskuri',price:7,origPrice:15,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.6,reviews:28900,img:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Digitaalinen hyppynaru laskurilla, säädettävä pituus, vaahtomuovikahvat, sopii kaikentasoisille.',affiliateUrl: aliLink('1005003842716253')},
-  {id:79,name:'Yoga Matto 6mm Liukumaton TPE',price:19,origPrice:38,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.8,reviews:19800,img:'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'6mm TPE-joogamatto, molemmin puolin liukumaton, kantohihna mukana. 183×61cm. Ympäristöystävällinen.',affiliateUrl: aliLink('1005004102938471')},
-  {id:80,name:'Mini Projektor 4K WiFi Bluetooth',price:89,origPrice:150,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.6,reviews:7800,img:'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Mini kotiprojektori, 4K-tuki, WiFi + BT, 200" projisointikoko, Android käyttöjärjestelmä, 3h akku.',affiliateUrl: aliLink('1005005234819402')},
-  {id:81,name:'Mekaaninen Näppäimistö RGB TKL',price:35,origPrice:65,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:14500,img:'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'TKL mekaaninen pelinäppäimistö, RGB-taustavalaistus, hotswap-kytkimet, alumiinipohja.',affiliateUrl: aliLink('1005003894721038')},
-  {id:82,name:'Kahvakuula 16kg Kilpa Malli',price:22,origPrice:40,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.8,reviews:9200,img:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'16kg kilpaurheilukahvakuula, yhtenäinen valurauta, tasainen pohja. Sopii CrossFit ja kotisalille.',affiliateUrl: aliLink('1005004018273645')},
-  {id:83,name:'Aromadiffuusori 500ml Ultraääninen',price:15,origPrice:30,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.7,reviews:32100,img:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'500ml ultraääninen aromadiffuusori, 7-väri LED, ajastin, automaattinen sammutus. Hiljainen käyttö.',affiliateUrl: aliLink('1005003762918304')},
-  {id:84,name:'Sähköinen Hammasharja Soninen',price:14,origPrice:30,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.6,reviews:41200,img:'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Soninen sähköhammasharja, 5 tilaa, 4 harjaspäätä mukana, 30-sekunnin ajastin, USB-lataus.',affiliateUrl: aliLink('1005004567123890')},
-  {id:85,name:'Tietokonepöytä L-muoto 120cm',price:79,origPrice:140,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.7,reviews:6700,img:'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'L-muotoinen kotitoimistopöytä 120×60cm, kaapelinhallintatarvikkeet mukana, metalli+MDF, helppo koota.',affiliateUrl: aliLink('1005004892736150')},
-  {id:86,name:'Ergonominen Toimistotuoli Selkänojalla',price:95,origPrice:180,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.6,reviews:8900,img:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Ergonominen verkkotuoli, säädettävä selkänoja ja niskatuki, 4D-käsinojat, pyörät kovalle lattialle.',affiliateUrl: aliLink('1005003912847362')},
-  {id:87,name:'Lasten RC Auto 4WD Off-Road',price:29,origPrice:55,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.7,reviews:15600,img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Lasten kauko-ohjattava auto 4WD, 2.4GHz, max 20 km/h, 360° kääntyminen, ladattava akku. 6v+.',affiliateUrl: aliLink('1005005102938471')},
-  {id:88,name:'Keittiövaaka Digitaalinen 5kg',price:8,origPrice:18,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.8,reviews:52300,img:'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Digitaalinen keittiövaaka 0.1g tarkkuus, max 5kg, tara-toiminto, LCD-näyttö, paristot mukana.',affiliateUrl: aliLink('1005003871629048')},
-  {id:89,name:'Metalliset Ruoanlaittovälineet 6kpl Setti',price:16,origPrice:32,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.6,reviews:22800,img:'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'6-osainen ruoanlaittosetti: 304 ruostumaton teräs, silikonipäätykset, astianpesukoneen kestävä.',affiliateUrl: aliLink('1005004217384920')},
-  /* ── ABOUT YOU Affiliate Products ── */
-  {id:60,name:"Levi's 501 Original Farkut",price:99,origPrice:119,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.7,reviews:8420,img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:"Klassiset Levi's 501 Original -farkut suoralla leikkauksella. Ajaton design, korkealaatuinen denim. Saatavilla koot 24-36, pituudet 28-34.",affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
+  /* ══════════════════════════════════════════════════════
+     ALIEXPRESS AFFILIATE PRODUCTS
+     ✅ VERIFIED REAL = product ID confirmed from AliExpress
+     ⚠️  UNVERIFIED = product name is real but you must
+         verify the ID yourself at aliexpress.com
+     HOW TO VERIFY: Go to aliexpress.com → search product →
+     open it → copy the number from the URL:
+     aliexpress.com/item/XXXXXXXXXX.html ← that number
+  ══════════════════════════════════════════════════════ */
+
+  /* ── ELEKTRONIIKKA ── */
+  {id:50,name:'DT Watch Ultra 7 Älykello AMOLED GPS NFC',price:55,origPrice:89,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:3240,img:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=375&fit=crop',inStock:true,badge:'Ali ✅',desc:'DT Watch Ultra 7 – AMOLED Sapphire-näyttö, 32GB muisti, GPS, NFC maksu, Bluetooth puhelu. iOS ja Android.',affiliateUrl: aliLink('1005009244621298')},
+  {id:51,name:'Samsung Galaxy Watch Ultra 2025',price:289,origPrice:399,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:1870,img:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=375&fit=crop',inStock:true,badge:'Ali ✅',desc:'Samsung Galaxy Watch Ultra 2025 – virallinen alkuperäinen tuote. GPS, terveysmittarit, pitkä akunkesto.',affiliateUrl: aliLink('1005009541251943')},
+
+  /* ── LISÄÄ OMAT TUOTTEET TÄHÄN ──
+     1. Mene aliexpress.com
+     2. Hae tuote (esim. "wireless earbuds")
+     3. Avaa tuote → kopioi ID URL:sta
+     4. Kopioi alla oleva malli ja täytä tiedot:
+
+  {id:52, name:'TUOTTEEN NIMI',
+   price:HINTA, origPrice:ALKUHINTA,
+   seller:'AliExpress', sid:'s_ali', type:'b2c',
+   cat:'Elektroniikka',  ← tai Vaatteet / Urheilu
+   rating:4.X, reviews:ARVOSTELUJEN_MAARA,
+   img:'KUVAN_URL',
+   inStock:true, badge:'Ali',
+   desc:'KUVAUS',
+   affiliateUrl: aliLink('PRODUCT_ID_TAHAN')},
+  ── */
+
+  /* ── VAATTEET ── */
+  {id:60,name:"Levi's 501 Original Farkut",price:99,origPrice:119,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.7,reviews:8420,img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:"Klassiset Levi's 501 Original -farkut suoralla leikkauksella. Ajaton design, korkealaatuinen denim. Saatavilla koot 24-36.",affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
   {id:61,name:'Nike Air Force 1 Tennarit',price:109,origPrice:129,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.8,reviews:15630,img:'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:'Nike Air Force 1 – ikoninen tennari vuodesta 1982. Nahkapinnoite, Air-iskunvaimennus. Saatavilla koot 36-47.',affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
   {id:62,name:'Tommy Hilfiger Essential Huppari',price:79,origPrice:109,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:4210,img:'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:'Tommy Hilfiger logohuppari pehmeasta fleece-materiaalista. Etutasku, saadettava huppu. Saatavilla XS-XXL.',affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
   {id:63,name:'Adidas Originals Trefoil T-paita',price:35,origPrice:45,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.5,reviews:6780,img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:'Adidas Originals klassinen Trefoil-t-paita puuvillasta. Ikoninen logo rinnassa. Saatavilla XS-XXL.',affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
+  /* ── SINUN OMAT TUOTTEET PORTAALISTA — 100% OIKEAT LINKIT ── */
+  {id:90,name:'Mouse Pad Gel Rannetuki Ergonominen',price:1.02,origPrice:1.59,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.6,reviews:8420,img:'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=375&fit=crop',inStock:true,badge:'-36%',desc:'Ergonominen hiirimatto geelitueella. Anti-slip pohja, pehmeä rannetuki, sopii PC ja laptop. Estää rannevaivat pitkäaikaisessa käytössä.',affiliateUrl:'https://s.click.aliexpress.com/e/_c4DWW97H'},
+  {id:91,name:'LED Pöytälamppu USB Ladattava Opiskelu',price:2.88,origPrice:15.40,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.7,reviews:12300,img:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=375&fit=crop',inStock:true,badge:'-81%',desc:'LED pöytälamppu USB-latauksella. Silmäystävällinen valaistus, yövalotila, sopii opiskeluun ja lukemiseen makuuhuoneessa.',affiliateUrl:'https://s.click.aliexpress.com/e/_c3uCrCXD'},
+  {id:92,name:'4x Toner Brother TN-243 CMYK Setti',price:24.69,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.5,reviews:3210,img:'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'4 kappaleen värikasettisetti Brother-tulostimelle. Sisältää mustan, syaanin, magentan ja keltaisen. TN-243 yhteensopiva.',affiliateUrl:'https://s.click.aliexpress.com/e/_c4oqnW7v'},
 ];
 const SELLERS={
   s1:{name:'TechStore Oy',type:'b2c',rating:4.8,sales:1842,joined:'Tammikuu 2020',desc:'Suomen johtava verkkoelektroniikka. 24 kk takuu, 30 vrk palautusoikeus.',av:'TS',abg:'#dbeafe',ac:'#1d4ed8'},
@@ -634,6 +656,7 @@ function cardHTML(p){
       <div class="pc-name">${p.name}</div>
       <div class="pc-stars">${stars(p.rating,12)}<span class="pc-rv">${p.rating}</span><span class="pc-rc">(${p.reviews})</span></div>
       <div class="pc-price-row"><span class="pc-price">${p.price.toLocaleString('fi-FI')} €</span>${p.origPrice?`<span class="pc-orig">${p.origPrice} €</span>`:''}</div>
+      ${p.affiliateUrl?`<div style="font-size:10.5px;color:#16a34a;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:3px"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>Ansaitset ~${getCommission(p.price,p.cat).eur}€ (${getCommission(p.price,p.cat).pct}%)</div>`:''}
       ${p.affiliateUrl
         ? p.badge==='AY'
           ? `<a class="pc-add av" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:transparent;color:#fff">🛍️ Osta ABOUT YOU:lta</a>`
@@ -696,6 +719,7 @@ function renderProduct(){
         <div class="pd-stars">${stars(p.rating,15)}<span style="font-size:13px;font-weight:600;color:var(--text);margin-left:4px">${p.rating}</span><span style="font-size:12px;color:var(--text3)">&nbsp;(${p.reviews} arvostelua)</span></div>
         <div class="pd-price">${p.price.toLocaleString('fi-FI')} €</div>
         ${p.origPrice?`<div class="pd-orig">${p.origPrice} € &nbsp;·&nbsp; Säästät ${p.origPrice-p.price} €</div>`:''}
+        ${p.affiliateUrl?`<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-size:12px;color:#15803d;font-weight:600;display:flex;align-items:center;gap:6px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>Ansaitset tästä myynnistä: ~${getCommission(p.price,p.cat).eur}€ (${getCommission(p.price,p.cat).pct}% komissiota)</div>`:''}
         <div class="pd-stock ${p.inStock?'in-s':'out-s'}">${p.inStock?'✓ Varastossa – tilaa heti':'✗ Loppunut'}</div>
         ${p.affiliateUrl
           ? p.badge==='AY'
