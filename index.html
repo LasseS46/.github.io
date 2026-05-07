@@ -114,6 +114,8 @@ img{display:block;max-width:100%}
 .pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .pcard:hover .pc-img img{transform:scale(1.06)}
 .pc-badge{position:absolute;top:9px;left:9px;border-radius:6px;padding:3px 8px;font-size:10.5px;font-weight:700;background:var(--sun);color:var(--night);z-index:2}
+.pc-badge-ali{background:linear-gradient(135deg,#e8472a,#ff6a00)!important;color:#fff!important}
+.pc-badge-asos{background:#000!important;color:#fff!important}
 .pc-sold{position:absolute;inset:0;background:rgba(13,27,42,.45);display:flex;align-items:center;justify-content:center;z-index:2}
 .pc-sold span{color:#fff;font-size:12px;font-weight:600;letter-spacing:.3px}
 .pc-wish{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(4px);border:none;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;z-index:3;font-size:14px;transition:transform .15s}
@@ -418,6 +420,9 @@ let PRODUCTS=[
   {id:50,name:'Mouse Pad Gel Rannetuki Ergonominen',price:1.02,origPrice:1.59,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.6,reviews:8420,img:'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=375&fit=crop',inStock:true,badge:'-36%',desc:'Ergonominen hiirimatto geelitueella. Anti-slip pohja, pehmeä rannetuki. Sopii PC ja laptop. Estää rannevaivat.',affiliateUrl:'https://s.click.aliexpress.com/e/_c4DWW97H'},
   {id:51,name:'LED Pöytälamppu USB Ladattava',price:2.88,origPrice:15.40,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.7,reviews:12300,img:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=375&fit=crop',inStock:true,badge:'-81%',desc:'LED pöytälamppu USB-latauksella. Silmäystävällinen valaistus, yövalotila. Sopii opiskeluun ja lukemiseen.',affiliateUrl:'https://s.click.aliexpress.com/e/_c3uCrCXD'},
   {id:52,name:'4x Toner Brother TN-243 CMYK Setti',price:24.69,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.5,reviews:3210,img:'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'4 kappaleen värikasettisetti Brother-tulostimelle. Musta, syaani, magenta ja keltainen. TN-243 yhteensopiva.',affiliateUrl:'https://s.click.aliexpress.com/e/_c4oqnW7v'},
+  /* ── ASOS Products via Sovrn ── */
+  {id:60,name:'Adidas Originals Samba OG Tennarit',price:92,seller:'ASOS',sid:'s_asos',type:'b2c',cat:'Vaatteet',rating:4.8,reviews:5931,img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=375&fit=crop',inStock:true,badge:'ASOS',desc:'Adidas Originals Samba OG tennarit mustana ja valkoisena. Ikoninen design, nahkapinnoite, kumipohja. Erittäin suosittu malli.',affiliateUrl:'https://sovrn.co/yh3z4fs'},
+  {id:61,name:'Topman Retro Cardigan Tummanvihreä',price:69,seller:'ASOS',sid:'s_asos',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:420,img:'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&h=375&fit=crop',inStock:true,badge:'ASOS',desc:'Topman klassinen retro-cardigan tummanvihreänä. Rento fit, pehmeä materiaali, nappikiinnitys. Täydellinen casual-tyyliin.',affiliateUrl:'https://sovrn.co/mkn7o7s'},
 ];
 const SELLERS={
   s1:{name:'TechStore Oy',type:'b2c',rating:4.8,sales:1842,joined:'Tammikuu 2020',desc:'Suomen johtava verkkoelektroniikka. 24 kk takuu, 30 vrk palautusoikeus.',av:'TS',abg:'#dbeafe',ac:'#1d4ed8'},
@@ -434,6 +439,7 @@ const SELLERS={
   s12:{name:'PyrätPlus',type:'b2c',rating:4.7,sales:312,joined:'Helmikuu 2021',desc:'Pyörien erikoisliike. Trek, Giant, Specialized.',av:'PP',abg:'#dbeafe',ac:'#1d4ed8'},
   s13:{name:'Lauri V.',type:'c2c',rating:4.8,sales:6,joined:'Marraskuu 2023',desc:'Valokuvaaja myymässä kalustoaan.',av:'LV',abg:'#d1fae5',ac:'#059669'},
   s_ali:{name:'AliExpress',type:'b2c',rating:4.6,sales:2500000,joined:'Tammikuu 2010',desc:'Affiliate-kumppani. Tuotteet toimitetaan suoraan AliExpressistä. Klikkaa ostopainiketta siirtyäksesi AliExpressiin.',av:'AE',abg:'#fee2e2',ac:'#e11d48'},
+  s_asos:{name:'ASOS',type:'b2c',rating:4.8,sales:980000,joined:'Tammikuu 2000',desc:'ASOS on maailman johtava muotikauppa. Nike, Adidas, Topman, Tommy Hilfiger ja tuhansia muita merkkejä. Ilmainen toimitus yli $75 tilauksista.',av:'AS',abg:'#fef9c3',ac:'#854d0e'},
 };
 const REVS={
   1:[{n:'Petri V.',r:5,t:'Loistava puhelin, kamera on huikea! Toimitus nopeaa.',d:'15.3.2025'},{n:'Liisa M.',r:5,t:'Titaniumrunko tuntuu laadukkaalta. Suosittelen.',d:'2.2.2025'}],
@@ -577,7 +583,7 @@ function cardHTML(p){
   return`<div class="pcard" onclick="navigate('product',{selProd:${p.id}})">
     <div class="pc-img">
       ${img(p.img,p.name)}
-      ${p.badge?`<span class="pc-badge">${p.badge}</span>`:''}
+      ${p.badge?`<span class="pc-badge${p.badge==='Ali'?' pc-badge-ali':p.badge==='ASOS'?' pc-badge-asos':''}">${p.badge}</span>`:''}
       ${!p.inStock?`<div class="pc-sold"><span>Loppunut</span></div>`:''}
       <button class="pc-wish" onclick="event.stopPropagation();toggleWish(${p.id})">${inW?'❤️':'🤍'}</button>
     </div>
@@ -591,7 +597,9 @@ function cardHTML(p){
       <div class="pc-stars">${stars(p.rating,12)}<span class="pc-rv">${p.rating}</span><span class="pc-rc">(${p.reviews})</span></div>
       <div class="pc-price-row"><span class="pc-price">${p.price.toLocaleString('fi-FI')} €</span>${p.origPrice?`<span class="pc-orig">${p.origPrice} €</span>`:''}</div>
       ${p.affiliateUrl
-        ? `<a class="pc-add av" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#e8472a,#ff6a00);border-color:transparent;color:#fff;font-weight:600">🛍️ Osta AliExpressistä</a>`
+        ? p.badge==='ASOS'
+          ? `<a class="pc-add av" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()" style="display:block;text-align:center;text-decoration:none;background:#000;border-color:transparent;color:#fff;font-weight:600">🛍️ Osta ASOS:ista</a>`
+          : `<a class="pc-add av" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#e8472a,#ff6a00);border-color:transparent;color:#fff;font-weight:600">🛍️ Osta AliExpressistä</a>`
         : `<button class="pc-add ${p.inStock?'av':'na'}" onclick="event.stopPropagation();${p.inStock?`addCart(${p.id})`:''}">
         ${p.inStock?'Lisää koriin':'Loppunut'}
       </button>`}
