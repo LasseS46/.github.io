@@ -1,825 +1,1016 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="Ergonomic desk gear for remote professionals. Laptop stands, LED lamps, cable management & more. Fast US shipping. 30-day guarantee. Shop at focusforge.shop"/>
-<meta property="og:title" content="FocusForge — Work Smarter. Go Further."/>
-<meta property="og:description" content="Curated ergonomic desk accessories for freelancers & remote pros. Ships in 5–8 days. 30-day money-back guarantee."/>
-<meta property="og:url" content="https://focusforge.shop"/>
-<meta property="og:type" content="website"/>
-<meta name="twitter:card" content="summary_large_image"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FocusForge — Ergonomic Desk Gear | focusforge.shop</title>
-<link rel="canonical" href="https://focusforge.shop/"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>FocusForge.Shop – Premium Store</title>
+<meta name="description" content="FocusForge.Shop – Suomen monipuolisin verkkokauppaalusta. B2C, C2C ja B2B yhdessä paikassa. Nopea toimitus, turvallinen maksaminen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#060F2E;--dark:#0A1F5C;--blue:#1B4FD8;--lb:#5B8AF0;--pale:#B5D4F4;--cream:#F8FAFF;--bg:#F0F4FA;--gold:#C9A84C;--green:#1D9E75;--text:#0A1F5C;--muted:#6B7A99;}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
-.page{display:none;}.page.active{display:block;}
-
-/* ANNOUNCE */
-.announce{background:var(--blue);color:white;text-align:center;padding:9px 20px;font-size:12px;font-weight:500;letter-spacing:.03em;}
-.announce span{color:var(--pale);margin:0 8px;}
-
-/* NAV */
-nav{background:var(--navy);position:sticky;top:0;z-index:200;border-bottom:1px solid rgba(91,138,240,.15);}
-.nav-inner{max-width:1260px;margin:0 auto;padding:0 28px;height:64px;display:flex;align-items:center;gap:28px;}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;flex-shrink:0;}
-.ff-box{width:38px;height:38px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.ff-text{font-family:'Playfair Display',serif;font-size:17px;font-weight:900;color:white;letter-spacing:-1px;}
-.logo-word{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:white;letter-spacing:-.3px;}
-.logo-word em{font-style:normal;color:var(--lb);}
-.nav-links{display:flex;gap:22px;margin-left:12px;}
-.nav-links a{color:rgba(255,255,255,.65);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:.02em;transition:color .2s;cursor:pointer;}
-.nav-links a:hover,.nav-links a.active{color:white;}
-.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px;}
-.nav-right a{color:rgba(255,255,255,.6);font-size:13px;text-decoration:none;transition:color .2s;cursor:pointer;}
-.nav-right a:hover{color:white;}
-.nav-cta{background:var(--blue)!important;color:white!important;padding:8px 18px!important;border-radius:8px!important;font-weight:600!important;}
-.cart-pill{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:5px 13px;font-size:13px;font-weight:500;color:white!important;cursor:pointer;}
-.cart-num{background:var(--gold);color:var(--navy);border-radius:50%;width:18px;height:18px;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;}
-
-/* HERO */
-.hero{background:var(--navy);min-height:560px;display:flex;align-items:center;position:relative;overflow:hidden;}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(91,138,240,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(91,138,240,.07) 1px,transparent 1px);background-size:52px 52px;}
-.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(27,79,216,.2) 0%,transparent 65%);top:-150px;right:-150px;pointer-events:none;}
-.hero-inner{max-width:1260px;margin:0 auto;padding:72px 28px;display:flex;align-items:center;gap:56px;position:relative;z-index:2;width:100%;}
-.hero-left{flex:1;}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(27,79,216,.2);border:1px solid rgba(91,138,240,.3);border-radius:20px;padding:5px 14px;font-size:11px;font-weight:600;color:var(--pale);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;}
-.hero-pulse{width:6px;height:6px;border-radius:50%;background:var(--lb);animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,54px);font-weight:900;color:white;line-height:1.1;margin-bottom:18px;}
-h1 .accent{color:var(--lb);display:block;}
-.hero-sub{font-size:15px;color:rgba(255,255,255,.6);line-height:1.75;max-width:460px;margin-bottom:30px;font-weight:300;}
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
-.btn-p{background:var(--blue);color:white;padding:13px 26px;border-radius:10px;font-size:14px;font-weight:600;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
-.btn-p:hover{background:var(--lb);transform:translateY(-1px);}
-.btn-o{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:13px 22px;border-radius:10px;font-size:14px;font-weight:500;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;}
-.btn-o:hover{border-color:rgba(255,255,255,.5);color:white;}
-.trust-row{display:flex;align-items:center;gap:12px;}
-.t-avs{display:flex;}
-.t-av{width:28px;height:28px;border-radius:50%;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;margin-left:-7px;}
-.t-av:first-child{margin-left:0;}
-.t-text{font-size:12px;color:rgba(255,255,255,.5);}
-.t-text strong{color:rgba(255,255,255,.85);}
-.hero-right{flex-shrink:0;width:400px;position:relative;}
-
-/* USP */
-.usp{background:var(--blue);}
-.usp-row{max-width:1260px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-around;flex-wrap:wrap;}
-.usp-item{display:flex;align-items:center;gap:10px;padding:15px 10px;flex:1;min-width:150px;}
-.usp-ic{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.usp-l{font-size:13px;font-weight:600;color:white;}
-.usp-s{font-size:10px;color:rgba(255,255,255,.6);margin-top:1px;}
-
-/* SECTIONS */
-.section{padding:72px 28px;}
-.sec-inner{max-width:1260px;margin:0 auto;}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px;flex-wrap:wrap;gap:10px;}
-.sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);font-weight:700;color:var(--navy);}
-.sec-head a{font-size:13px;color:var(--blue);text-decoration:none;font-weight:500;cursor:pointer;}
-.sec-head a:hover{text-decoration:underline;}
-.sec-eyebrow{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;}
-.sec-sub{font-size:14px;color:var(--muted);max-width:480px;margin-top:4px;}
-
-/* PRODUCT GRID */
-.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;}
-.pcard{background:white;border-radius:16px;overflow:hidden;border:1px solid rgba(27,79,216,.07);transition:all .22s;cursor:pointer;position:relative;}
-.pcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(10,31,92,.11);border-color:rgba(27,79,216,.18);}
-.pcard-badges{position:absolute;top:10px;left:10px;z-index:3;display:flex;gap:5px;flex-wrap:wrap;}
-.badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.03em;}
-.b-blue{background:var(--blue);color:white;}
-.b-green{background:var(--green);color:white;}
-.b-gold{background:var(--gold);color:var(--navy);}
-.b-red{background:#E05C3A;color:white;}
-.b-purple{background:#7F77DD;color:white;}
-.pcard-img{height:200px;overflow:hidden;position:relative;background:#f5f7ff;}
-.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
-.pcard:hover .pcard-img img{transform:scale(1.05);}
-.pcard-info{padding:14px 16px 16px;}
-.pcard-stars{display:flex;align-items:center;gap:4px;margin-bottom:5px;}
-.stars{color:var(--gold);font-size:11px;letter-spacing:.5px;}
-.rcount{font-size:11px;color:var(--muted);}
-.pcard-name{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px;line-height:1.3;}
-.pcard-desc{font-size:11px;color:var(--muted);line-height:1.55;margin-bottom:12px;}
-.pcard-foot{display:flex;align-items:center;justify-content:space-between;}
-.pcard-price{font-size:18px;font-weight:700;color:var(--blue);}
-.pcard-price span{font-size:12px;color:var(--muted);text-decoration:line-through;margin-left:5px;font-weight:400;}
-.add-btn{background:var(--navy);color:white;border:none;padding:8px 15px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;white-space:nowrap;}
-.add-btn:hover{background:var(--blue);}
-
-/* CATEGORY PILLS */
-.cat-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
-.cat-pill{padding:7px 16px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid rgba(27,79,216,.2);color:var(--muted);background:white;transition:all .15s;font-family:'DM Sans',sans-serif;}
-.cat-pill.active,.cat-pill:hover{background:var(--navy);color:white;border-color:var(--navy);}
-
-/* STATS */
-.stats-bar{background:var(--blue);}
-.stats-row{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
-.stat{text-align:center;padding:36px 20px;border-right:1px solid rgba(255,255,255,.15);}
-.stat:last-child{border-right:none;}
-.stat-n{font-family:'Playfair Display',serif;font-size:40px;font-weight:900;color:white;line-height:1;margin-bottom:5px;}
-.stat-l{font-size:11px;color:rgba(255,255,255,.55);font-weight:500;letter-spacing:.04em;}
-
-/* WHY */
-.why-bg{background:var(--navy);}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(91,138,240,.14);border-radius:16px;padding:26px 22px;transition:all .2s;}
-.why-card:hover{background:rgba(27,79,216,.1);border-color:rgba(91,138,240,.3);}
-.why-icon{width:44px;height:44px;border-radius:11px;background:rgba(27,79,216,.22);display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
-.why-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:white;margin-bottom:7px;}
-.why-text{font-size:12px;color:rgba(255,255,255,.5);line-height:1.7;}
-
-/* REVIEWS */
-.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
-.rev-card{background:white;border-radius:14px;padding:22px;border:1px solid rgba(27,79,216,.07);}
-.rev-head{display:flex;align-items:center;gap:11px;margin-bottom:12px;}
-.rev-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:white;flex-shrink:0;font-family:'Playfair Display',serif;}
-.rev-name{font-size:13px;font-weight:600;color:var(--navy);}
-.rev-loc{font-size:11px;color:var(--muted);margin-top:1px;}
-.rev-stars{color:var(--gold);font-size:11px;letter-spacing:1px;margin-bottom:8px;}
-.rev-text{font-size:12px;color:#4a5568;line-height:1.7;font-style:italic;}
-.rev-tag{display:inline-block;margin-top:10px;font-size:10px;font-weight:600;color:var(--blue);background:rgba(27,79,216,.07);padding:2px 9px;border-radius:20px;}
-
-/* EMAIL */
-.email-bg{background:var(--navy);}
-.email-inner{max-width:580px;margin:0 auto;text-align:center;}
-.email-tag{display:inline-block;background:rgba(27,79,216,.3);border:1px solid rgba(91,138,240,.3);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:600;color:var(--pale);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;}
-.email-h{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:white;line-height:1.2;margin-bottom:10px;}
-.email-s{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:24px;}
-.email-form{display:flex;gap:10px;max-width:420px;margin:0 auto;}
-.email-in{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px 16px;font-size:13px;color:white;font-family:'DM Sans',sans-serif;outline:none;}
-.email-in::placeholder{color:rgba(255,255,255,.3);}
-.email-in:focus{border-color:var(--lb);}
-.email-btn{background:var(--blue);color:white;border:none;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:background .2s;}
-.email-btn:hover{background:var(--lb);}
-.email-note{font-size:11px;color:rgba(255,255,255,.25);margin-top:10px;}
-
-/* FOOTER */
-footer{background:#020810;border-top:1px solid rgba(91,138,240,.09);}
-.foot-top{max-width:1260px;margin:0 auto;padding:52px 28px 36px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;}
-.foot-brand p{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;max-width:240px;margin-top:12px;}
-.foot-col h4{font-size:11px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
-.foot-col a{display:block;font-size:13px;color:rgba(255,255,255,.35);text-decoration:none;margin-bottom:8px;transition:color .2s;cursor:pointer;}
-.foot-col a:hover{color:rgba(255,255,255,.75);}
-.foot-bottom{max-width:1260px;margin:0 auto;padding:18px 28px;border-top:1px solid rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.foot-copy{font-size:11px;color:rgba(255,255,255,.22);}
-.pay-row{display:flex;gap:6px;}
-.pay-b{background:rgba(255,255,255,.06);border-radius:5px;padding:3px 8px;font-size:10px;font-weight:700;color:rgba(255,255,255,.35);}
-
-/* ── PRODUCT PAGE ── */
-.pdp-wrap{background:white;}
-.breadcrumb{background:var(--bg);padding:12px 28px;border-bottom:1px solid rgba(27,79,216,.07);}
-.breadcrumb-inner{max-width:1260px;margin:0 auto;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:7px;}
-.breadcrumb a{color:var(--blue);text-decoration:none;cursor:pointer;}
-.pdp-inner{max-width:1260px;margin:0 auto;padding:40px 28px 60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-.gallery{position:sticky;top:84px;}
-.main-photo{border-radius:18px;overflow:hidden;height:440px;border:1px solid rgba(27,79,216,.09);background:#f5f7ff;margin-bottom:12px;cursor:zoom-in;position:relative;}
-.main-photo img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
-.main-photo:hover img{transform:scale(1.03);}
-.thumbs{display:flex;gap:8px;}
-.thumb{width:70px;height:70px;border-radius:9px;border:2px solid transparent;cursor:pointer;overflow:hidden;transition:all .18s;flex-shrink:0;}
-.thumb.active{border-color:var(--blue);}
-.thumb:hover{border-color:var(--lb);}
-.thumb img{width:100%;height:100%;object-fit:cover;}
-.pdp-info{padding-top:4px;}
-.pdp-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px;}
-.pdp-badge{font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;letter-spacing:.03em;}
-.pb-blue{background:rgba(27,79,216,.1);color:var(--blue);}
-.pb-green{background:rgba(29,158,117,.1);color:var(--green);}
-.pb-gold{background:rgba(201,168,76,.15);color:#9A7A20;}
-.pdp-title{font-family:'Playfair Display',serif;font-size:clamp(22px,2.8vw,30px);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:10px;}
-.rating-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid rgba(27,79,216,.07);}
-.p-stars{color:var(--gold);font-size:14px;letter-spacing:1px;}
-.rev-link{font-size:12px;color:var(--blue);cursor:pointer;text-decoration:underline;}
-.sold-count{font-size:12px;color:var(--muted);}
-.price-row{display:flex;align-items:baseline;gap:11px;margin-bottom:6px;}
-.big-price{font-size:34px;font-weight:700;color:var(--blue);font-family:'Playfair Display',serif;}
-.orig-price{font-size:16px;color:var(--muted);text-decoration:line-through;}
-.save-badge{font-size:12px;font-weight:600;color:var(--green);}
-.ship-note{font-size:12px;color:var(--muted);margin-bottom:22px;}
-.ship-note strong{color:var(--green);}
-.benefits{margin-bottom:22px;}
-.benefits h4{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
-.benefit{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-bottom:1px solid rgba(27,79,216,.05);}
-.benefit:last-child{border-bottom:none;}
-.b-chk{width:19px;height:19px;border-radius:50%;background:rgba(29,158,117,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
-.b-txt{font-size:13px;color:var(--text);line-height:1.5;}
-.b-txt strong{font-weight:600;color:var(--navy);}
-.qty-row{display:flex;align-items:center;gap:13px;margin-bottom:14px;}
-.qty-lbl{font-size:13px;font-weight:600;color:var(--navy);}
-.qty-ctrl{display:flex;align-items:center;border:1px solid rgba(27,79,216,.18);border-radius:9px;overflow:hidden;}
-.q-btn{width:35px;height:35px;background:transparent;border:none;font-size:18px;cursor:pointer;color:var(--navy);font-weight:300;transition:background .15s;font-family:'DM Sans',sans-serif;}
-.q-btn:hover{background:rgba(27,79,216,.06);}
-.q-num{width:38px;text-align:center;font-size:14px;font-weight:600;color:var(--navy);}
-.big-add{width:100%;padding:15px;background:var(--navy);color:white;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Playfair Display',serif;letter-spacing:.02em;transition:all .2s;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:10px;}
-.big-add:hover{background:var(--blue);transform:translateY(-1px);}
-.big-add.added{background:var(--green);}
-.buy-now{width:100%;padding:13px;background:var(--blue);color:white;border:none;border-radius:12px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;margin-bottom:18px;}
-.buy-now:hover{background:var(--lb);}
-.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px;}
-.t-item{display:flex;align-items:center;gap:7px;background:white;border:1px solid rgba(27,79,216,.07);border-radius:9px;padding:9px 11px;}
-.t-ic{width:26px;height:26px;border-radius:7px;background:rgba(27,79,216,.07);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.t-lbl{font-size:11px;font-weight:600;color:var(--navy);}
-.t-sub{font-size:10px;color:var(--muted);margin-top:1px;}
-.pdp-tabs{border-top:1px solid rgba(27,79,216,.09);padding-top:20px;margin-top:6px;}
-.tab-nav{display:flex;border-bottom:2px solid rgba(27,79,216,.09);margin-bottom:18px;}
-.tab-btn{padding:9px 18px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .18s;font-family:'DM Sans',sans-serif;background:none;border-top:none;border-left:none;border-right:none;}
-.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue);}
-.tab-content{display:none;font-size:13px;color:#4a5568;line-height:1.8;}
-.tab-content.active{display:block;}
-.spec-row{display:flex;padding:9px 0;border-bottom:1px solid rgba(27,79,216,.05);font-size:13px;}
-.spec-row:last-child{border-bottom:none;}
-.spec-l{font-weight:600;color:var(--navy);min-width:155px;flex-shrink:0;}
-.spec-v{color:var(--muted);}
-
-/* RELATED */
-.related{padding:52px 28px;background:var(--cream);}
-.rel-inner{max-width:1260px;margin:0 auto;}
-
-/* NOTIFICATION */
-.notif{position:fixed;top:76px;right:22px;background:var(--green);color:white;padding:11px 18px;border-radius:11px;font-size:13px;font-weight:600;z-index:999;transform:translateX(130%);transition:transform .28s;box-shadow:0 8px 24px rgba(29,158,117,.28);}
-.notif.show{transform:translateX(0);}
-
-/* STICKY MOBILE */
-.sticky-cart{display:none;position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid rgba(27,79,216,.12);padding:11px 18px;z-index:200;align-items:center;gap:12px;box-shadow:0 -4px 20px rgba(10,31,92,.1);}
-.sticky-info{flex:1;}
-.sticky-name{font-size:13px;font-weight:600;color:var(--navy);}
-.sticky-price{font-size:14px;font-weight:700;color:var(--blue);}
-.sticky-btn{background:var(--navy);color:white;border:none;padding:11px 22px;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.fu{animation:fadeUp .5s ease both;}
-.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}
-
-@media(max-width:900px){
-  .pdp-inner{grid-template-columns:1fr;gap:28px;}
-  .gallery{position:static;}
-  .hero-inner{flex-direction:column;padding:48px 20px;gap:32px;}
-  .hero-right{width:100%;}
-  .foot-top{grid-template-columns:1fr 1fr;gap:28px;}
-  .nav-links{display:none;}
-  .sticky-cart{display:flex;}
+:root{
+  --night:#0d1b2a;
+  --fjord:#162840;
+  --navy:#1e3a54;
+  --sky:#5BB8F5;
+  --blue:#2E8DC8;
+  --snow:#f4f8fc;
+  --ice:#dce8f0;
+  --mist:#8ab4cc;
+  --sun:#F4A261;
+  --green:#22c77a;
+  --red:#e84545;
+  --text:#0d1b2a;
+  --text2:#3a6a8a;
+  --text3:#6b8fa8;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --r:10px;
+  --sh:0 2px 16px rgba(13,27,42,.10);
 }
-@media(max-width:600px){
-  .stats-row{grid-template-columns:1fr 1fr;}
-  .stat{border:none;border-bottom:1px solid rgba(255,255,255,.1);}
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--snow);color:var(--text);min-height:100vh}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--sans)}
+img{display:block;max-width:100%}
 
-.ff-box{display:none;}
-.ff-text{display:none;}
-.logo-word{display:none;}
-.logo-pill{
-  background:#0A1F5C;
-  border-radius:10px;
-  padding:8px 16px;
-  display:inline-flex;
-  align-items:center;
-  gap:0;
-  font-family:'DM Sans',sans-serif;
-  font-size:17px;
-  font-weight:600;
-  letter-spacing:-.3px;
-  cursor:pointer;
-  text-decoration:none;
-  border:none;
-  background:linear-gradient(135deg,#0D1B45 0%,#0A1F5C 100%);
+/* ─── HEADER ─── */
+.hdr{background:var(--night);position:sticky;top:0;z-index:100;box-shadow:0 2px 24px rgba(0,0,0,.3)}
+.hdr-top{display:flex;align-items:center;gap:12px;padding:0 1.5rem;height:60px}
+.logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0}
+.logo-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:20px;height:20px}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-nordic{font-family:var(--serif);font-size:19px;font-weight:700;color:#fff;letter-spacing:-.4px}
+.logo-shop{font-size:9px;font-weight:500;color:var(--sky);letter-spacing:3.5px;text-transform:uppercase;margin-top:1px}
+.hdr-search{flex:1;position:relative;max-width:520px}
+.hdr-search input{width:100%;height:38px;background:#1e3a54;border:1px solid #2a4f6e;border-radius:9px;padding:0 14px 0 38px;font-size:13.5px;font-family:var(--sans);color:#e8f4fc;outline:none;transition:border-color .2s,background .2s}
+.hdr-search input:focus{background:#234460;border-color:var(--sky)}
+.hdr-search input::placeholder{color:var(--mist)}
+.hdr-search .si{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mist);pointer-events:none}
+.hdr-actions{display:flex;gap:8px;flex-shrink:0;margin-left:auto}
+.ha-btn{background:var(--fjord);border:1px solid #2a4f6e;border-radius:9px;height:38px;padding:0 14px;color:#c8e0ee;font-size:13px;font-weight:500;display:flex;align-items:center;gap:7px;transition:background .15s,border-color .15s;position:relative;white-space:nowrap}
+.ha-btn:hover{background:var(--navy);border-color:var(--sky)}
+.ha-btn svg{width:16px;height:16px;flex-shrink:0}
+.ha-btn.primary{background:linear-gradient(135deg,var(--sky),var(--blue));color:var(--night);border-color:transparent;font-weight:600}
+.ha-btn.primary:hover{filter:brightness(1.08)}
+.badge{position:absolute;top:-6px;right:-6px;background:var(--sun);color:var(--night);border-radius:99px;min-width:18px;height:18px;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px;border:2px solid var(--night)}
+.pc-badge[style*="Ali"],.pc-badge:contains("Ali"){background:linear-gradient(135deg,#e8472a,#ff6a00)!important;color:#fff!important}
+.dot-badge{position:absolute;top:-3px;right:-3px;width:9px;height:9px;background:var(--red);border-radius:50%;border:2px solid var(--night)}
+.hdr-nav{background:var(--fjord);border-top:1px solid #1e3a54;display:flex;padding:0 1.5rem;overflow-x:auto;scrollbar-width:none}
+.hdr-nav::-webkit-scrollbar{display:none}
+.nav-btn{background:none;border:none;border-bottom:2px solid transparent;color:var(--mist);padding:9px 14px;font-size:12.5px;font-family:var(--sans);white-space:nowrap;transition:all .15s}
+.nav-btn:hover{color:#c8e0ee}
+.nav-btn.on{border-bottom-color:var(--sky);color:var(--sky);font-weight:600}
+
+/* ─── LAYOUT ─── */
+.page{padding:1.5rem}
+.page-narrow{max-width:640px}
+.back-btn{background:none;border:none;font-size:13px;color:var(--text3);display:flex;align-items:center;gap:5px;margin-bottom:1.25rem;padding:0;font-family:var(--sans)}
+.back-btn:hover{color:var(--text2)}
+.sec-title{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--night);letter-spacing:-.3px;margin-bottom:.25rem}
+.sec-sub{font-size:12px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid var(--ice)}
+
+/* ─── HERO ─── */
+.hero{background:linear-gradient(135deg,var(--night) 0%,#0a2233 60%,#0d2d44 100%);border-radius:16px;padding:2rem 2.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(91,184,245,.12) 0%,transparent 70%)}
+.hero::after{content:'';position:absolute;bottom:-40px;left:30%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(46,141,200,.08) 0%,transparent 70%)}
+.hero-content{position:relative;z-index:1}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(91,184,245,.15);border:1px solid rgba(91,184,245,.25);border-radius:99px;padding:4px 12px;font-size:11px;font-weight:500;color:var(--sky);margin-bottom:.875rem;letter-spacing:.3px}
+.hero h1{font-family:var(--serif);font-size:32px;font-weight:800;color:#fff;letter-spacing:-.8px;line-height:1.15;margin-bottom:.625rem}
+.hero h1 em{color:var(--sky);font-style:normal}
+.hero p{font-size:14px;color:var(--mist);margin-bottom:1.25rem;line-height:1.6;max-width:340px}
+.hero-badges{display:flex;gap:8px;flex-wrap:wrap}
+.hbadge{border-radius:6px;padding:4px 10px;font-size:11px;font-weight:600}
+.hbadge.b2c{background:rgba(91,184,245,.2);color:var(--sky)}
+.hbadge.c2c{background:rgba(34,199,122,.2);color:#22c77a}
+.hbadge.b2b{background:rgba(244,162,97,.2);color:var(--sun)}
+.hero-emoji{font-size:72px;position:relative;z-index:1;filter:drop-shadow(0 8px 24px rgba(91,184,245,.3))}
+.hero-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.5rem}
+.hstat{background:var(--night);border:1px solid #1e3a54;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.hstat-icon{font-size:20px}
+.hstat-v{font-size:14px;font-weight:600;color:var(--text)}
+.hstat-l{font-size:11px;color:var(--text3)}
+
+/* ─── CATS ─── */
+.cats{display:flex;gap:8px;overflow-x:auto;margin-bottom:1.5rem;padding-bottom:2px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cat-btn{flex-shrink:0;border:1px solid var(--ice);border-radius:99px;padding:6px 16px;font-size:12.5px;font-family:var(--sans);background:#fff;color:var(--text2);transition:all .15s;white-space:nowrap}
+.cat-btn:hover{border-color:var(--blue);color:var(--blue)}
+.cat-btn.on{background:var(--night);color:#fff;border-color:var(--night);font-weight:500}
+
+/* ─── SORT CHIPS ─── */
+.sort-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;gap:8px;flex-wrap:wrap}
+.sort-chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--ice);border-radius:6px;padding:5px 11px;font-size:12px;font-family:var(--sans);background:#fff;color:var(--text3);transition:all .15s}
+.chip.on{background:var(--night);color:#fff;border-color:var(--night)}
+.results-lbl{font-size:12.5px;color:var(--text3)}
+
+/* ─── PRODUCT GRID ─── */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.pcard{background:#fff;border:1px solid var(--ice);border-radius:14px;overflow:hidden;cursor:pointer;transition:box-shadow .2s,transform .2s;box-shadow:var(--sh)}
+.pcard:hover{box-shadow:0 8px 32px rgba(13,27,42,.14);transform:translateY(-2px)}
+.pc-img{height:150px;overflow:hidden;background:var(--snow);position:relative}
+.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.pcard:hover .pc-img img{transform:scale(1.06)}
+.pc-badge{position:absolute;top:9px;left:9px;border-radius:6px;padding:3px 8px;font-size:10.5px;font-weight:700;background:var(--sun);color:var(--night);z-index:2}
+.pc-badge-ali{background:linear-gradient(135deg,#e8472a,#ff6a00);color:#fff}
+.pc-badge-ay{background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff}
+.pc-sold{position:absolute;inset:0;background:rgba(13,27,42,.45);display:flex;align-items:center;justify-content:center;z-index:2}
+.pc-sold span{color:#fff;font-size:12px;font-weight:600;letter-spacing:.3px}
+.pc-wish{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(4px);border:none;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;z-index:3;font-size:14px;transition:transform .15s}
+.pc-wish:hover{transform:scale(1.2)}
+.pc-body{padding:12px}
+.pc-seller-row{display:flex;align-items:center;gap:4px;margin-bottom:5px;overflow:hidden}
+.pc-stype{font-size:10.5px;font-weight:600;flex-shrink:0}
+.pc-sname{font-size:10.5px;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pc-name{font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:5px;line-height:1.3;font-family:var(--sans)}
+.pc-stars{display:flex;align-items:center;gap:3px;margin-bottom:7px}
+.pc-rv{font-size:11.5px;font-weight:600;color:var(--text)}
+.pc-rc{font-size:11px;color:var(--text3)}
+.pc-price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:10px}
+.pc-price{font-size:16px;font-weight:700;color:var(--night)}
+.pc-orig{font-size:11.5px;color:var(--text3);text-decoration:line-through}
+.pc-add{width:100%;padding:8px 0;border:none;border-radius:8px;font-size:12.5px;font-weight:600;font-family:var(--sans);transition:all .15s}
+.pc-add.av{background:var(--night);color:#fff}
+.pc-add.av:hover{background:var(--fjord)}
+.pc-add.na{background:var(--snow);color:var(--text3);cursor:not-allowed}
+
+/* ─── PRODUCT DETAIL ─── */
+.pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem}
+.pd-img-wrap{border-radius:14px;overflow:hidden;background:var(--snow);aspect-ratio:4/3}
+.pd-img-wrap img{width:100%;height:100%;object-fit:cover}
+.pd-tag-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+.tag{display:inline-block;border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600}
+.tag.b2c{background:rgba(91,184,245,.15);color:var(--blue)}
+.tag.c2c{background:rgba(34,199,122,.15);color:#19a464}
+.tag.b2b{background:rgba(244,162,97,.15);color:#c0621a}
+.tag.cat{background:var(--snow);color:var(--text3);border:1px solid var(--ice)}
+.tag.badge-tag{background:rgba(244,162,97,.2);color:#c05a10}
+.pd-title{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--night);letter-spacing:-.5px;margin-bottom:10px;line-height:1.2}
+.pd-stars{display:flex;align-items:center;gap:5px;margin-bottom:14px}
+.pd-price{font-size:28px;font-weight:700;color:var(--night);font-family:var(--serif);margin-bottom:3px}
+.pd-orig{font-size:13.5px;color:var(--text3);text-decoration:line-through;margin-bottom:12px}
+.pd-stock{font-size:13px;font-weight:600;margin-bottom:16px}
+.in-s{color:var(--green)}.out-s{color:var(--red)}
+.qty-row{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.qty-label{font-size:12.5px;color:var(--text3);font-weight:500}
+.qty-ctrl{display:flex;align-items:center;gap:0;border:1px solid var(--ice);border-radius:9px;overflow:hidden}
+.qty-btn{width:34px;height:34px;background:none;border:none;font-size:18px;color:var(--text);display:flex;align-items:center;justify-content:center;transition:background .15s}
+.qty-btn:hover{background:var(--snow)}
+.qty-val{width:34px;text-align:center;font-size:14px;font-weight:600;color:var(--text)}
+.big-btn{width:100%;padding:13px;border:none;border-radius:10px;font-size:14px;font-weight:600;font-family:var(--sans);transition:all .15s;margin-bottom:9px}
+.big-btn.primary{background:var(--night);color:#fff}
+.big-btn.primary:hover{background:var(--fjord)}
+.big-btn.outline{background:#fff;border:1.5px solid var(--ice);color:var(--text)}
+.big-btn.outline:hover{border-color:var(--night);background:var(--snow)}
+.big-btn.sky{background:linear-gradient(135deg,var(--sky),var(--blue));color:var(--night)}
+.pd-desc-box{margin-bottom:1.5rem}
+.pd-desc-box p{font-size:14px;color:var(--text2);line-height:1.75}
+.seller-card{background:var(--snow);border:1px solid var(--ice);border-radius:12px;padding:14px;cursor:pointer;transition:border-color .15s;margin-bottom:1.5rem}
+.seller-card:hover{border-color:var(--blue)}
+.sa-row{display:flex;align-items:center;gap:12px}
+.s-av{border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.rev-item{background:var(--snow);border:1px solid var(--ice);border-radius:10px;padding:14px;margin-bottom:9px}
+.rev-top{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.rev-av{width:30px;height:30px;border-radius:50%;background:#fff;border:1px solid var(--ice);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--text3);flex-shrink:0}
+.rev-n{font-size:13px;font-weight:600;color:var(--text)}
+.rev-d{font-size:11px;color:var(--text3)}
+.rev-txt{font-size:13px;color:var(--text2);line-height:1.55}
+.rev-form{background:var(--snow);border:1px solid var(--ice);border-radius:12px;padding:16px;margin-top:14px}
+.star-pick{display:flex;gap:5px;margin-bottom:10px}
+.star-pick button{background:none;border:none;font-size:24px;transition:transform .1s}
+.star-pick button:hover{transform:scale(1.2)}
+
+/* ─── SELLER PAGE ─── */
+.sel-hero-box{background:linear-gradient(135deg,var(--night),var(--fjord));border-radius:14px;padding:1.75rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:1.25rem}
+.sel-stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.25rem}
+.sel-stat{background:#fff;border:1px solid var(--ice);border-radius:10px;padding:12px;text-align:center;box-shadow:var(--sh)}
+.sel-stat-v{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--night)}
+.sel-stat-l{font-size:11px;color:var(--text3);margin-top:2px}
+.sel-desc-box{background:var(--snow);border:1px solid var(--ice);border-radius:10px;padding:14px;margin-bottom:1.25rem;font-size:13.5px;color:var(--text2);line-height:1.65}
+
+/* ─── CART PANEL ─── */
+#cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;backdrop-filter:blur(2px)}
+#cart-panel{position:fixed;top:0;right:0;height:100vh;width:340px;background:#fff;z-index:201;display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,.2)}
+.cp-hdr{padding:18px 20px;border-bottom:1px solid var(--ice);display:flex;align-items:center;justify-content:space-between}
+.cp-title{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--night)}
+.cp-close{background:none;border:none;font-size:20px;color:var(--text3);line-height:1}
+.cp-items{flex:1;overflow-y:auto;padding:12px}
+.cp-empty{text-align:center;padding:3rem 1rem;color:var(--text3)}
+.cp-empty-icon{font-size:44px;margin-bottom:10px}
+.c-item{display:flex;gap:10px;padding:12px;background:var(--snow);border-radius:10px;margin-bottom:8px}
+.ci-img{width:44px;height:44px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--ice)}
+.ci-img img{width:100%;height:100%;object-fit:cover}
+.ci-info{flex:1;min-width:0}
+.ci-name{font-size:13px;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:2px}
+.ci-sel{font-size:11px;color:var(--text3);margin-bottom:5px}
+.ci-bot{display:flex;align-items:center;justify-content:space-between}
+.ci-price{font-size:13px;font-weight:700;color:var(--night)}
+.ci-rm{background:none;border:none;font-size:11.5px;color:var(--red);font-family:var(--sans)}
+.cp-foot{padding:16px 20px;border-top:1px solid var(--ice)}
+.cp-tot-row{display:flex;justify-content:space-between;margin-bottom:14px}
+.cp-tot-l{font-size:13.5px;color:var(--text3)}
+.cp-tot-v{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--night)}
+.cp-chk-btn{width:100%;padding:13px;background:linear-gradient(135deg,var(--sky),var(--blue));color:var(--night);border:none;border-radius:10px;font-size:14px;font-weight:700;font-family:var(--sans)}
+
+/* ─── MODAL ─── */
+#modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:300;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(3px)}
+.modal-box{background:#fff;border-radius:18px;padding:2rem;width:360px;max-width:92vw;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.modal-title{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--night);margin-bottom:4px}
+.modal-sub{font-size:13px;color:var(--text3);margin-bottom:1.25rem}
+.modal-close{float:right;background:none;border:none;font-size:20px;color:var(--text3);margin-top:-4px}
+.auth-tabs{display:flex;border:1px solid var(--ice);border-radius:9px;overflow:hidden;margin-bottom:1.25rem}
+.auth-tab{flex:1;padding:8px 0;border:none;background:none;font-size:13.5px;font-family:var(--sans);color:var(--text3);transition:all .15s}
+.auth-tab.on{background:var(--night);color:#fff;font-weight:600}
+
+/* ─── FORMS ─── */
+.flbl{font-size:12.5px;font-weight:600;color:var(--text2);margin-bottom:5px;display:block}
+.finp{width:100%;height:40px;padding:0 13px;border:1.5px solid var(--ice);border-radius:9px;font-size:13.5px;font-family:var(--sans);color:var(--text);background:#fff;outline:none;margin-bottom:13px;transition:border-color .2s}
+.finp:focus{border-color:var(--sky)}
+.fsel{width:100%;height:40px;padding:0 13px;border:1.5px solid var(--ice);border-radius:9px;font-size:13.5px;font-family:var(--sans);color:var(--text);background:#fff;outline:none;margin-bottom:13px;appearance:none}
+.ftarea{width:100%;padding:11px 13px;border:1.5px solid var(--ice);border-radius:9px;font-size:13.5px;font-family:var(--sans);color:var(--text);background:#fff;outline:none;margin-bottom:13px;resize:vertical;min-height:90px;line-height:1.5}
+.ftarea:focus{border-color:var(--sky)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-btn{width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-weight:700;font-family:var(--sans);transition:all .15s;margin-top:4px}
+.form-btn.dark{background:var(--night);color:#fff}
+.form-btn.dark:hover{background:var(--fjord)}
+.form-btn.sky{background:linear-gradient(135deg,var(--sky),var(--blue));color:var(--night)}
+
+/* ─── CHECKOUT ─── */
+.ck-steps{display:flex;margin-bottom:1.5rem}
+.ck-step{flex:1;text-align:center;padding:9px 0;border-bottom:2.5px solid var(--ice);font-size:12.5px;font-weight:500;color:var(--text3);transition:all .2s}
+.ck-step.done{border-bottom-color:var(--green);color:var(--green)}
+.ck-step.active{border-bottom-color:var(--night);color:var(--night);font-weight:700}
+.pay-opt{display:flex;align-items:center;gap:12px;padding:14px;border:1.5px solid var(--ice);border-radius:10px;cursor:pointer;background:#fff;margin-bottom:9px;transition:border-color .15s}
+.pay-opt.sel{border-color:var(--night);background:var(--snow)}
+.pay-opt-name{font-size:13.5px;font-weight:600;color:var(--text)}
+.pay-opt-sub{font-size:11.5px;color:var(--text3)}
+.order-sum{background:var(--snow);border:1px solid var(--ice);border-radius:12px;padding:14px;margin-bottom:1.25rem}
+.order-sum-row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--ice)}
+.osm-img{width:40px;height:40px;border-radius:7px;overflow:hidden;flex-shrink:0;background:var(--ice)}
+.osm-img img{width:100%;height:100%;object-fit:cover}
+.order-total-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 0;font-size:15px;font-weight:700;color:var(--night)}
+
+/* ─── ORDERS ─── */
+.order-card{background:#fff;border:1px solid var(--ice);border-radius:14px;padding:1.25rem;margin-bottom:12px;box-shadow:var(--sh)}
+.ord-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.ord-id{font-size:13.5px;font-weight:700;color:var(--text)}
+.ord-date{font-size:11.5px;color:var(--text3)}
+.ord-status{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:6px}
+.st-p{background:#fef3c7;color:#92400e}
+.st-s{background:rgba(91,184,245,.15);color:var(--blue)}
+.st-d{background:rgba(34,199,122,.15);color:#19a464}
+.oi-row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--ice)}
+.oi-img{width:40px;height:40px;border-radius:8px;overflow:hidden;flex-shrink:0;background:var(--snow)}
+.oi-img img{width:100%;height:100%;object-fit:cover}
+
+/* ─── MESSAGES ─── */
+.conv-list{display:flex;flex-direction:column;gap:3px}
+.conv-item{background:#fff;border:1px solid var(--ice);border-radius:11px;padding:14px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:border-color .15s,box-shadow .15s}
+.conv-item:hover{border-color:var(--sky);box-shadow:var(--sh)}
+.conv-item.unread{border-left:3px solid var(--sky)}
+.conv-av{border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.conv-name{font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:2px}
+.conv-prev{font-size:12.5px;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.conv-time{font-size:11px;color:var(--text3);flex-shrink:0}
+.chat-area{background:var(--snow);border:1px solid var(--ice);border-radius:12px;padding:14px;min-height:200px;margin-bottom:10px;display:flex;flex-direction:column;gap:10px}
+.msg-bubble{max-width:72%;padding:10px 13px;border-radius:13px;font-size:13.5px;line-height:1.5}
+.msg-me{align-self:flex-end;background:var(--night);color:#fff;border-bottom-right-radius:4px}
+.msg-them{align-self:flex-start;background:#fff;border:1px solid var(--ice);color:var(--text);border-bottom-left-radius:4px}
+.msg-time{font-size:10px;opacity:.55;margin-top:3px;text-align:right}
+.chat-inp-row{display:flex;gap:9px}
+.chat-inp{flex:1;height:40px;padding:0 13px;border:1.5px solid var(--ice);border-radius:9px;font-size:13.5px;font-family:var(--sans);color:var(--text);background:#fff;outline:none}
+.chat-inp:focus{border-color:var(--sky)}
+.chat-send{height:40px;padding:0 18px;background:var(--night);color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:600;font-family:var(--sans)}
+
+/* ─── NOTIFICATIONS ─── */
+.ntf-item{background:#fff;border:1px solid var(--ice);border-radius:11px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;margin-bottom:8px;cursor:pointer;transition:border-color .15s}
+.ntf-item:hover{border-color:var(--sky)}
+.ntf-item.unread{border-left:3px solid var(--sky)}
+.ntf-icon{font-size:24px;flex-shrink:0;margin-top:1px}
+.ntf-title{font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:2px}
+.ntf-sub{font-size:12.5px;color:var(--text2);line-height:1.45}
+.ntf-time{font-size:11px;color:var(--text3);margin-top:4px}
+.ntf-dot{width:9px;height:9px;background:var(--sky);border-radius:50%;flex-shrink:0;margin-top:5px}
+
+/* ─── DASHBOARD ─── */
+.dash-kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:1.25rem}
+.kpi-card{background:#fff;border:1px solid var(--ice);border-radius:12px;padding:16px;box-shadow:var(--sh)}
+.kpi-lbl{font-size:11.5px;color:var(--text3);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-val{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--night);margin-bottom:3px}
+.kpi-chg{font-size:11.5px;font-weight:600}
+.kpi-chg.up{color:var(--green)}.kpi-chg.dn{color:var(--red)}
+.kpi-bar{height:5px;background:var(--snow);border-radius:3px;margin-top:10px;overflow:hidden}
+.kpi-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--sky),var(--blue))}
+.list-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--ice)}
+.list-row:last-child{border-bottom:none}
+.list-img{width:46px;height:46px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--snow)}
+
+/* ─── LISTING FORM ─── */
+.img-picker{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:14px}
+.img-pick-cell{height:56px;border-radius:8px;overflow:hidden;cursor:pointer;border:2.5px solid transparent;transition:border-color .15s}
+.img-pick-cell.sel{border-color:var(--sky)}
+.img-pick-cell img{width:100%;height:100%;object-fit:cover}
+
+/* ─── SUCCESS ─── */
+.success-box{text-align:center;padding:3.5rem 1.5rem}
+.success-icon{font-size:60px;margin-bottom:14px;animation:pop .4s ease}
+@keyframes pop{0%{transform:scale(.5);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+.success-title{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--night);margin-bottom:8px}
+.success-sub{font-size:14px;color:var(--text3);line-height:1.6;margin-bottom:24px}
+.success-btn{background:var(--night);color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:14px;font-weight:600;font-family:var(--sans);margin:0 5px}
+
+/* ─── BOTTOM NAV ─── */
+.bnav{background:#fff;border-top:1px solid var(--ice);display:flex;position:sticky;bottom:0;z-index:50}
+.bnav-btn{flex:1;background:none;border:none;padding:10px 0 9px;font-family:var(--sans);display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;color:var(--text3);transition:color .15s;position:relative}
+.bnav-btn.on{color:var(--night);font-weight:600}
+.bnav-btn svg{width:21px;height:21px}
+.bnav-badge{position:absolute;top:7px;left:calc(50% + 3px);width:8px;height:8px;background:var(--red);border-radius:50%;border:2px solid #fff}
+
+/* ─── EMPTY STATES ─── */
+.empty-st{text-align:center;padding:3rem 1rem;color:var(--text3)}
+.empty-icon{font-size:48px;margin-bottom:12px}
+.empty-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:5px}
+.empty-sub{font-size:13px;margin-bottom:18px}
+.empty-btn{background:var(--night);color:#fff;border:none;border-radius:9px;padding:10px 24px;font-size:13.5px;font-weight:600;font-family:var(--sans)}
+
+/* ─── TRUST BAR ─── */
+.trust-bar{background:var(--night);padding:.875rem 1.5rem;display:flex;gap:24px;overflow-x:auto;scrollbar-width:none}
+.trust-bar::-webkit-scrollbar{display:none}
+.trust-item{display:flex;align-items:center;gap:8px;flex-shrink:0;font-size:12px;color:var(--mist)}
+.trust-item svg{width:15px;height:15px;color:var(--sky);flex-shrink:0}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:640px){
+  .pd-grid{grid-template-columns:1fr;gap:1rem}
+  .hero{padding:1.25rem}
+  .hero h1{font-size:24px}
+  .hero-emoji{font-size:52px}
+  .hero-stat-row{grid-template-columns:1fr 1fr}
+  .hstat:last-child{display:none}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  #cart-panel{width:100%}
+  .frow{grid-template-columns:1fr}
+  .dash-kpi{grid-template-columns:1fr}
 }
-.logo-pill .lp-name{color:white;}
-.logo-pill .lp-ext{color:#5B8AF0;}
 </style>
 </head>
 <body>
 
-<div class="notif" id="notif">✓ Added to cart</div>
-<div class="sticky-cart"><div class="sticky-info"><div class="sticky-name">Adjustable Laptop Stand</div><div class="sticky-price">$27.99</div></div><button class="sticky-btn" onclick="addCart()">Add to Cart</button></div>
-
-<!-- ANNOUNCE -->
-<div class="announce">Free US shipping on orders $45+ <span>·</span> 30-day money-back guarantee <span>·</span> 5–8 day delivery</div>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <div class="logo-pill" onclick="goPage('home')">
-      <span class="lp-name">focusforge</span><span class="lp-ext">.shop</span>
-    </div>
-    <div class="nav-links">
-      <a onclick="goPage('home');filterCat('all')" class="active">All Products</a>
-      <a onclick="goPage('home');filterCat('desk')">Desk Setup</a>
-      <a onclick="goPage('home');filterCat('lighting')">Lighting</a>
-      <a onclick="goPage('home');filterCat('ergonomics')">Ergonomics</a>
-      <a onclick="goPage('home');filterCat('bundles')">Bundles</a>
-    </div>
-    <div class="nav-right">
-      <a>About</a>
-      <a class="cart-pill" onclick="goPage('home')"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M1.5 1.5h2l2 7h6l1.5-5H4.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="12.5" r=".8" fill="white"/><circle cx="11.5" cy="12.5" r=".8" fill="white"/></svg> Cart <span class="cart-num" id="cartNum">0</span></a>
-      <a class="nav-cta" onclick="goPage('home')">Shop Now →</a>
-    </div>
-  </div>
-</nav>
-
-<!-- ═══ HOME PAGE ═══ -->
-<div id="pg-home" class="page active">
-
-<!-- HERO -->
-<section class="hero" style="padding:0">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div class="hero-left fu">
-      <div class="hero-badge"><div class="hero-pulse"></div>For Remote Professionals</div>
-      <h1>Your Workspace,<br><span class="accent">Your Performance.</span></h1>
-      <p class="hero-sub">Curated ergonomic desk accessories built for freelancers and remote pros who take their wellbeing seriously. Fast US delivery. Zero risk.</p>
-      <div class="btns">
-        <button class="btn-p" onclick="goPage('home')">Shop the Collection →</button>
-        <button class="btn-o">Our Promise</button>
-      </div>
-      <div class="trust-row">
-        <div class="t-avs">
-          <div class="t-av" style="background:var(--blue)">J</div>
-          <div class="t-av" style="background:var(--lb)">S</div>
-          <div class="t-av" style="background:var(--green)">M</div>
-          <div class="t-av" style="background:#7F77DD">A</div>
-        </div>
-        <div class="t-text"><strong>2,400+ remote workers</strong> upgraded their desk this month</div>
-      </div>
-    </div>
-    <div class="hero-right fu d2">
-      <svg viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="218" width="360" height="12" rx="4" fill="#1B4FD8" opacity=".35"/>
-        <rect x="20" y="218" width="360" height="5" rx="2.5" fill="rgba(91,138,240,.5)"/>
-        <rect x="42" y="230" width="8" height="48" rx="3" fill="rgba(27,79,216,.25)"/>
-        <rect x="350" y="230" width="8" height="48" rx="3" fill="rgba(27,79,216,.25)"/>
-        <g style="animation:float 4s ease-in-out infinite" id="floatGroup">
-          <line x1="118" y1="218" x2="100" y2="170" stroke="#5B8AF0" stroke-width="7" stroke-linecap="round"/>
-          <line x1="230" y1="218" x2="248" y2="170" stroke="#5B8AF0" stroke-width="7" stroke-linecap="round"/>
-          <line x1="100" y1="188" x2="248" y2="188" stroke="#5B8AF0" stroke-width="3" stroke-linecap="round" opacity=".3"/>
-          <rect x="92" y="152" width="164" height="20" rx="6" fill="#1B4FD8"/>
-          <rect x="92" y="152" width="164" height="9" rx="5" fill="rgba(91,138,240,.4)"/>
-          <rect x="95" y="64" width="158" height="90" rx="10" fill="#060F2E" stroke="rgba(91,138,240,.4)" stroke-width="1.5"/>
-          <rect x="102" y="71" width="144" height="78" rx="6" fill="#0A1F5C"/>
-          <rect x="109" y="78" width="60" height="9" rx="4" fill="white" opacity=".85"/>
-          <rect x="109" y="91" width="108" height="4" rx="2" fill="white" opacity=".28"/>
-          <rect x="109" y="99" width="90" height="4" rx="2" fill="white" opacity=".28"/>
-          <rect x="109" y="107" width="100" height="4" rx="2" fill="white" opacity=".28"/>
-          <rect x="172" y="117" width="8" height="14" rx="2" fill="#B5D4F4" opacity=".7"/>
-          <rect x="183" y="112" width="8" height="19" rx="2" fill="#5B8AF0"/>
-          <rect x="194" y="104" width="8" height="27" rx="2" fill="#1B4FD8"/>
-          <rect x="205" y="95" width="8" height="36" rx="2" fill="rgba(255,255,255,.8)"/>
-          <rect x="110" y="152" width="128" height="6" rx="3" fill="#040C1E"/>
-          <circle cx="98" cy="180" r="5" fill="#0A1F5C" stroke="#5B8AF0" stroke-width="1.5"/>
-          <circle cx="98" cy="196" r="5" fill="#0A1F5C" stroke="#5B8AF0" stroke-width="1.5"/>
-          <circle cx="98" cy="212" r="5" fill="#0A1F5C" stroke="#5B8AF0" stroke-width="1.5"/>
-        </g>
-        <rect x="312" y="172" width="5" height="46" rx="2.5" fill="#C9A84C" opacity=".8"/>
-        <line x1="314" y1="172" x2="290" y2="148" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
-        <ellipse cx="279" cy="143" rx="15" ry="9" fill="#C9A84C"/>
-        <ellipse cx="279" cy="143" rx="9" ry="5" fill="white" opacity=".3"/>
-        <ellipse cx="240" cy="160" rx="50" ry="22" fill="#C9A84C" opacity=".07"/>
-        <rect x="46" y="210" width="8" height="8" rx="2.5" fill="#5B8AF0" opacity=".9"/>
-        <rect x="58" y="210" width="8" height="8" rx="2.5" fill="#5B8AF0" opacity=".9"/>
-        <rect x="70" y="210" width="8" height="8" rx="2.5" fill="#5B8AF0" opacity=".9"/>
-        <rect x="44" y="204" width="52" height="13" rx="6.5" fill="#D6E4FF" opacity=".55"/>
-        <rect x="270" y="56" width="98" height="40" rx="10" fill="rgba(27,79,216,.88)" stroke="rgba(91,138,240,.35)" stroke-width="1"/>
-        <text x="280" y="73" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(255,255,255,.6)">Customer rating</text>
-        <text x="280" y="88" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="white">★★★★★  4.8/5</text>
-        <rect x="28" y="108" width="86" height="34" rx="10" fill="rgba(6,15,46,.92)" stroke="rgba(91,138,240,.28)" stroke-width="1"/>
-        <text x="38" y="122" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(255,255,255,.55)">Ships in</text>
-        <text x="38" y="135" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#5B8AF0">5–8 Days 🚀</text>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- USP -->
-<div class="usp">
-  <div class="usp-row">
-    <div class="usp-item"><div class="usp-ic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8L6 12L14 4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="usp-l">Ships in 5–8 Days</div><div class="usp-s">US warehouses</div></div></div>
-    <div class="usp-item"><div class="usp-ic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5l2 4.5h5L11 9l1.5 5L8 11l-4.5 3L5 9 1 6h5z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="usp-l">30-Day Guarantee</div><div class="usp-s">No questions asked</div></div></div>
-    <div class="usp-item"><div class="usp-ic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="6" width="12" height="8" rx="2" stroke="white" stroke-width="1.4"/><path d="M5 6V5a3 3 0 016 0v1" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg></div><div><div class="usp-l">Secure Checkout</div><div class="usp-s">SSL encrypted</div></div></div>
-    <div class="usp-item"><div class="usp-ic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h4l1.5-5L9 13l2-5h3" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="usp-l">Free Shipping $45+</div><div class="usp-s">All 50 US states</div></div></div>
-    <div class="usp-item"><div class="usp-ic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="1.4"/><path d="M8 5v4l2.5 1.5" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg></div><div><div class="usp-l">Same-Day Processing</div><div class="usp-s">Orders before 2pm EST</div></div></div>
-  </div>
+<div id="app">
+  <div id="hdr-root"></div>
+  <div id="trust-root"></div>
+  <div id="tbar-root"></div>
+  <div id="page-root" style="min-height:500px"></div>
+  <div id="bnav-root"></div>
 </div>
 
-<!-- PRODUCTS -->
-<section class="section" style="background:var(--cream)">
-  <div class="sec-inner">
-    <div class="sec-head">
-      <div>
-        <div class="sec-eyebrow">Our Collection</div>
-        <h2>Desk Upgrades That Actually Work</h2>
-        <div class="sec-sub">Every product is tested before it earns a spot. Curated for remote pros, backed by a 30-day guarantee.</div>
-      </div>
-      <a onclick="filterCat('all')">View all →</a>
-    </div>
-
-    <!-- CATEGORY FILTER -->
-    <div class="cat-pills">
-      <button class="cat-pill active" onclick="filterCat('all',this)">All Products</button>
-      <button class="cat-pill" onclick="filterCat('desk',this)">Desk Setup</button>
-      <button class="cat-pill" onclick="filterCat('lighting',this)">Lighting</button>
-      <button class="cat-pill" onclick="filterCat('ergonomics',this)">Ergonomics</button>
-      <button class="cat-pill" onclick="filterCat('cable',this)">Cable Mgmt</button>
-      <button class="cat-pill" onclick="filterCat('bundles',this)">Bundles</button>
-    </div>
-
-    <div class="products-grid" id="productsGrid"></div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stats-row">
-    <div class="stat"><div class="stat-n">2,400+</div><div class="stat-l">Happy Customers</div></div>
-    <div class="stat"><div class="stat-n">4.8★</div><div class="stat-l">Average Rating</div></div>
-    <div class="stat"><div class="stat-n">5–8</div><div class="stat-l">Days to Deliver</div></div>
-    <div class="stat"><div class="stat-n">30</div><div class="stat-l">Day Guarantee</div></div>
-  </div>
-</div>
-
-<!-- WHY -->
-<section class="why-bg section">
-  <div class="sec-inner">
-    <div class="sec-head" style="margin-bottom:36px">
-      <div>
-        <div class="sec-eyebrow" style="color:var(--pale)">Why FocusForge</div>
-        <h2 style="color:white">We Built the Store<br>We Wished Existed.</h2>
-      </div>
-    </div>
-    <div class="why-grid">
-      <div class="why-card"><div class="why-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1.5l2.2 6H18L13 11l2 6L10 13l-5 4 2-6L2 7.5h5.8z" stroke="#5B8AF0" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div class="why-title">Curated, Not Aggregated</div><div class="why-text">Every product is tested before it earns a spot. If we wouldn't buy it ourselves, you won't find it here.</div></div>
-      <div class="why-card"><div class="why-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#5B8AF0" stroke-width="1.4"/><path d="M10 6v5l3 2" stroke="#5B8AF0" stroke-width="1.4" stroke-linecap="round"/></svg></div><div class="why-title">Fast US Delivery</div><div class="why-text">We ship from US partner warehouses — your gear arrives in 5–8 business days, tracked every step.</div></div>
-      <div class="why-card"><div class="why-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4.5 4.5L16 6" stroke="#5B8AF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="why-title">Risk-Free Buying</div><div class="why-text">30 days. No questions. No forms. No waiting. Full refund if you're not completely satisfied.</div></div>
-      <div class="why-card"><div class="why-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="12" rx="2" stroke="#5B8AF0" stroke-width="1.4"/><path d="M7 5V4a3 3 0 016 0v1" stroke="#5B8AF0" stroke-width="1.4" stroke-linecap="round"/><path d="M8 11h4M10 9v4" stroke="#5B8AF0" stroke-width="1.4" stroke-linecap="round"/></svg></div><div class="why-title">Pro Ergonomics Guide</div><div class="why-text">Every order ships with our free PDF guide — set up your workspace like a professional in 10 minutes.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="section" style="background:var(--cream)">
-  <div class="sec-inner">
-    <div class="sec-head"><div><div class="sec-eyebrow">Reviews</div><h2>Real People. Real Setups.</h2></div></div>
-    <div class="rev-grid">
-      <div class="rev-card"><div class="rev-head"><div class="rev-av" style="background:var(--blue)">J</div><div><div class="rev-name">Jake Morrison</div><div class="rev-loc">Freelance Designer · Austin, TX</div></div></div><div class="rev-stars">★★★★★</div><div class="rev-text">"Fixed my neck pain on day one. Not exaggerating — I've been hunching for 2 years and this $28 fix changed everything."</div><div class="rev-tag">Laptop Stand</div></div>
-      <div class="rev-card"><div class="rev-head"><div class="rev-av" style="background:var(--lb)">S</div><div><div class="rev-name">Sarah Kellner</div><div class="rev-loc">Remote PM · Seattle, WA</div></div></div><div class="rev-stars">★★★★★</div><div class="rev-text">"My desk looks like I have my life together now. The cable box + clips combo is unreal — takes 20 minutes to install."</div><div class="rev-tag">Cable Bundle</div></div>
-      <div class="rev-card"><div class="rev-head"><div class="rev-av" style="background:var(--green)">M</div><div><div class="rev-name">Marcus Thompson</div><div class="rev-loc">Entrepreneur · Miami, FL</div></div></div><div class="rev-stars">★★★★★</div><div class="rev-text">"LED lamp is perfect for video calls — my Zoom presence went from 'dark basement' to 'professional studio'."</div><div class="rev-tag">LED Lamp</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- EMAIL -->
-<section class="email-bg section">
-  <div class="sec-inner">
-    <div class="email-inner">
-      <div class="email-tag">Exclusive Offer</div>
-      <h2 class="email-h">Get 10% Off<br>Your First Order</h2>
-      <p class="email-s">Join 3,000+ remote pros getting weekly desk tips & exclusive drops. No spam.</p>
-      <div class="email-form"><input class="email-in" type="email" placeholder="your@email.com"/><button class="email-btn">Claim 10% →</button></div>
-      <div class="email-note">Unsubscribe anytime.</div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="foot-top">
-    <div class="foot-brand">
-      <div class="logo-pill" onclick="goPage('home')" style="font-size:15px;padding:6px 13px">
-        <span class="lp-name">focusforge</span><span class="lp-ext">.shop</span>
-      </div>
-      <p>Ergonomic desk gear for freelancers and remote professionals who are serious about their work and wellbeing.</p>
-    </div>
-    <div class="foot-col"><h4>Shop</h4><a onclick="filterCat('all')">All Products</a><a onclick="filterCat('desk')">Desk Setup</a><a onclick="filterCat('lighting')">Lighting</a><a onclick="filterCat('bundles')">Bundles</a></div>
-    <div class="foot-col"><h4>Support</h4><a>FAQ</a><a>Contact Us</a><a>Shipping</a><a>Returns</a><a>Track Order</a></div>
-    <div class="foot-col"><h4>Company</h4><a>About Us</a><a>Privacy Policy</a><a>Terms</a><a>Sitemap</a></div>
-  </div>
-  <div class="foot-bottom">
-    <div class="foot-copy">© 2025 FocusForge · focusforge.shop · Work Smarter. Go Further.</div>
-    <div class="pay-row"><div class="pay-b">VISA</div><div class="pay-b">MC</div><div class="pay-b">PAYPAL</div><div class="pay-b">AMEX</div><div class="pay-b">APPLE PAY</div></div>
-  </div>
-</footer>
-</div>
-
-<!-- ═══ PRODUCT PAGE ═══ -->
-<div id="pg-product" class="page pdp-wrap">
-  <div class="breadcrumb"><div class="breadcrumb-inner"><a onclick="goPage('home')">Home</a> › <a onclick="goPage('home');filterCat('desk')">Desk Setup</a> › <span id="pdp-bc">Product</span></div></div>
-  <div class="pdp-inner">
-    <div class="gallery">
-      <div class="main-photo"><img id="pdp-main-img" src="" alt="Product"/></div>
-      <div class="thumbs" id="pdp-thumbs"></div>
-    </div>
-    <div class="pdp-info">
-      <div class="pdp-badges"><span class="pdp-badge pb-blue" id="pdp-badge1">Bestseller</span><span class="pdp-badge pb-green">✓ In Stock</span><span class="pdp-badge pb-gold">★ Editor's Pick</span></div>
-      <h1 class="pdp-title" id="pdp-title">Product Name</h1>
-      <div class="rating-row"><span class="p-stars">★★★★★</span><a class="rev-link" id="pdp-revlink">247 reviews</a><span class="sold-count">· <span id="pdp-sold">1,200+</span> sold</span></div>
-      <div class="price-row"><span class="big-price" id="pdp-price">$27.99</span><span class="orig-price" id="pdp-orig">$39.99</span><span class="save-badge" id="pdp-save">Save 30%</span></div>
-      <div class="ship-note"><strong>Free shipping</strong> · Arrives in <strong>5–8 business days</strong></div>
-      <div class="benefits">
-        <h4>What You Get</h4>
-        <div id="pdp-benefits"></div>
-      </div>
-      <div class="qty-row"><span class="qty-lbl">Qty</span><div class="qty-ctrl"><button class="q-btn" onclick="chgQty(-1)">−</button><span class="q-num" id="qtyN">1</span><button class="q-btn" onclick="chgQty(1)">+</button></div></div>
-      <button class="big-add" id="addBtn" onclick="addCart()">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2h2l2.5 9h7l2-6H6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="15" r="1" fill="white"/><circle cx="14" cy="15" r="1" fill="white"/></svg>
-        <span id="addBtnTxt">Add to Cart — $27.99</span>
-      </button>
-      <button class="buy-now">Buy Now → Apple Pay / Shop Pay</button>
-      <div class="trust-grid">
-        <div class="t-item"><div class="t-ic"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5L5 9.5L11 3.5" stroke="#1B4FD8" stroke-width="1.4" stroke-linecap="round"/></svg></div><div><div class="t-lbl">30-Day Returns</div><div class="t-sub">No questions</div></div></div>
-        <div class="t-item"><div class="t-ic"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="2" y="5" width="9" height="7" rx="1.5" stroke="#1B4FD8" stroke-width="1.3"/><path d="M4.5 5V4A2 2 0 018.5 4v1" stroke="#1B4FD8" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div class="t-lbl">Secure Checkout</div><div class="t-sub">SSL encrypted</div></div></div>
-        <div class="t-item"><div class="t-ic"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="#1B4FD8" stroke-width="1.3"/><path d="M6.5 4v3.5l2 1" stroke="#1B4FD8" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div class="t-lbl">Ships 5–8 Days</div><div class="t-sub">US warehouses</div></div></div>
-        <div class="t-item"><div class="t-ic"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1l1.5 4H12L8.5 7.5l1.5 4.5L6.5 9.5 3 12l1.5-4L1 5h4z" stroke="#1B4FD8" stroke-width="1.3" stroke-linejoin="round"/></svg></div><div><div class="t-lbl">4.8 / 5 Stars</div><div class="t-sub">Verified reviews</div></div></div>
-      </div>
-      <div class="pdp-tabs">
-        <div class="tab-nav">
-          <button class="tab-btn active" onclick="swTab('desc',this)">Description</button>
-          <button class="tab-btn" onclick="swTab('specs',this)">Specs</button>
-          <button class="tab-btn" onclick="swTab('reviews',this)">Reviews</button>
-        </div>
-        <div id="tab-desc" class="tab-content active" id="pdp-desc-content"><p id="pdp-desc"></p></div>
-        <div id="tab-specs" class="tab-content" id="pdp-specs-content"><div id="pdp-specs"></div></div>
-        <div id="tab-reviews" class="tab-content">
-          <div style="display:flex;align-items:center;gap:18px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(27,79,216,.07)">
-            <div style="text-align:center"><div style="font-size:48px;font-weight:900;color:var(--navy);font-family:'Playfair Display',serif;line-height:1">4.8</div><div style="color:var(--gold);font-size:15px;letter-spacing:2px">★★★★★</div><div style="font-size:11px;color:var(--muted);margin-top:3px">247 reviews</div></div>
-            <div style="flex:1">
-              <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><span style="font-size:11px;color:var(--muted);min-width:12px">5</span><div style="flex:1;height:5px;background:rgba(27,79,216,.09);border-radius:3px;overflow:hidden"><div style="height:100%;width:87%;background:var(--gold);border-radius:3px"></div></div><span style="font-size:11px;color:var(--muted)">87%</span></div>
-              <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><span style="font-size:11px;color:var(--muted);min-width:12px">4</span><div style="flex:1;height:5px;background:rgba(27,79,216,.09);border-radius:3px;overflow:hidden"><div style="height:100%;width:10%;background:var(--gold);border-radius:3px"></div></div><span style="font-size:11px;color:var(--muted)">10%</span></div>
-              <div style="display:flex;align-items:center;gap:7px"><span style="font-size:11px;color:var(--muted);min-width:12px">3</span><div style="flex:1;height:5px;background:rgba(27,79,216,.09);border-radius:3px;overflow:hidden"><div style="height:100%;width:3%;background:var(--gold);border-radius:3px"></div></div><span style="font-size:11px;color:var(--muted)">3%</span></div>
-            </div>
-          </div>
-          <div class="rev-card" style="margin-bottom:10px"><div class="rev-head"><div class="rev-av" style="background:var(--blue)">J</div><div><div class="rev-name">Jake M. · Austin TX</div><div class="rev-loc">Verified · 3 days ago</div></div></div><div class="rev-stars">★★★★★</div><div class="rev-text">"Fixed my neck pain on day one. Fast shipping too — arrived in 6 days exactly."</div></div>
-          <div class="rev-card"><div class="rev-head"><div class="rev-av" style="background:var(--green)">A</div><div><div class="rev-name">Amanda R. · Denver CO</div><div class="rev-loc">Verified · 1 week ago</div></div></div><div class="rev-stars">★★★★★</div><div class="rev-text">"Sturdy, lightweight, folds perfectly into my backpack. Exactly what I needed as a freelancer who works from cafes."</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- RELATED -->
-  <div class="related"><div class="rel-inner">
-    <div class="sec-head"><h2>Complete Your Setup</h2><a onclick="goPage('home')">View all →</a></div>
-    <div class="products-grid" id="relatedGrid"></div>
-  </div></div>
-  <footer>
-    <div class="foot-top">
-      <div class="foot-brand"><div class="logo-pill" onclick="goPage('home')" style="font-size:14px;padding:6px 12px"><span class="lp-name">focusforge</span><span class="lp-ext">.shop</span></div><p>Ergonomic desk gear for freelancers and remote professionals.</p></div>
-      <div class="foot-col"><h4>Shop</h4><a onclick="goPage('home')">All Products</a><a>Desk Setup</a><a>Lighting</a><a>Bundles</a></div>
-      <div class="foot-col"><h4>Support</h4><a>FAQ</a><a>Contact</a><a>Shipping</a><a>Returns</a></div>
-      <div class="foot-col"><h4>Company</h4><a>About</a><a>Privacy</a><a>Terms</a></div>
-    </div>
-    <div class="foot-bottom"><div class="foot-copy">© 2025 FocusForge · focusforge.shop · Work Smarter. Go Further.</div><div class="pay-row"><div class="pay-b">VISA</div><div class="pay-b">MC</div><div class="pay-b">PAYPAL</div><div class="pay-b">AMEX</div><div class="pay-b">APPLE PAY</div></div></div>
-  </footer>
-</div>
+<!-- CART, MODAL overlays -->
+<div id="cart-overlay" style="display:none" onclick="closeCart()"></div>
+<div id="cart-panel" style="display:none"></div>
+<div id="modal-overlay" style="display:none" onclick="closeModal()"></div>
 
 <script>
-// ─── PRODUCT DATA ───
-const PRODUCTS = [
-  {
-    id:1, cat:'desk',
-    name:'Adjustable Aluminum Laptop Stand',
-    short:'6 heights, fits 10–17", folds flat. Fixes neck pain instantly.',
-    price:'$27.99', orig:'$39.99', save:'Save 30%',
-    badge:'Bestseller', badgeType:'b-blue',
-    stars:'★★★★★', reviews:'(247)', sold:'1,200+',
-    desc:'It\'s 9pm. Your neck is stiff. You\'ve been hunching over your laptop since morning. The FocusForge Laptop Stand lifts your screen to eye level in seconds — 6 height settings, aircraft-grade aluminum, folds flat in 3 seconds.',
-    benefits:['<strong>Fix neck pain today</strong> — raises screen to exact eye level','<strong>6 height settings</strong> — sitting, standing, anywhere in between','<strong>Aircraft-grade aluminum</strong> — sturdy, lightweight, built to last','<strong>Fits 10–17" laptops</strong> — MacBook, Dell, HP, Lenovo, Surface','<strong>Folds flat in 3 seconds</strong> — travels in your laptop bag'],
-    specs:[['Material','Aircraft-grade aluminum'],['Heights','6 positions (15–32cm)'],['Compatibility','10–17" laptops'],['Max Load','10 kg'],['Folded Size','26×21×2cm'],['Weight','380g']],
-    img:'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=85','https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600&q=85','https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=85','https://images.unsplash.com/photo-1547082299-de196ea013d6?w=600&q=85']
-  },
-  {
-    id:2, cat:'lighting',
-    name:'LED Desk Lamp — Eye-Care Dimmable',
-    short:'3 color temps · 10 brightness levels · USB-C power',
-    price:'$24.99', orig:'$34.99', save:'Save 28%',
-    badge:'Trending', badgeType:'b-gold',
-    stars:'★★★★★', reviews:'(189)', sold:'900+',
-    desc:'Stop squinting at your screen by 3pm. The FocusForge LED Lamp gives you exact light for every situation — warm for evenings, cool for focus, neutral for video calls. Touch controls, 10 levels, USB-C powered.',
-    benefits:['<strong>3 color temperatures</strong> — warm 3000K, natural 4500K, cool 6500K','<strong>10 brightness levels</strong> — from cozy glow to full focus mode','<strong>USB-C powered</strong> — plug into laptop, hub or any port','<strong>Touch controls</strong> — no fumbling with switches','<strong>Eye-care certified</strong> — flicker-free technology'],
-    specs:[['Color Temps','3000K / 4500K / 6500K'],['Brightness','10 levels'],['Power','USB-C, 5W'],['Cable Length','1.5m'],['Control','Touch button'],['Life','50,000 hours']],
-    img:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=85','https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=85','https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=85']
-  },
-  {
-    id:3, cat:'cable',
-    name:'Magnetic Cable Clips 5-Pack',
-    short:'1 min install. Sticks anywhere. Holds any cable.',
-    price:'$17.99', orig:'$24.99', save:'Save 28%',
-    badge:'Impulse Buy', badgeType:'b-purple',
-    stars:'★★★★☆', reviews:'(312)', sold:'2,100+',
-    desc:'You glance at your desk and there it is: a jungle of cables. Five magnetic clips, one minute to install — your cables stay exactly where you put them, routed neatly, always in reach, never in a knot.',
-    benefits:['<strong>Strong magnetic hold</strong> — cables stay put, no slipping','<strong>3M adhesive backing</strong> — sticks to wood, glass, metal, plastic','<strong>Fits cables up to 8mm</strong> — USB-C, Lightning, HDMI and more','<strong>Removable without residue</strong> — renter-friendly','<strong>5 clips per pack</strong> — enough for your full setup'],
-    specs:[['Quantity','5 clips per pack'],['Adhesive','3M VHB tape'],['Max Cable Diameter','8mm'],['Material','ABS + Magnet'],['Removable','Yes, no residue']],
-    img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85','https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&q=85']
-  },
-  {
-    id:4, cat:'ergonomics',
-    name:'Memory Foam Wrist Rest — Full Mouse Pad',
-    short:'Memory foam · Non-slip · Washable · Anti-RSI',
-    price:'$26.99', orig:'$36.99', save:'Save 27%',
-    badge:'Pain Relief', badgeType:'b-green',
-    stars:'★★★★★', reviews:'(156)', sold:'780+',
-    desc:'Six, seven, eight hours of typing. Your wrist pressing against a hard desk edge all day. The tingling starts around 4pm. Memory foam that molds to your wrist + non-slip base that stays planted = wrists that feel fine at 6pm.',
-    benefits:['<strong>High-density memory foam</strong> — supports without squishing','<strong>Extended 31×10cm surface</strong> — full mouse pad area','<strong>Non-slip rubber base</strong> — stays in place during long sessions','<strong>Washable lycra cover</strong> — stays fresh, stays clean','<strong>Compatible with any mouse</strong> — wired, wireless, any size'],
-    specs:[['Dimensions','31×10cm'],['Fill','High-density memory foam'],['Base','Non-slip rubber'],['Cover','Washable lycra'],['Compatibility','Any mouse/keyboard']],
-    img:'https://images.unsplash.com/photo-1612532720891-e3fb85b13c26?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1612532720891-e3fb85b13c26?w=600&q=85','https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&q=85']
-  },
-  {
-    id:5, cat:'desk',
-    name:'Wood Monitor Stand with Storage Drawer',
-    short:'Raises monitor to eye level · Hidden drawer · USB hub',
-    price:'$34.99', orig:'$49.99', save:'Save 30%',
-    badge:'New', badgeType:'b-blue',
-    stars:'★★★★★', reviews:'(98)', sold:'420+',
-    desc:'Elevate your monitor to eye level and unlock hidden storage in one move. Natural bamboo construction, integrated drawer for small items, cable routing slot to keep everything tidy.',
-    benefits:['<strong>Monitor to eye level</strong> — eliminates neck strain for dual-screen setups','<strong>Hidden drawer</strong> — stash pens, cables, cards, drives','<strong>Natural bamboo</strong> — durable, eco-friendly, looks premium','<strong>Cable routing slot</strong> — keeps wires hidden and organized','<strong>Fits monitors up to 27"</strong> and most laptops'],
-    specs:[['Material','Bamboo wood'],['Monitor Size','Up to 27"'],['Load Capacity','15kg'],['Drawer','1 sliding drawer'],['Dimensions','40×23×10cm']],
-    img:'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=85','https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=600&q=85']
-  },
-  {
-    id:6, cat:'cable',
-    name:'Under-Desk Cable Management Box',
-    short:'Hides power strips · Velcro straps included · Mounts under desk',
-    price:'$22.99', orig:'$29.99', save:'Save 23%',
-    badge:'Clean Desk', badgeType:'b-blue',
-    stars:'★★★★☆', reviews:'(204)', sold:'1,050+',
-    desc:'Hide every cord, strip and adapter in one sleek box that mounts under your desk. No more cable mess on your floor or desk surface. Comes with 3 velcro cable ties.',
-    benefits:['<strong>Hides power strip completely</strong> — no visible cord clutter','<strong>Mounts under desk</strong> — frees up floor and desk space','<strong>Includes 3 velcro ties</strong> — bundle and route cables inside','<strong>1.5m openings</strong> — cables exit cleanly from both ends','<strong>Easy to access</strong> — lid pops open for plugging/unplugging'],
-    specs:[['Dimensions','38×11×7cm'],['Mount','Under-desk adhesive or screw'],['Includes','Box + 3 velcro ties'],['Material','ABS plastic'],['Color','Matte white / black']],
-    img:'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&q=85','https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85']
-  },
-  {
-    id:7, cat:'desk',
-    name:'Flexible Gooseneck Phone Holder',
-    short:'360° bendable arm · Clamps to desk · Any phone size',
-    price:'$19.99', orig:'$27.99', save:'Save 28%',
-    badge:'TikTok Fav', badgeType:'b-purple',
-    stars:'★★★★★', reviews:'(287)', sold:'1,800+',
-    desc:'Always have your phone at the perfect angle without taking up desk space. Flexible gooseneck adjusts to any position, desk clamp fits any desk up to 6cm thick. Great for video calls, recipe viewing, TikTok filming.',
-    benefits:['<strong>360° flexible arm</strong> — adjust to literally any angle','<strong>Strong desk clamp</strong> — fits desks up to 6cm thick','<strong>Universal phone fit</strong> — 4.5"–7" phones with or without case','<strong>No sticky residue</strong> — clamp is gentle on desk surfaces','<strong>Perfect for video calls</strong> — hands-free phone positioning'],
-    specs:[['Arm Length','65cm flexible gooseneck'],['Clamp Range','0–6cm desk thickness'],['Phone Compatibility','4.5"–7"'],['Rotation','360° swivel head'],['Material','Aluminum + rubber grip']],
-    img:'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=85','https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=85']
-  },
-  {
-    id:8, cat:'desk',
-    name:'7-in-1 USB-C Hub for Laptops',
-    short:'HDMI 4K · 3×USB-A · SD card · 100W PD charging',
-    price:'$29.99', orig:'$44.99', save:'Save 33%',
-    badge:'High Value', badgeType:'b-blue',
-    stars:'★★★★★', reviews:'(321)', sold:'2,400+',
-    desc:'One port, seven connections. Connect your monitors, drives, cards and charger all at once without sacrificing laptop portability. Compatible with MacBook, Dell XPS, Surface and all USB-C laptops.',
-    benefits:['<strong>HDMI 4K@60Hz output</strong> — crystal-clear dual-screen setup','<strong>100W Power Delivery</strong> — charges your laptop while you work','<strong>3×USB-A 3.0 ports</strong> — connects mouse, keyboard, drives','<strong>SD + MicroSD card slots</strong> — for photographers and creators','<strong>Compact design</strong> — 100g, fits in any laptop bag'],
-    specs:[['Ports','HDMI 4K + 3×USB-A + 2×card + PD'],['HDMI','4K@60Hz'],['USB-A','3.0, up to 5Gbps'],['Power Delivery','100W passthrough'],['Compatibility','USB-C laptops'],['Weight','100g']],
-    img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85','https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=85']
-  },
-  {
-    id:9, cat:'ergonomics',
-    name:'Lumbar Support Back Cushion',
-    short:'Memory foam · Adjustable strap · Any chair',
-    price:'$31.99', orig:'$44.99', save:'Save 29%',
-    badge:'Back Relief', badgeType:'b-green',
-    stars:'★★★★★', reviews:'(142)', sold:'620+',
-    desc:'Lower back pain is the #1 complaint of remote workers. This contoured memory foam cushion fits any office chair or car seat and maintains the natural curve of your spine during long sessions.',
-    benefits:['<strong>Contoured memory foam</strong> — follows the curve of your spine','<strong>Adjustable strap</strong> — fits any chair, car seat, or couch','<strong>Breathable mesh cover</strong> — stays cool during long sessions','<strong>Dual density foam</strong> — firm support, soft feel','<strong>Machine washable cover</strong> — stays fresh'],
-    specs:[['Material','Dual-density memory foam'],['Cover','Breathable mesh, removable'],['Strap','Adjustable, fits all chairs'],['Dimensions','40×30×10cm'],['Weight','600g']],
-    img:'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&q=85','https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&q=85']
-  },
-  {
-    id:10, cat:'bundles',
-    name:'Clean Desk Starter Bundle',
-    short:'Laptop Stand + LED Lamp + Cable Clips · Save $16',
-    price:'$54.99', orig:'$70.97', save:'Save $16',
-    badge:'Best Value', badgeType:'b-red',
-    stars:'★★★★★', reviews:'(88)', sold:'360+',
-    desc:'The three upgrades every remote worker needs, bundled together. Laptop Stand to fix your posture, LED Lamp to fix your lighting, Cable Clips to fix your chaos. Ordered together, they arrive together.',
-    benefits:['<strong>Includes 3 products</strong> — Laptop Stand + LED Lamp + Cable Clips 5-pack','<strong>Save $16 vs buying separately</strong> — $70.97 → $54.99','<strong>Ships as one order</strong> — arrives together in 5–8 days','<strong>Best-seller trio</strong> — our most popular combination','<strong>30-day guarantee</strong> on every item in the bundle'],
-    specs:[['Includes','Laptop Stand + LED Lamp + Cable Clips'],['Total Retail','$70.97'],['Bundle Price','$54.99'],['Savings','$16 (23%)'],['Ships','As one package']],
-    img:'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=85','https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=85','https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85']
-  },
-  {
-    id:11, cat:'bundles',
-    name:'Pro Setup Bundle — 5 Products',
-    short:'Stand + Lamp + Wrist Rest + USB Hub + Cable Box · Save $27',
-    price:'$109.99', orig:'$136.95', save:'Save $27',
-    badge:'Pro Pick', badgeType:'b-red',
-    stars:'★★★★★', reviews:'(44)', sold:'180+',
-    desc:'The complete professional remote workspace in one order. Everything a serious freelancer or remote professional needs to build a fast, ergonomic, tidy desk. Ships together, arrives together.',
-    benefits:['<strong>5 products</strong> — Stand + Lamp + Wrist Rest + USB Hub + Cable Box','<strong>Save $27 vs buying separately</strong>','<strong>Full ergonomics upgrade</strong> — posture, lighting, wrists all covered','<strong>Productivity upgrade</strong> — USB hub + cable management','<strong>30-day guarantee</strong> on everything'],
-    specs:[['Includes','5 products (see above)'],['Total Retail','$136.95'],['Bundle Price','$109.99'],['Savings','$27 (20%)']],
-    img:'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=85',
-    imgs:['https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=85','https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=85']
-  }
+/* ══════════════ AFFILIATE CONFIG ══════════════ */
+/* 🔧 MUUTA VAIN TÄMÄ — Add your AliExpress tracking ID here once! */
+const ALI_TRACKING_ID = 'YOUR_TRACKING_ID'; // ← Korvaa omalla ID:lläsi
+/* All affiliate links are built automatically from this ID */
+function aliLink(productId){
+  return `https://www.aliexpress.com/item/${productId}.html?aff_fcid=${ALI_TRACKING_ID}&aff_platform=default&aff_trace_key=&terminal_id=&afSmartRedirect=y`;
+}
+
+/* ══════════════ DATA ══════════════ */
+const IMGS={
+  iphone:'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500&h=375&fit=crop',
+  macbook:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&h=375&fit=crop',
+  robot:'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500&h=375&fit=crop',
+  nike:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=375&fit=crop',
+  shelf:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=375&fit=crop',
+  coffee:'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&h=375&fit=crop',
+  office:'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=500&h=375&fit=crop',
+  guitar:'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=500&h=375&fit=crop',
+  tv:'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=500&h=375&fit=crop',
+  jacket:'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500&h=375&fit=crop',
+  factory:'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&h=375&fit=crop',
+  kindle:'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&h=375&fit=crop',
+  bike:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=375&fit=crop',
+  watch:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=375&fit=crop',
+  headphones:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=375&fit=crop',
+  camera:'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&h=375&fit=crop',
+  sofa:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=375&fit=crop',
+  plants:'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500&h=375&fit=crop'
+};
+const PICKLIST=Object.values(IMGS);
+const CATS=['Kaikki','Elektroniikka','Urheilu','Koti & Sisustus','Vaatteet','Ruoka & Juoma','Kirjat & Media','Teollisuus','Toimisto','Musiikki'];
+const TTYPES=[{k:'all',l:'Kaikki'},{k:'b2c',l:'Yrityksiltä'},{k:'c2c',l:'Yksityisiltä'},{k:'b2b',l:'Tukkumyynti'}];
+const TI={b2c:{label:'Yritys',color:'#2E8DC8'},c2c:{label:'Yksityinen',color:'#19a464'},b2b:{label:'Tukku',color:'#c0621a'}};
+const STMAP={processing:{cls:'st-p',l:'Käsitellään'},shipped:{cls:'st-s',l:'Lähetetty'},delivered:{cls:'st-d',l:'Toimitettu'}};
+
+let PRODUCTS=[
+  {id:1,name:'iPhone 15 Pro',price:1299,origPrice:1499,seller:'TechStore Oy',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:342,img:IMGS.iphone,inStock:true,badge:'-13%',desc:'Tehokas iPhone 15 Pro titaniumrungolla ja A17 Pro -prosessorilla. 48 MP kamerajärjestelmä, USB-C-liitäntä ja Action-painike. Saatavilla 128–1TB.'},
+  {id:2,name:'MacBook Air M2 – käytetty',price:890,seller:'Mikko K.',sid:'s2',type:'c2c',cat:'Elektroniikka',rating:4.5,reviews:12,img:IMGS.macbook,inStock:true,desc:'Erittäin hyväkuntoinen MacBook Air M2, ostettu 2023. Akun kapasiteetti 94%. Mukana alkuperäinen laturi. Naarmu vasemmassa kulmassa, toimii täydellisesti.'},
+  {id:3,name:'Teollisuusrobotti ARM-500 (50 kpl)',price:45000,seller:'RobotiikkaFin Oy',sid:'s3',type:'b2b',cat:'Teollisuus',rating:4.9,reviews:8,img:IMGS.robot,inStock:true,badge:'Tukku',desc:'Tukkulot 50 kpl teollisuusrobotteja kokoonpanolinjalle. Kantavuus 5 kg, toimintasäde 900 mm. Sisältää asennuksen ja koulutuksen. ISO 10218-sertifioitu.'},
+  {id:4,name:'Nike Air Max 2024',price:129,origPrice:159,seller:'SportShop Finland',sid:'s4',type:'b2c',cat:'Urheilu',rating:4.6,reviews:89,img:IMGS.nike,inStock:true,badge:'-19%',desc:'Uusi Nike Air Max 2024 -juoksukenkä maksimoidulla ilmatyynyllä. Täydellinen päivittäiseen treenaamiseen. Saatavilla koot 38–47.'},
+  {id:5,name:'IKEA Kallax 4×4 hylly',price:79,seller:'Anna M.',sid:'s5',type:'c2c',cat:'Koti & Sisustus',rating:4.3,reviews:5,img:IMGS.shelf,inStock:true,desc:'Valkoinen IKEA Kallax 147×147 cm. Erittäin hyvässä kunnossa, alle 2 vuotta vanha. Noudettavissa Helsingistä, Käpylä.'},
+  {id:6,name:'Specialty Coffee – kuukausitilaus',price:9,seller:'Kahvila Artisan',sid:'s6',type:'b2c',cat:'Ruoka & Juoma',rating:4.9,reviews:203,img:IMGS.coffee,inStock:true,badge:'Suosittu',desc:'Kuukausitilaus erikoiskahveille. Joka kuukausi uusi single origin -paahto. 250 g / kk. Peruutettavissa milloin tahansa.'},
+  {id:7,name:'Toimistotarvike-erä 500 kpl',price:1200,seller:'OfficeSupply Pro',sid:'s7',type:'b2b',cat:'Toimisto',rating:4.7,reviews:34,img:IMGS.office,inStock:true,badge:'B2B',desc:'Kattava toimistopaketti 500 kappaletta: kynät, vihkot, mapit, niittikoneet, tussit. Soveltuu 20–30 hengen yrityksille.'},
+  {id:8,name:'Vintage kitara – Fender 1975',price:2400,seller:'Jari H.',sid:'s8',type:'c2c',cat:'Musiikki',rating:5.0,reviews:3,img:IMGS.guitar,inStock:true,badge:'Harvinainen',desc:'Alkuperäinen Fender Stratocaster vuodelta 1975, sunburst-väri. Kaikki osat alkuperäisiä. Sisältää tweed-kotelon.'},
+  {id:9,name:'Samsung 4K OLED 65"',price:1599,origPrice:1899,seller:'ElektroniikkaMaailma',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:156,img:IMGS.tv,inStock:false,desc:'Samsung S90C 65" QD-OLED. 4K 120Hz, Dolby Atmos, HDR10+, Google TV.'},
+  {id:10,name:'Lasten talvitakki 128 cm',price:45,seller:'Eeva S.',sid:'s9',type:'c2c',cat:'Vaatteet',rating:4.4,reviews:7,img:IMGS.jacket,inStock:true,desc:'Reima-lasten talvitakki, koko 128. Käytetty yhden talvikauden. Vedenpitävä. Noudettavissa Tampereelta.'},
+  {id:11,name:'Teollisuuskuitu – sopimustoimitus',price:15000,seller:'PaperCo Finland',sid:'s10',type:'b2b',cat:'Teollisuus',rating:4.8,reviews:12,img:IMGS.factory,inStock:true,desc:'Kuukausittainen paperikuitutoimitus tehtaille. FSC- ja PEFC-sertifioitu. Minimierä 5 tn/kk.'},
+  {id:12,name:'Kindle Paperwhite 2023',price:149,origPrice:179,seller:'KirjaShop',sid:'s11',type:'b2c',cat:'Kirjat & Media',rating:4.6,reviews:67,img:IMGS.kindle,inStock:true,desc:'6,8" näyttö, 300 ppi, vedenpitävä IPX8. USB-C-lataus. 16 Gt.'},
+  {id:13,name:'Trek Marlin 5 maastopyörä',price:599,origPrice:749,seller:'PyrätPlus',sid:'s12',type:'b2c',cat:'Urheilu',rating:4.7,reviews:41,img:IMGS.bike,inStock:true,badge:'-20%',desc:'Trek Marlin 5, koko M, 2023. 21-vaihteinen, levyjarrut. Erittäin hyvässä kunnossa.'},
+  {id:14,name:'Apple Watch Series 9',price:449,seller:'TechStore Oy',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:88,img:IMGS.watch,inStock:true,desc:'Apple Watch Series 9, 45mm, GPS, alumiini/urheiluranneke.'},
+  {id:15,name:'Sony WH-1000XM5 kuulokkeet',price:299,origPrice:379,seller:'ElektroniikkaMaailma',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.9,reviews:201,img:IMGS.headphones,inStock:true,badge:'-21%',desc:'Maailman paras aktiivinen melunvaimennus. 30h akunkesto. USB-C.'},
+  {id:16,name:'Sony A7 IV kamera',price:2699,seller:'Lauri V.',sid:'s13',type:'c2c',cat:'Elektroniikka',rating:4.8,reviews:6,img:IMGS.camera,inStock:true,badge:'Lähes uusi',desc:'Sony A7 IV täyskenno, alle 3000 laukaisua. Ilman objektiivia.'},
+  /* ── AliExpress Affiliate Products — auto-linked ── */
+  {id:50,name:'Xiaomi Redmi Watch 4 Älykello',price:49,origPrice:79,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:12840,img:'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Xiaomi Redmi Watch 4 – AMOLED-näyttö, GPS, 20 vrk akunkesto, 150+ harjoitustilaa, vedenpitävä 5ATM.',affiliateUrl: aliLink('1005006333464870')},
+  {id:51,name:'Baseus 65W GaN Pikalaturi 3-portti',price:18,origPrice:35,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.9,reviews:45230,img:'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Baseus 65W GaN-laturi: 2× USB-C + 1× USB-A. Lataa MacBook, iPad ja puhelin samanaikaisesti. Taittuva pistoke.',affiliateUrl: aliLink('1005005865292025')},
+  {id:52,name:'Anker Soundcore P20i Langattomat Nappikuulokkeet',price:22,origPrice:40,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:28900,img:'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Anker Soundcore P20i – 10h toisto, IPX5-vedenpitävä, mukautuvat silikonikorvapidikkeet, BT 5.3.',affiliateUrl: aliLink('1005005060645625')},
+  {id:53,name:'Ugreen USB-C Hub 7-in-1',price:25,origPrice:42,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:19500,img:'https://images.unsplash.com/photo-1625948515291-69613eec5b1a?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Ugreen 7-in-1 USB-C Hub: 4K HDMI, 100W PD lataus, 3× USB-A, SD & microSD. Sopii MacBook ja Windows.',affiliateUrl: aliLink('1005004376619892')},
+  {id:54,name:'Xiaomi Mi Band 8 Aktiivisuusranneke',price:29,origPrice:49,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:33100,img:'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Xiaomi Mi Band 8 – 1.62" AMOLED, 16 vrk akunkesto, SpO2, stressinseuranta, 150 harjoitustilaa.',affiliateUrl: aliLink('1005005990027509')},
+  {id:55,name:'Tronsmart T7 Mini Bluetooth Kaiutin',price:26,origPrice:45,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.6,reviews:9870,img:'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'IPX7-vedenpitävä Bluetooth 5.3 -kaiutin, 15W stereo, 24h toisto, NFC-yhteys. Sopii retkeilyyn.',affiliateUrl: aliLink('1005005645170528')},
+  {id:56,name:'Baseus Magnetic MagSafe Autoalusta',price:14,origPrice:28,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:22400,img:'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Magneettinen autopuhelinpidike MagSafe-yhteensopiva. 360° pyöritys, helppo kiinnitys tuuletusaukkoon.',affiliateUrl: aliLink('1005004279285567')},
+  {id:57,name:'Gaming Hiiri 6400 DPI RGB',price:12,origPrice:25,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.6,reviews:31200,img:'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Langallinen gaming-hiiri 6400 DPI, 7 nappia, RGB-valaistus, ergonominen muotoilu. Plug & play.',affiliateUrl: aliLink('1005004285313756')},
+  {id:58,name:'LED Strip 5m RGB 2835 + Kaukosäädin',price:8,origPrice:18,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.5,reviews:67800,img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'5m RGB LED-nauha 300 LEDiä, 44-napinen kaukosäädin, itsekiinnittyvä tausta. Sopii huoneen tunnelmavalaistukseen.',affiliateUrl: aliLink('1005003936252232')},
+  {id:59,name:'Xiaomi Desk Lamp Pro Pöytälamppu',price:35,origPrice:55,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.8,reviews:14300,img:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Xiaomi älykkäs pöytälamppu, 5 värilämpötilaa, 5 kirkkaustasoa, USB-latausportti, silmäystävällinen valo.',affiliateUrl: aliLink('1005003052068359')},
+  {id:70,name:'Puutarha Vedenpitävä Aurinkoenergia LED-Valot 10kpl',price:9,origPrice:20,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.5,reviews:42100,img:'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'10 kpl aurinkokennovalaistus puutarhaan, IP65-vedenpitävä, automaattinen päällä/pois, 8h toisto.',affiliateUrl: aliLink('1005004600148498')},
+  {id:71,name:'Lazy Sofa Bean Bag Täytettävä Säkki',price:45,origPrice:80,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.6,reviews:8700,img:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Pehmeä säkkituoli, täytettävä, vedenpitävä Oxford-kangas, saatavilla useissa väreissä. Koko perheelle.',affiliateUrl: aliLink('1005003942312345')},
+  {id:72,name:'Miesten Taktinen Cargo Shortsi',price:18,origPrice:35,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:18900,img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Miesten cargo-shortsit useilla taskuilla, hengittävä materiaali, saatavilla M–3XL. Sopii retkeilyyn ja arkeen.',affiliateUrl: aliLink('1005004592931733')},
+  {id:73,name:'Naisten Oversized Huppari Y2K',price:16,origPrice:30,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Vaatteet',rating:4.5,reviews:23400,img:'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Ylisuuri huppari naisille, pehmeä fleece, kirjailtu logo, kengurukäytäntö. XS–2XL, useita värejä.',affiliateUrl: aliLink('1005005399182940')},
+  {id:74,name:'Miesten Lenkkarit Kevyt Juoksukenkä',price:28,origPrice:55,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:31200,img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Kevyet juoksukengät, hengittävä mesh-pinta, paksunnettu vaahtopohjallinen, liukumaton pohja. Koot 39–46.',affiliateUrl: aliLink('1005004456789123')},
+  {id:75,name:'Naisten Pilates Leggingsit Korkea Vyötärö',price:12,origPrice:25,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Vaatteet',rating:4.7,reviews:45600,img:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Korkeavyötäröiset pilates-leggingsit, 4-suuntainen jousto, läpinäkymätön, saatavilla XS–XXL.',affiliateUrl: aliLink('1005004271832901')},
+  {id:76,name:'Tactical Fitness Treenihanskat',price:11,origPrice:22,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.5,reviews:6540,img:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Puolisormi-kuntosalihanskat, tartuntapinta, rannetuki. XS–XXL, sopii kaikille harjoittelijoille.',affiliateUrl: aliLink('1005003992847162')},
+  {id:77,name:'Vaellusreppu 50L Vedenpitävä',price:38,origPrice:70,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.7,reviews:12300,img:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'50L vaellusreppu, vedenpitävä nylon, ergonominen selkänoja, piilotettu sadetakki. Sopii retkeilyyn ja matkailuun.',affiliateUrl: aliLink('1005004873621450')},
+  {id:78,name:'Hyppynaru Nopeus Laskuri',price:7,origPrice:15,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.6,reviews:28900,img:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Digitaalinen hyppynaru laskurilla, säädettävä pituus, vaahtomuovikahvat, sopii kaikentasoisille.',affiliateUrl: aliLink('1005003842716253')},
+  {id:79,name:'Yoga Matto 6mm Liukumaton TPE',price:19,origPrice:38,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.8,reviews:19800,img:'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'6mm TPE-joogamatto, molemmin puolin liukumaton, kantohihna mukana. 183×61cm. Ympäristöystävällinen.',affiliateUrl: aliLink('1005004102938471')},
+  {id:80,name:'Mini Projektor 4K WiFi Bluetooth',price:89,origPrice:150,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.6,reviews:7800,img:'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Mini kotiprojektori, 4K-tuki, WiFi + BT, 200" projisointikoko, Android käyttöjärjestelmä, 3h akku.',affiliateUrl: aliLink('1005005234819402')},
+  {id:81,name:'Mekaaninen Näppäimistö RGB TKL',price:35,origPrice:65,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:14500,img:'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'TKL mekaaninen pelinäppäimistö, RGB-taustavalaistus, hotswap-kytkimet, alumiinipohja.',affiliateUrl: aliLink('1005003894721038')},
+  {id:82,name:'Kahvakuula 16kg Kilpa Malli',price:22,origPrice:40,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Urheilu',rating:4.8,reviews:9200,img:'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'16kg kilpaurheilukahvakuula, yhtenäinen valurauta, tasainen pohja. Sopii CrossFit ja kotisalille.',affiliateUrl: aliLink('1005004018273645')},
+  {id:83,name:'Aromadiffuusori 500ml Ultraääninen',price:15,origPrice:30,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.7,reviews:32100,img:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'500ml ultraääninen aromadiffuusori, 7-väri LED, ajastin, automaattinen sammutus. Hiljainen käyttö.',affiliateUrl: aliLink('1005003762918304')},
+  {id:84,name:'Sähköinen Hammasharja Soninen',price:14,origPrice:30,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.6,reviews:41200,img:'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Soninen sähköhammasharja, 5 tilaa, 4 harjaspäätä mukana, 30-sekunnin ajastin, USB-lataus.',affiliateUrl: aliLink('1005004567123890')},
+  {id:85,name:'Tietokonepöytä L-muoto 120cm',price:79,origPrice:140,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.7,reviews:6700,img:'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'L-muotoinen kotitoimistopöytä 120×60cm, kaapelinhallintatarvikkeet mukana, metalli+MDF, helppo koota.',affiliateUrl: aliLink('1005004892736150')},
+  {id:86,name:'Ergonominen Toimistotuoli Selkänojalla',price:95,origPrice:180,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.6,reviews:8900,img:'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Ergonominen verkkotuoli, säädettävä selkänoja ja niskatuki, 4D-käsinojat, pyörät kovalle lattialle.',affiliateUrl: aliLink('1005003912847362')},
+  {id:87,name:'Lasten RC Auto 4WD Off-Road',price:29,origPrice:55,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.7,reviews:15600,img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Lasten kauko-ohjattava auto 4WD, 2.4GHz, max 20 km/h, 360° kääntyminen, ladattava akku. 6v+.',affiliateUrl: aliLink('1005005102938471')},
+  {id:88,name:'Keittiövaaka Digitaalinen 5kg',price:8,origPrice:18,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.8,reviews:52300,img:'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'Digitaalinen keittiövaaka 0.1g tarkkuus, max 5kg, tara-toiminto, LCD-näyttö, paristot mukana.',affiliateUrl: aliLink('1005003871629048')},
+  {id:89,name:'Metalliset Ruoanlaittovälineet 6kpl Setti',price:16,origPrice:32,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.6,reviews:22800,img:'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'6-osainen ruoanlaittosetti: 304 ruostumaton teräs, silikonipäätykset, astianpesukoneen kestävä.',affiliateUrl: aliLink('1005004217384920')},
+  /* ── ABOUT YOU Affiliate Products ── */
+  {id:60,name:"Levi's 501 Original Farkut",price:99,origPrice:119,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.7,reviews:8420,img:'https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:"Klassiset Levi's 501 Original -farkut suoralla leikkauksella. Ajaton design, korkealaatuinen denim. Saatavilla koot 24-36, pituudet 28-34.",affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
+  {id:61,name:'Nike Air Force 1 Tennarit',price:109,origPrice:129,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.8,reviews:15630,img:'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:'Nike Air Force 1 – ikoninen tennari vuodesta 1982. Nahkapinnoite, Air-iskunvaimennus. Saatavilla koot 36-47.',affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
+  {id:62,name:'Tommy Hilfiger Essential Huppari',price:79,origPrice:109,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:4210,img:'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:'Tommy Hilfiger logohuppari pehmeasta fleece-materiaalista. Etutasku, saadettava huppu. Saatavilla XS-XXL.',affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
+  {id:63,name:'Adidas Originals Trefoil T-paita',price:35,origPrice:45,seller:'ABOUT YOU',sid:'s_ay',type:'b2c',cat:'Vaatteet',rating:4.5,reviews:6780,img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=375&fit=crop',inStock:true,badge:'AY',desc:'Adidas Originals klassinen Trefoil-t-paita puuvillasta. Ikoninen logo rinnassa. Saatavilla XS-XXL.',affiliateUrl:'https://track.adtraction.com/KORVAA_OMALLA_AY_LINKILLA'},
+];
+const SELLERS={
+  s1:{name:'TechStore Oy',type:'b2c',rating:4.8,sales:1842,joined:'Tammikuu 2020',desc:'Suomen johtava verkkoelektroniikka. 24 kk takuu, 30 vrk palautusoikeus.',av:'TS',abg:'#dbeafe',ac:'#1d4ed8'},
+  s2:{name:'Mikko K.',type:'c2c',rating:4.5,sales:8,joined:'Maaliskuu 2023',desc:'Yksityinen myyjä Helsingistä. Hinnat neuvoteltavissa.',av:'MK',abg:'#d1fae5',ac:'#059669'},
+  s3:{name:'RobotiikkaFin Oy',type:'b2b',rating:4.9,sales:94,joined:'Kesäkuu 2018',desc:'Teollisuusrobotiikan johtava toimittaja Pohjoismaissa. ISO-sertifioitu.',av:'RF',abg:'#ede9fe',ac:'#7c3aed'},
+  s4:{name:'SportShop Finland',type:'b2c',rating:4.6,sales:3241,joined:'Elokuu 2019',desc:'Urheilun erikoisliike. Nike, Adidas, Salomon.',av:'SF',abg:'#dbeafe',ac:'#1d4ed8'},
+  s5:{name:'Anna M.',type:'c2c',rating:4.3,sales:15,joined:'Tammikuu 2024',desc:'Käytettyjä huonekaluja. Nouto Helsingistä.',av:'AM',abg:'#d1fae5',ac:'#059669'},
+  s6:{name:'Kahvila Artisan',type:'b2c',rating:4.9,sales:876,joined:'Huhtikuu 2021',desc:'Oma paahtiamo Kalliossa. Cup of Excellence -tason kahvit.',av:'KA',abg:'#fef3c7',ac:'#92400e'},
+  s7:{name:'OfficeSupply Pro',type:'b2b',rating:4.7,sales:412,joined:'Maaliskuu 2017',desc:'B2B toimistotarvikkeet yrityksille. Lasku 30 pv.',av:'OP',abg:'#ede9fe',ac:'#7c3aed'},
+  s8:{name:'Jari H.',type:'c2c',rating:5.0,sales:4,joined:'Lokakuu 2022',desc:'Keräilijä 30+ vuotta. Vain aitoja instrumentteja.',av:'JH',abg:'#d1fae5',ac:'#059669'},
+  s9:{name:'Eeva S.',type:'c2c',rating:4.4,sales:23,joined:'Kesäkuu 2023',desc:'Lasten vaatteet. Nopeat toimitukset.',av:'ES',abg:'#d1fae5',ac:'#059669'},
+  s10:{name:'PaperCo Finland',type:'b2b',rating:4.8,sales:201,joined:'Helmikuu 2015',desc:'Paperikuitutoimittaja teollisuudelle. FSC/PEFC.',av:'PC',abg:'#ede9fe',ac:'#7c3aed'},
+  s11:{name:'KirjaShop',type:'b2c',rating:4.6,sales:567,joined:'Syyskuu 2020',desc:'Kirjat ja e-lukijat. Ilmainen toimitus 30 €+.',av:'KS',abg:'#dbeafe',ac:'#1d4ed8'},
+  s12:{name:'PyrätPlus',type:'b2c',rating:4.7,sales:312,joined:'Helmikuu 2021',desc:'Pyörien erikoisliike. Trek, Giant, Specialized.',av:'PP',abg:'#dbeafe',ac:'#1d4ed8'},
+  s13:{name:'Lauri V.',type:'c2c',rating:4.8,sales:6,joined:'Marraskuu 2023',desc:'Valokuvaaja myymässä kalustoaan.',av:'LV',abg:'#d1fae5',ac:'#059669'},
+  s_ali:{name:'AliExpress Partner',type:'b2c',rating:4.6,sales:2500000,joined:'Tammikuu 2010',desc:'Affiliate-kumppani. Tuotteet toimitetaan suoraan AliExpressistä maailmanlaajuisesti. Klikkaa ostopainiketta siirtyäksesi AliExpressiin. Ostoksesi tukee FocusForge.Shopin ylläpitoa.',av:'AE',abg:'#fee2e2',ac:'#e11d48'},
+  s_ay:{name:'ABOUT YOU',type:'b2c',rating:4.7,sales:850000,joined:'Tammikuu 2014',desc:'ABOUT YOU on yli 1500 huippumerkin muotikauppa. Nike, Adidas, Levi\'s, Calvin Klein, Tommy Hilfiger ja paljon muuta. Ilmainen toimitus yli 34,90 € tilauksista. 30 vrk palautusoikeus. Ostoksesi tukee FocusForge.Shopin ylläpitoa.',av:'AY',abg:'#f3e8ff',ac:'#7c3aed'},
+};
+const REVS={
+  1:[{n:'Petri V.',r:5,t:'Loistava puhelin, kamera on huikea! Toimitus nopeaa.',d:'15.3.2025'},{n:'Liisa M.',r:5,t:'Titaniumrunko tuntuu laadukkaalta. Suosittelen.',d:'2.2.2025'}],
+  4:[{n:'Sari P.',r:5,t:'Täydellinen juoksukenkä! Iskunvaimennus upea.',d:'20.3.2025'}],
+  6:[{n:'Aino H.',r:5,t:'Etiopian single origin oli parasta kahvia ikinä!',d:'18.3.2025'},{n:'Matti K.',r:5,t:'Suosittelen kovasti!',d:'1.3.2025'}],
+  8:[{n:'Eero N.',r:5,t:'Täysin aito ja erinomaisessa kunnossa.',d:'22.1.2025'}],
+  15:[{n:'Kaisa T.',r:5,t:'Paras melunvaimennus mitä olen kuullut!',d:'10.3.2025'}],
+};
+const NOTIFS=[
+  {id:1,icon:'📦',title:'Tilaus lähetetty',sub:'Tilauksesi #NS-48291 on matkalla. Arvioitu saapuminen 2 vrk.',time:'Tänään 10:42',read:false},
+  {id:2,icon:'💬',title:'Uusi viesti',sub:'Mikko K. vastasi: "Kyllä, laturi on mukana."',time:'Eilen 16:20',read:false},
+  {id:3,icon:'❤️',title:'Toivelistahälytys',sub:'Nike Air Max 2024 hinta laski 159 € → 129 €.',time:'Eilen 09:05',read:true},
+  {id:4,icon:'⭐',title:'Arvostele ostoksesi',sub:'Mitä mieltä olit iPhone 15 Pro -ostoksestasi?',time:'2 pv sitten',read:true},
+  {id:5,icon:'🏷️',title:'Tarjous hyväksytty',sub:'Myyjä hyväksyi tarjouksesi IKEA Kallax -hyllystä.',time:'3 pv sitten',read:true},
+];
+const CONVS=[
+  {id:'c1',with:'Mikko K.',sid:'s2',prod:'MacBook Air M2',av:'MK',abg:'#d1fae5',ac:'#059669',unread:true,msgs:[{me:false,txt:'Hei! Onko laturi vielä mukana?',t:'Eilen 15:55'},{me:true,txt:'Kyllä, alkuperäinen laturi on mukana.',t:'Eilen 16:10'},{me:false,txt:'Mahtavaa!',t:'Eilen 16:20'}]},
+  {id:'c2',with:'Jari H.',sid:'s8',prod:'Vintage kitara Fender 1975',av:'JH',abg:'#d1fae5',ac:'#059669',unread:false,msgs:[{me:true,txt:'Onko kitarassa alkuperäiset virityskoneistot?',t:'3 pv sitten'},{me:false,txt:'Kyllä, kaikki alkuperäistä!',t:'3 pv sitten'}]},
 ];
 
-let cartCount = 0;
-let qty = 1;
-let currentProduct = PRODUCTS[0];
-let currentCat = 'all';
+/* ══════════════ STATE ══════════════ */
+let nextId=200;
+let navStack=[];
+let S={
+  page:'home',selProd:null,selSeller:null,selConv:null,
+  cart:[],wishlist:[],orders:[{id:'NS-48291',date:'18.4.2025',status:'shipped',items:[{...PRODUCTS[0],qty:1}],total:1299}],
+  user:null,modal:null,cartOpen:false,
+  search:'',cat:'Kaikki',ftype:'all',sort:'suosituimmat',
+  qty:1,chkStep:1,fd:{fn:'',ln:'',addr:'',city:'',zip:''},selPay:0,
+  notifs:[...NOTIFS],convs:[...CONVS],
+  newRev:{r:0,txt:''},newMsg:'',
+  listForm:{name:'',cat:'Elektroniikka',type:'c2c',price:'',desc:'',badge:'',img:''},listDone:false,
+  dashTab:'yhteenveto',
+};
 
-function goPage(p) {
-  document.querySelectorAll('.page').forEach(x => x.classList.remove('active'));
-  document.getElementById('pg-'+p).classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+/* ══════════════ HELPERS ══════════════ */
+const $=id=>document.getElementById(id);
+function set(u){Object.assign(S,u);renderAll();}
+function fp(n){return n.toLocaleString('fi-FI',{minimumFractionDigits:2,maximumFractionDigits:2})+'\u00a0€';}
+function svgStar(sz,fill){return`<svg width="${sz}" height="${sz}" viewBox="0 0 24 24" fill="${fill}" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;}
+function stars(r,sz){return[1,2,3,4,5].map(i=>svgStar(sz||14,i<=Math.round(r)?'#F4A261':'#dce8f0')).join('');}
+function img(src,alt,cls,style){return`<img src="${src}" alt="${alt||''}" class="${cls||''}" style="${style||''}" loading="lazy" onerror="this.style.opacity=0">`;}
+function logoSVG(small){
+  const s=small?26:34;
+  return`<svg viewBox="0 0 400 400" width="${s}" height="${s}" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="20" width="360" height="360" rx="60" fill="#0F2472"/>
+    <g transform="translate(72,70) scale(4.7)" stroke="#60A5FA" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3,21 C3,11 10,7 18,7 L23,7 L26,16" stroke-width="2.8"/>
+      <path d="M26,16 L54,16 L50,43 L22,43 Z" stroke-width="2.4"/>
+      <line x1="25" y1="25" x2="52" y2="25" stroke-width="1.5"/>
+      <line x1="24" y1="34" x2="51" y2="34" stroke-width="1.5"/>
+      <line x1="36" y1="16" x2="34" y2="43" stroke-width="1.5"/>
+      <line x1="45" y1="16" x2="43" y2="43" stroke-width="1.5"/>
+      <line x1="1" y1="24" x2="14" y2="24" stroke-width="2.6"/>
+      <line x1="0" y1="34" x2="13" y2="34" stroke-width="2.0"/>
+      <circle cx="28" cy="51" r="5.2" stroke-width="2.4"/>
+      <circle cx="47" cy="51" r="5.2" stroke-width="2.4"/>
+    </g>
+  </svg>`;
+}
+function navigate(page,extra){navStack.push({page:S.page,selProd:S.selProd,selSeller:S.selSeller,selConv:S.selConv});set({page,cartOpen:false,modal:null,qty:1,...(extra||{})});}
+function goBack(){if(navStack.length){const p=navStack.pop();set({page:p.page,selProd:p.selProd,selSeller:p.selSeller,selConv:p.selConv,cartOpen:false});}else set({page:'home'});}
+function addCart(id){const p=PRODUCTS.find(x=>x.id===id);if(!p||!p.inStock)return;const ex=S.cart.find(x=>x.id===id);if(ex)ex.qty++;else S.cart.push({...p,qty:1});set({});}
+function addCartQ(id){const p=PRODUCTS.find(x=>x.id===id);if(!p)return;const ex=S.cart.find(x=>x.id===id);if(ex)ex.qty+=S.qty;else S.cart.push({...p,qty:S.qty});set({cartOpen:true});}
+function rmCart(id){S.cart=S.cart.filter(x=>x.id!==id);set({});}
+function toggleWish(id){S.wishlist=S.wishlist.includes(id)?S.wishlist.filter(x=>x!==id):[...S.wishlist,id];set({});}
+function closeCart(){set({cartOpen:false});}
+function openModal(t){set({modal:t,cartOpen:false});}
+function closeModal(){set({modal:null});}
+function doLogin(){const e=$('auth-e')?.value||'';if(!e)return;const name=e.split('@')[0].replace(/[._]/g,' ').replace(/\b\w/g,c=>c.toUpperCase());set({user:{name,email:e},modal:null});}
+function doRegister(){const n=$('reg-n')?.value||'',e=$('auth-e')?.value||'';if(!n||!e)return;set({user:{name:n,email:e},modal:null});}
+function logout(){set({user:null,page:'home'});}
+function markRead(id){const n=S.notifs.find(x=>x.id===id);if(n)n.read=true;set({});}
+function markAllRead(){S.notifs.forEach(n=>n.read=true);set({});}
+function sendMsg(){const txt=S.newMsg.trim();if(!txt||!S.selConv)return;const c=S.convs.find(x=>x.id===S.selConv);if(c){const now=new Date();c.msgs.push({me:true,txt,t:`${now.getHours()}:${String(now.getMinutes()).padStart(2,'0')}`});}S.newMsg='';set({});}
+function setRevStar(r){S.newRev.r=r;set({});}
+function submitRev(){const p=PRODUCTS.find(x=>x.id===S.selProd);if(!p||!S.newRev.r||!S.newRev.txt.trim())return;if(!REVS[p.id])REVS[p.id]=[];REVS[p.id].unshift({n:S.user?.name||'Anonyymi',r:S.newRev.r,t:S.newRev.txt,d:new Date().toLocaleDateString('fi-FI')});S.newRev={r:0,txt:''};set({});}
+function nextChk(){if(!S.fd.fn||!S.fd.addr){alert('Täytä osoitetiedot');return;}set({chkStep:2});}
+function placeOrder(){if(!S.user){openModal('login');return;}const id='NS-'+Math.floor(10000+Math.random()*90000);const total=S.cart.reduce((a,b)=>a+b.price*b.qty,0);S.orders.unshift({id,date:new Date().toLocaleDateString('fi-FI'),status:'processing',items:[...S.cart],total});S.cart=[];set({chkStep:3});}
+function startMsg(sid){const sel=SELLERS[sid];if(!sel)return;const ex=S.convs.find(c=>c.sid===sid);if(ex){navigate('messages',{selConv:ex.id});}else{const id='c'+Date.now();S.convs.unshift({id,with:sel.name,sid,prod:'Kysymys',av:sel.av,abg:sel.abg,ac:sel.ac,unread:false,msgs:[]});navigate('messages',{selConv:id});}}
+function submitListing(){const f=S.listForm;if(!f.name||!f.price)return;PRODUCTS.unshift({id:nextId++,name:f.name,price:parseInt(f.price),seller:S.user?.name||'Sinä',sid:'s2',type:f.type,cat:f.cat,rating:5.0,reviews:0,img:f.img||IMGS.camera,inStock:true,badge:f.badge||null,desc:f.desc||'Ei kuvausta.'});S.listForm={name:'',cat:'Elektroniikka',type:'c2c',price:'',desc:'',badge:'',img:''};set({listDone:true});}
+
+/* ══════════════ RENDER HEADER ══════════════ */
+function renderHeader(){
+  const cnt=S.cart.reduce((a,b)=>a+b.qty,0);
+  const unreadNtf=S.notifs.filter(x=>!x.read).length;
+  const uBlock=S.user
+    ?`<button class="ha-btn" onclick="navigate('dashboard')" style="background:#1e3a54;border-color:#2a5070"><svg viewBox="0 0 400 400" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="360" height="360" rx="60" fill="#0F2472"/><g transform="translate(72,70) scale(4.7)" stroke="#60A5FA" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3,21 C3,11 10,7 18,7 L23,7 L26,16" stroke-width="2.8"/><path d="M26,16 L54,16 L50,43 L22,43 Z" stroke-width="2.4"/><line x1="25" y1="25" x2="52" y2="25" stroke-width="1.5"/><line x1="24" y1="34" x2="51" y2="34" stroke-width="1.5"/><line x1="36" y1="16" x2="34" y2="43" stroke-width="1.5"/><line x1="45" y1="16" x2="43" y2="43" stroke-width="1.5"/><line x1="1" y1="24" x2="14" y2="24" stroke-width="2.6"/><line x1="0" y1="34" x2="13" y2="34" stroke-width="2.0"/><circle cx="28" cy="51" r="5.2" stroke-width="2.4"/><circle cx="47" cy="51" r="5.2" stroke-width="2.4"/></g></svg><span style="color:#c8e0ee;font-size:13px">${S.user.name.split(' ')[0]}</span></button><button class="ha-btn" onclick="logout()" style="font-size:11.5px;color:#6b8fa8;padding:0 10px">Poistu</button>`
+    :`<button class="ha-btn" onclick="openModal('login')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>Kirjaudu</button><button class="ha-btn primary" onclick="navigate('list')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Myy</button>`;
+  $('hdr-root').innerHTML=`
+  <header class="hdr">
+    <div class="hdr-top">
+      <div class="logo" onclick="navigate('home')" style="gap:0">
+        <svg viewBox="0 0 380 110" width="180" height="52" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+          <rect x="0" y="0" width="380" height="110" rx="14" fill="#0F2472"/>
+          <g transform="translate(22,18) scale(1.05)" stroke="#60A5FA" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3,21 C3,11 10,7 18,7 L23,7 L26,16" stroke-width="3.8"/>
+            <path d="M26,16 L54,16 L50,43 L22,43 Z" stroke-width="3.2"/>
+            <line x1="25" y1="25" x2="52" y2="25" stroke-width="2"/>
+            <line x1="24" y1="34" x2="51" y2="34" stroke-width="2"/>
+            <line x1="36" y1="16" x2="34" y2="43" stroke-width="2"/>
+            <line x1="45" y1="16" x2="43" y2="43" stroke-width="2"/>
+            <line x1="1" y1="24" x2="14" y2="24" stroke-width="3.4"/>
+            <line x1="0" y1="34" x2="13" y2="34" stroke-width="2.8"/>
+            <circle cx="28" cy="51" r="5.2" stroke-width="3"/>
+            <circle cx="47" cy="51" r="5.2" stroke-width="3"/>
+          </g>
+          <text x="98" y="55" font-family="Georgia,'Times New Roman',serif" font-size="29" font-weight="700" fill="white">FocusForge<tspan fill="#60A5FA">.Shop</tspan></text>
+          <text x="100" y="76" font-family="Arial,sans-serif" font-size="11" fill="#93C5FD" letter-spacing="4.5">PREMIUM STORE</text>
+        </svg>
+      </div>
+      <div class="hdr-search">
+        <svg class="si" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input placeholder="Hae tuotteita, myyjiä, kategorioita..." value="${S.search.replace(/"/g,'&quot;')}" oninput="S.search=this.value;S.page='home';renderAll()">
+      </div>
+      <div class="hdr-actions">
+        <button class="ha-btn" onclick="navigate('notifications')" style="position:relative">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          ${unreadNtf>0?`<span class="dot-badge"></span>`:''}
+        </button>
+        ${uBlock}
+        ${S.user?`<button class="ha-btn primary" onclick="navigate('list')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Myy</button>`:''}
+        <button class="ha-btn" onclick="S.cartOpen=!S.cartOpen;renderAll()" style="position:relative">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          ${cnt>0?`<span class="badge">${cnt}</span>`:''}
+        </button>
+      </div>
+    </div>
+  </header>`;
+
+  $('trust-root').innerHTML=`<div class="trust-bar">
+    ${[['🔒','SSL-suojattu maksaminen'],['🚚','Ilmainen toimitus 49 €+'],['↩','30 vrk palautusoikeus'],['⭐','2 847 luotettua myyjää'],['🌍','B2C · C2C · B2B'],['🛍️','AliExpress-affiliate'],['👗','ABOUT YOU -affiliate']].map(([ic,t])=>`<div class="trust-item"><span style="font-size:13px">${ic}</span>${t}</div>`).join('')}
+  </div>`;
+
+  $('tbar-root').innerHTML=TTYPES.map(t=>`<button class="nav-btn${S.ftype===t.k?' on':''}" onclick="S.ftype='${t.k}';S.page='home';renderAll()">${t.l}</button>`).join('');
 }
 
-function filterCat(cat, btn) {
-  currentCat = cat;
-  document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  else { const pills = document.querySelectorAll('.cat-pill'); pills.forEach((p,i) => { if (p.textContent.toLowerCase().includes(cat==='all'?'all':cat)) p.classList.add('active'); }); }
-  renderProducts();
+/* ══════════════ PRODUCT CARD ══════════════ */
+function cardHTML(p){
+  const t=TI[p.type],inW=S.wishlist.includes(p.id);
+  return`<div class="pcard" onclick="navigate('product',{selProd:${p.id}})">
+    <div class="pc-img">
+      ${img(p.img,p.name)}
+      ${p.badge?`<span class="pc-badge${p.badge==='Ali'?' pc-badge-ali':p.badge==='AY'?' pc-badge-ay':''}">${p.badge}</span>`:''}
+      ${!p.inStock?`<div class="pc-sold"><span>Loppunut</span></div>`:''}
+      <button class="pc-wish" onclick="event.stopPropagation();toggleWish(${p.id})">${inW?'❤️':'🤍'}</button>
+    </div>
+    <div class="pc-body">
+      <div class="pc-seller-row">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="${t.color}" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="pc-stype" style="color:${t.color}">${t.label}</span>
+        <span class="pc-sname">&nbsp;· ${p.seller}</span>
+      </div>
+      <div class="pc-name">${p.name}</div>
+      <div class="pc-stars">${stars(p.rating,12)}<span class="pc-rv">${p.rating}</span><span class="pc-rc">(${p.reviews})</span></div>
+      <div class="pc-price-row"><span class="pc-price">${p.price.toLocaleString('fi-FI')} €</span>${p.origPrice?`<span class="pc-orig">${p.origPrice} €</span>`:''}</div>
+      ${p.affiliateUrl
+        ? p.badge==='AY'
+          ? `<a class="pc-add av" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:transparent;color:#fff">🛍️ Osta ABOUT YOU:lta</a>`
+          : `<a class="pc-add av" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#e8472a,#ff6a00);border-color:transparent;color:#fff">🛍️ Osta AliExpressistä</a>`
+        : `<button class="pc-add ${p.inStock?'av':'na'}" onclick="event.stopPropagation();${p.inStock?`addCart(${p.id})`:''}">
+        ${p.inStock?'Lisää koriin':'Loppunut'}
+      </button>`}
+    </div>
+  </div>`;
 }
 
-function renderProducts() {
-  const grid = document.getElementById('productsGrid');
-  const filtered = currentCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === currentCat);
-  grid.innerHTML = filtered.map(p => `
-    <div class="pcard fu" onclick="openProduct(${p.id})">
-      <div class="pcard-badges"><span class="badge ${p.badgeType}">${p.badge}</span></div>
-      <div class="pcard-img"><img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'"/></div>
-      <div class="pcard-info">
-        <div class="pcard-stars"><span class="stars">${p.stars}</span><span class="rcount">${p.reviews}</span></div>
-        <div class="pcard-name">${p.name}</div>
-        <div class="pcard-desc">${p.short}</div>
-        <div class="pcard-foot">
-          <div class="pcard-price">${p.price} <span>${p.orig}</span></div>
-          <button class="add-btn" onclick="event.stopPropagation();addCart()">Add to Cart</button>
+/* ══════════════ HOME ══════════════ */
+function renderHome(){
+  let filt=PRODUCTS.filter(p=>(S.cat==='Kaikki'||p.cat===S.cat)&&(S.ftype==='all'||p.type===S.ftype)&&(p.name.toLowerCase().includes(S.search.toLowerCase())||p.seller.toLowerCase().includes(S.search.toLowerCase())));
+  if(S.sort==='hinta-ylos')filt=[...filt].sort((a,b)=>a.price-b.price);
+  else if(S.sort==='hinta-alas')filt=[...filt].sort((a,b)=>b.price-a.price);
+  else if(S.sort==='uusimmat')filt=[...filt].reverse();
+  const showHero=!S.search&&S.ftype==='all'&&S.cat==='Kaikki';
+  $('page-root').innerHTML=`<div class="page">
+    ${showHero?`<div class="hero">
+      <div class="hero-content">
+        <div class="hero-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Viikon suosituimmat</div>
+        <h1>Osta, myy,<br>tee <em>bisnestä</em></h1>
+        <p>FocusForge.Shop yhdistää kuluttajat, yritykset ja tukkukauppiaat yhdellä alustalla.</p>
+        <div class="hero-badges"><span class="hbadge b2c">B2C</span><span class="hbadge c2c">C2C</span><span class="hbadge b2b">B2B</span></div>
+      </div>
+      <div class="hero-emoji">🏪</div>
+    </div>
+    <div class="hero-stat-row">
+      <div class="hstat"><span class="hstat-icon">📦</span><div><div class="hstat-v">${PRODUCTS.length}+</div><div class="hstat-l">Tuotteita</div></div></div>
+      <div class="hstat"><span class="hstat-icon">👥</span><div><div class="hstat-v">2 847</div><div class="hstat-l">Myyjiä</div></div></div>
+      <div class="hstat"><span class="hstat-icon">🚚</span><div><div class="hstat-v">1 204</div><div class="hstat-l">Toimitusta/pv</div></div></div>
+    </div>`:''}
+    <div class="cats">${CATS.map(c=>`<button class="cat-btn${S.cat===c?' on':''}" onclick="S.cat='${c}';S.page='home';renderAll()">${c}</button>`).join('')}</div>
+    <div class="sort-row">
+      <span class="results-lbl">${filt.length} tuotetta${S.search?` – "${S.search}"`:''}${S.cat!=='Kaikki'?` · ${S.cat}`:''}</span>
+      <div class="sort-chips">
+        ${['suosituimmat','uusimmat','hinta-ylos','hinta-alas'].map(s=>`<button class="chip${S.sort===s?' on':''}" onclick="S.sort='${s}';renderAll()">${{suosituimmat:'Suosituimmat',uusimmat:'Uusimmat','hinta-ylos':'Halvin','hinta-alas':'Kallein'}[s]}</button>`).join('')}
+      </div>
+    </div>
+    <div class="pgrid">${!filt.length?`<div class="empty-st" style="grid-column:1/-1"><div class="empty-icon">🔍</div><div class="empty-title">Ei tuloksia</div><div class="empty-sub">Kokeile eri hakua tai suodatinta</div></div>`:filt.map(p=>cardHTML(p)).join('')}</div>
+  </div>`;
+}
+
+/* ══════════════ PRODUCT DETAIL ══════════════ */
+function renderProduct(){
+  const p=PRODUCTS.find(x=>x.id===S.selProd);if(!p)return;
+  const t=TI[p.type],sel=SELLERS[p.sid],revs=REVS[p.id]||[],inW=S.wishlist.includes(p.id);
+  $('page-root').innerHTML=`<div class="page">
+    <button class="back-btn" onclick="goBack()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>Takaisin</button>
+    <div class="pd-grid">
+      <div class="pd-img-wrap">${img(p.img,p.name)}</div>
+      <div>
+        <div class="pd-tag-row">
+          <span class="tag ${p.type}">${t.label}</span>
+          <span class="tag cat">${p.cat}</span>
+          ${p.badge?`<span class="tag badge-tag">${p.badge}</span>`:''}
+        </div>
+        <div class="pd-title">${p.name}</div>
+        <div class="pd-stars">${stars(p.rating,15)}<span style="font-size:13px;font-weight:600;color:var(--text);margin-left:4px">${p.rating}</span><span style="font-size:12px;color:var(--text3)">&nbsp;(${p.reviews} arvostelua)</span></div>
+        <div class="pd-price">${p.price.toLocaleString('fi-FI')} €</div>
+        ${p.origPrice?`<div class="pd-orig">${p.origPrice} € &nbsp;·&nbsp; Säästät ${p.origPrice-p.price} €</div>`:''}
+        <div class="pd-stock ${p.inStock?'in-s':'out-s'}">${p.inStock?'✓ Varastossa – tilaa heti':'✗ Loppunut'}</div>
+        ${p.affiliateUrl
+          ? p.badge==='AY'
+            ? `<a class="big-btn primary" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#7c3aed,#a855f7);border-color:transparent">🛍️ Osta ABOUT YOU:lta →</a>
+               <div style="font-size:11px;color:var(--text3);margin-top:6px;text-align:center;padding:6px 8px;background:#faf5ff;border-radius:6px;border:1px solid #e9d5ff">🔗 Affiliate-linkki – avautuu ABOUT YOU:hun. Ostoksesi tukee FocusForge.Shopin ylläpitoa.</div>`
+            : `<a class="big-btn primary" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#e8472a,#ff6a00);border-color:transparent">🛍️ Osta AliExpressistä →</a>
+               <div style="font-size:11px;color:var(--text3);margin-top:6px;text-align:center;padding:6px 8px;background:#fff7f5;border-radius:6px;border:1px solid #fde4dd">🔗 Affiliate-linkki – avautuu AliExpressiin. Ostoksesi tukee FocusForge.Shopin ylläpitoa.</div>`
+          : p.inStock?`<div class="qty-row">
+          <span class="qty-label">Määrä</span>
+          <div class="qty-ctrl">
+            <button class="qty-btn" onclick="set({qty:Math.max(1,S.qty-1)})">−</button>
+            <span class="qty-val">${S.qty}</span>
+            <button class="qty-btn" onclick="set({qty:S.qty+1})">+</button>
+          </div>
+        </div>
+        <button class="big-btn primary" onclick="addCartQ(${p.id})">Lisää koriin (${S.qty} kpl)</button>`:''}
+        <button class="big-btn outline" onclick="toggleWish(${p.id})">${inW?'❤️ Poista toivelistalta':'🤍 Lisää toivelistalle'}</button>
+        <button class="big-btn sky" onclick="startMsg('${p.sid}')">💬 Lähetä viesti myyjälle</button>
+      </div>
+    </div>
+    <div class="pd-desc-box"><div class="sec-title" style="font-size:17px;margin-bottom:8px">Tuotekuvaus</div><p>${p.desc}</p></div>
+    <div style="margin-bottom:1.5rem">
+      <div class="sec-title" style="font-size:17px;margin-bottom:10px">Myyjä</div>
+      <div class="seller-card" onclick="navigate('seller',{selSeller:'${p.sid}'})">
+        <div class="sa-row">
+          <div class="s-av" style="width:44px;height:44px;background:${sel.abg};color:${sel.ac}">${sel.av}</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:600;color:var(--text)">${sel.name}</div>
+            <div style="font-size:12px;color:var(--text3)">${TI[sel.type].label} · ${sel.sales} myyntiä</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px">${stars(sel.rating,12)}<span style="font-size:12px;font-weight:600;color:var(--text)">${sel.rating}</span></div>
         </div>
       </div>
-    </div>`).join('');
+    </div>
+    <div>
+      <div class="sec-title" style="font-size:17px;margin-bottom:12px">Arvostelut (${revs.length})</div>
+      ${revs.map(r=>`<div class="rev-item"><div class="rev-top"><div class="rev-av">${r.n.split(' ').map(x=>x[0]).join('')}</div><div><div class="rev-n">${r.n}</div><div class="rev-d">${r.d}</div></div><div style="margin-left:auto;display:flex;gap:2px">${stars(r.r,12)}</div></div><div class="rev-txt">${r.t}</div></div>`).join('')}
+      ${S.user?`<div class="rev-form">
+        <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:10px">Kirjoita arvostelu</div>
+        <div class="star-pick">${[1,2,3,4,5].map(i=>`<button onclick="setRevStar(${i})">${i<=S.newRev.r?'⭐':'☆'}</button>`).join('')}</div>
+        <textarea class="ftarea" placeholder="Kerro kokemuksestasi..." oninput="S.newRev.txt=this.value">${S.newRev.txt}</textarea>
+        <button class="form-btn dark" onclick="submitRev()">Julkaise arvostelu</button>
+      </div>`:`<p style="font-size:13px;color:var(--text3);margin-top:10px"><button onclick="openModal('login')" style="background:none;border:none;cursor:pointer;color:var(--blue);font-family:var(--sans);font-size:13px">Kirjaudu</button> kirjoittaaksesi arvostelun.</p>`}
+    </div>
+  </div>`;
 }
 
-function openProduct(id) {
-  currentProduct = PRODUCTS.find(p => p.id === id);
-  const p = currentProduct;
-  qty = 1;
-  document.getElementById('pdp-bc').textContent = p.name;
-  document.getElementById('pdp-title').textContent = p.name;
-  document.getElementById('pdp-price').textContent = p.price;
-  document.getElementById('pdp-orig').textContent = p.orig;
-  document.getElementById('pdp-save').textContent = p.save;
-  document.getElementById('pdp-sold').textContent = p.sold;
-  document.getElementById('pdp-revlink').textContent = p.reviews.replace(/[()]/g,'') + ' reviews';
-  document.getElementById('pdp-badge1').textContent = p.badge;
-  document.getElementById('addBtnTxt').textContent = 'Add to Cart — ' + p.price;
-  document.getElementById('qtyN').textContent = '1';
-  const mainImg = document.getElementById('pdp-main-img');
-  mainImg.src = p.imgs[0];
-  const thumbsEl = document.getElementById('pdp-thumbs');
-  thumbsEl.innerHTML = p.imgs.map((img,i) => `<div class="thumb ${i===0?'active':''}" onclick="swThumb(this,'${img}')"><img src="${img}" alt=""/></div>`).join('');
-  document.getElementById('pdp-benefits').innerHTML = p.benefits.map(b => `<div class="benefit"><div class="b-chk"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 5L4.5 7.5L8 3" stroke="#1D9E75" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><div class="b-txt">${b}</div></div>`).join('');
-  document.getElementById('pdp-desc').textContent = p.desc;
-  const specsEl = document.getElementById('pdp-specs');
-  specsEl.innerHTML = p.specs ? p.specs.map(s => `<div class="spec-row"><div class="spec-l">${s[0]}</div><div class="spec-v">${s[1]}</div></div>`).join('') : '';
-  const relGrid = document.getElementById('relatedGrid');
-  const related = PRODUCTS.filter(x => x.id !== id).slice(0,4);
-  relGrid.innerHTML = related.map(rp => `<div class="pcard fu" onclick="openProduct(${rp.id})"><div class="pcard-badges"><span class="badge ${rp.badgeType}">${rp.badge}</span></div><div class="pcard-img"><img src="${rp.img}" alt="${rp.name}" loading="lazy"/></div><div class="pcard-info"><div class="pcard-stars"><span class="stars">${rp.stars}</span><span class="rcount">${rp.reviews}</span></div><div class="pcard-name">${rp.name}</div><div class="pcard-foot"><div class="pcard-price">${rp.price}</div><button class="add-btn" onclick="event.stopPropagation();addCart()">Add</button></div></div></div>`).join('');
-  document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-  document.querySelector('.tab-btn').classList.add('active');
-  document.getElementById('tab-desc').classList.add('active');
-  goPage('product');
+/* ══════════════ SELLER ══════════════ */
+function renderSeller(){
+  const sel=SELLERS[S.selSeller];if(!sel)return;
+  const t=TI[sel.type],prods=PRODUCTS.filter(p=>p.sid===S.selSeller);
+  $('page-root').innerHTML=`<div class="page">
+    <button class="back-btn" onclick="goBack()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>Takaisin</button>
+    <div class="sel-hero-box">
+      <div class="s-av" style="width:64px;height:64px;background:${sel.abg};color:${sel.ac};font-size:20px">${sel.av}</div>
+      <div>
+        <div style="font-size:20px;font-weight:700;color:#fff;font-family:var(--serif);margin-bottom:5px">${sel.name}</div>
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:7px"><span class="tag ${sel.type}">${t.label}</span><span style="font-size:12px;color:var(--mist)">Liittynyt ${sel.joined}</span></div>
+        <div style="display:flex;align-items:center;gap:4px">${stars(sel.rating,13)}<span style="font-size:12.5px;font-weight:600;color:#fff;margin-left:3px">${sel.rating}</span></div>
+      </div>
+    </div>
+    <div class="sel-stats-grid">
+      <div class="sel-stat"><div class="sel-stat-v">${sel.sales}</div><div class="sel-stat-l">Myyntiä</div></div>
+      <div class="sel-stat"><div class="sel-stat-v">${sel.rating} ⭐</div><div class="sel-stat-l">Arvosana</div></div>
+      <div class="sel-stat"><div class="sel-stat-v">${prods.length}</div><div class="sel-stat-l">Ilmoituksia</div></div>
+    </div>
+    <div class="sel-desc-box">${sel.desc}</div>
+    <button class="big-btn sky" style="margin-bottom:1.5rem" onclick="startMsg('${S.selSeller}')">💬 Lähetä viesti</button>
+    <div class="sec-title" style="font-size:17px;margin-bottom:12px">Ilmoitukset (${prods.length})</div>
+    <div class="pgrid">${prods.map(p=>cardHTML(p)).join('')}</div>
+  </div>`;
 }
 
-function swThumb(el, src) {
-  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
-  document.getElementById('pdp-main-img').src = src;
+/* ══════════════ WISHLIST ══════════════ */
+function renderWishlist(){
+  const prods=PRODUCTS.filter(p=>S.wishlist.includes(p.id));
+  $('page-root').innerHTML=`<div class="page">
+    <div class="sec-title">Toivelista</div><div class="sec-sub">${prods.length} tuotetta tallennettu</div>
+    ${!prods.length?`<div class="empty-st"><div class="empty-icon">🤍</div><div class="empty-title">Toivelista on tyhjä</div><div class="empty-sub">Lisää tuotteita painamalla sydäntä.</div><button class="empty-btn" onclick="navigate('home')">Selaa tuotteita →</button></div>`:`<div class="pgrid">${prods.map(p=>cardHTML(p)).join('')}</div>`}
+  </div>`;
 }
 
-function chgQty(d) {
-  qty = Math.max(1, Math.min(10, qty+d));
-  document.getElementById('qtyN').textContent = qty;
-  document.getElementById('addBtnTxt').textContent = 'Add to Cart — $' + (parseFloat(currentProduct.price.replace('$','')) * qty).toFixed(2);
+/* ══════════════ MESSAGES ══════════════ */
+function renderMessages(){
+  if(S.selConv){
+    const c=S.convs.find(x=>x.id===S.selConv);c.unread=false;
+    $('page-root').innerHTML=`<div class="page">
+      <button class="back-btn" onclick="S.selConv=null;navigate('messages')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>Takaisin</button>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem">
+        <div class="conv-av" style="width:40px;height:40px;background:${c.abg};color:${c.ac};font-size:13px;font-weight:700">${c.av}</div>
+        <div><div style="font-size:15px;font-weight:600;color:var(--text)">${c.with}</div><div style="font-size:12px;color:var(--text3)">${c.prod}</div></div>
+      </div>
+      <div class="chat-area">${c.msgs.map(m=>`<div class="msg-bubble ${m.me?'msg-me':'msg-them'}">${m.txt}<div class="msg-time">${m.t}</div></div>`).join('') || `<div style="text-align:center;color:var(--text3);font-size:13px;padding:1rem">Aloita keskustelu.</div>`}</div>
+      <div class="chat-inp-row">
+        <input class="chat-inp" id="chat-i" placeholder="Kirjoita viesti..." value="${S.newMsg}" oninput="S.newMsg=this.value" onkeydown="if(event.key==='Enter')sendMsg()">
+        <button class="chat-send" onclick="sendMsg()">Lähetä</button>
+      </div>
+    </div>`;
+  } else {
+    $('page-root').innerHTML=`<div class="page">
+      <div class="sec-title">Viestit</div><div class="sec-sub">${S.convs.length} keskustelua</div>
+      ${!S.convs.length?`<div class="empty-st"><div class="empty-icon">💬</div><div class="empty-title">Ei viestejä</div><div class="empty-sub">Ota yhteyttä myyjiin tuotesivuilla.</div></div>`
+      :`<div class="conv-list">${S.convs.map(c=>`<div class="conv-item${c.unread?' unread':''}" onclick="S.selConv='${c.id}';renderAll()">
+        <div class="conv-av" style="width:42px;height:42px;background:${c.abg};color:${c.ac}">${c.av}</div>
+        <div style="flex:1;min-width:0">
+          <div class="conv-name">${c.with}${c.unread?`<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--sky);margin-left:7px;vertical-align:middle"></span>`:''}</div>
+          <div class="conv-prev">${c.msgs.length?c.msgs[c.msgs.length-1].txt:'Aloita keskustelu'}</div>
+        </div>
+        <span class="conv-time">${c.msgs.length?c.msgs[c.msgs.length-1].t:''}</span>
+      </div>`).join('')}</div>`}
+    </div>`;
+  }
 }
 
-function addCart() {
-  cartCount++;
-  document.getElementById('cartNum').textContent = cartCount;
-  const n = document.getElementById('notif');
-  n.classList.add('show');
-  setTimeout(() => n.classList.remove('show'), 2200);
-  const btn = document.getElementById('addBtn');
-  if (btn) { btn.classList.add('added'); document.getElementById('addBtnTxt').textContent = '✓ Added to Cart!'; setTimeout(() => { btn.classList.remove('added'); document.getElementById('addBtnTxt').textContent = 'Add to Cart — ' + currentProduct.price; }, 2000); }
+/* ══════════════ NOTIFICATIONS ══════════════ */
+function renderNotifications(){
+  $('page-root').innerHTML=`<div class="page">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem">
+      <div class="sec-title">Ilmoitukset</div>
+      <button onclick="markAllRead()" style="background:none;border:none;font-size:12.5px;color:var(--blue);cursor:pointer;font-family:var(--sans)">Merkitse luetuksi</button>
+    </div>
+    <div class="sec-sub">${S.notifs.filter(x=>!x.read).length} lukematonta</div>
+    ${S.notifs.map(n=>`<div class="ntf-item${n.read?'':' unread'}" onclick="markRead(${n.id})">
+      <span class="ntf-icon">${n.icon}</span>
+      <div style="flex:1"><div class="ntf-title">${n.title}</div><div class="ntf-sub">${n.sub}</div><div class="ntf-time">${n.time}</div></div>
+      ${!n.read?`<div class="ntf-dot"></div>`:''}
+    </div>`).join('')}
+  </div>`;
 }
 
-function swTab(id, btn) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('tab-'+id).classList.add('active');
+/* ══════════════ ORDERS ══════════════ */
+function renderOrders(){
+  $('page-root').innerHTML=`<div class="page">
+    <div class="sec-title">Tilaukseni</div><div class="sec-sub">${S.orders.length} tilausta</div>
+    ${!S.orders.length?`<div class="empty-st"><div class="empty-icon">📦</div><div class="empty-title">Ei tilauksia</div><div class="empty-sub">Tee ensimmäinen tilauksesi!</div><button class="empty-btn" onclick="navigate('home')">Selaa tuotteita →</button></div>`
+    :S.orders.map(o=>`<div class="order-card">
+      <div class="ord-hd"><div><div class="ord-id">Tilaus #${o.id}</div><div class="ord-date">${o.date}</div></div><span class="ord-status ${STMAP[o.status].cls}">${STMAP[o.status].l}</span></div>
+      ${o.items.map(it=>`<div class="oi-row"><div class="oi-img">${img(it.img,it.name)}</div><div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--text)">${it.name}</div><div style="font-size:11.5px;color:var(--text3)">x${it.qty} · ${it.seller}</div></div><div style="font-size:13px;font-weight:700;color:var(--night)">${fp(it.price*it.qty)}</div></div>`).join('')}
+      <div style="font-size:14px;font-weight:700;color:var(--night);text-align:right;padding-top:10px;border-top:1px solid var(--ice);margin-top:6px">Yhteensä: ${fp(o.total)}</div>
+    </div>`).join('')}
+  </div>`;
 }
 
-// Init
-renderProducts();
+/* ══════════════ CHECKOUT ══════════════ */
+function renderCheckout(){
+  const tot=S.cart.reduce((a,b)=>a+b.price*b.qty,0);
+  const steps=['Toimitusosoite','Maksu','Valmis'];
+  const stepsH=`<div class="ck-steps">${steps.map((s,i)=>`<div class="ck-step${i+1<S.chkStep?' done':i+1===S.chkStep?' active':''}">${i+1<S.chkStep?'✓ ':''}${s}</div>`).join('')}</div>`;
+  const sum=`<div class="order-sum"><div style="font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:9px">Tilauksen yhteenveto</div>
+    ${S.cart.map(it=>`<div class="order-sum-row"><div class="osm-img">${img(it.img,it.name)}</div><div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--text)">${it.name}</div><div style="font-size:11.5px;color:var(--text3)">x${it.qty}</div></div><div style="font-size:13px;font-weight:700;color:var(--night)">${fp(it.price*it.qty)}</div></div>`).join('')}
+    <div class="order-total-row"><span>Yhteensä</span><span>${fp(tot)}</span></div></div>`;
+  let body='';
+  const f=S.fd;
+  if(S.chkStep===1){
+    body=`<div class="sec-title" style="font-size:18px;margin-bottom:1rem">Toimitusosoite</div>
+    <div class="frow"><div><label class="flbl">Etunimi</label><input class="finp" value="${f.fn}" placeholder="Matti" oninput="S.fd.fn=this.value"></div><div><label class="flbl">Sukunimi</label><input class="finp" value="${f.ln}" placeholder="Meikäläinen" oninput="S.fd.ln=this.value"></div></div>
+    <label class="flbl">Katuosoite</label><input class="finp" value="${f.addr}" placeholder="Mannerheimintie 1" oninput="S.fd.addr=this.value">
+    <div class="frow"><div><label class="flbl">Postinumero</label><input class="finp" value="${f.zip}" placeholder="00100" oninput="S.fd.zip=this.value"></div><div><label class="flbl">Kaupunki</label><input class="finp" value="${f.city}" placeholder="Helsinki" oninput="S.fd.city=this.value"></div></div>
+    ${sum}<button class="form-btn dark" onclick="nextChk()">Jatka maksuun →</button>`;
+  } else if(S.chkStep===2){
+    body=`<div class="sec-title" style="font-size:18px;margin-bottom:1rem">Maksutapa</div>
+    ${[['💳','Luottokortti','Visa, Mastercard, Amex'],['🏦','Verkkopankki','OP, Nordea, Danske Bank'],['📱','MobilePay','Mobiilimaksaminen']].map(([e,n,s],i)=>`<div class="pay-opt${S.selPay===i?' sel':''}" onclick="S.selPay=${i};renderAll()"><span style="font-size:24px">${e}</span><div><div class="pay-opt-name">${n}</div><div class="pay-opt-sub">${s}</div></div>${S.selPay===i?`<span style="margin-left:auto;color:var(--green);font-weight:700;font-size:18px">✓</span>`:''}</div>`).join('')}
+    ${sum}<button class="form-btn sky" onclick="placeOrder()">Vahvista tilaus – ${fp(tot)}</button>`;
+  } else {
+    body=`<div class="success-box"><div class="success-icon">🎉</div><div class="success-title">Tilaus vahvistettu!</div><div class="success-sub">Tilauksesi #${S.orders[0]?.id} on vastaanotettu.<br>Saat vahvistuksen sähköpostiisi pian.</div><button class="success-btn" onclick="navigate('orders')">Näytä tilaukset →</button><button class="success-btn" style="background:var(--snow);color:var(--night);border:1px solid var(--ice)" onclick="navigate('home')">Jatka ostoksia</button></div>`;
+  }
+  $('page-root').innerHTML=`<div class="page page-narrow">
+    ${S.chkStep<3?`<button class="back-btn" onclick="${S.chkStep>1?'set({chkStep:S.chkStep-1})':'navigate(\'home\')'}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>Takaisin</button>`:''}
+    <div class="sec-title">Kassa</div><div class="sec-sub">Turvallinen maksaminen</div>
+    ${stepsH}${body}
+  </div>`;
+}
+
+/* ══════════════ LISTING ══════════════ */
+function renderListing(){
+  if(!S.user){$('page-root').innerHTML=`<div class="page"><div class="empty-st"><div class="empty-icon">🔐</div><div class="empty-title">Kirjaudu ensin</div><div class="empty-sub">Tarvitset tilin ilmoituksen julkaisemiseen.</div><button class="empty-btn" onclick="openModal('login')">Kirjaudu →</button></div></div>`;return;}
+  if(S.listDone){$('page-root').innerHTML=`<div class="page"><div class="success-box"><div class="success-icon">🎉</div><div class="success-title">Ilmoitus julkaistu!</div><div class="success-sub">Tuotteesi on nyt näkyvissä NordicShopissa.<br>Hallinnoi ilmoituksiasi myyjäpaneelissa.</div><button class="success-btn" onclick="S.listDone=false;navigate('home')">Etusivu</button><button class="success-btn" style="background:var(--snow);color:var(--night);border:1px solid var(--ice)" onclick="S.listDone=false;navigate('dashboard')">Myyjäpaneeli</button></div></div>`;return;}
+  const f=S.listForm;
+  $('page-root').innerHTML=`<div class="page page-narrow">
+    <button class="back-btn" onclick="goBack()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>Takaisin</button>
+    <div class="sec-title">Lisää ilmoitus</div><div class="sec-sub">Myy yrityksellesi tai yksityisesti</div>
+    <label class="flbl">Tuotteen nimi *</label><input class="finp" value="${f.name}" placeholder="esim. iPhone 14 Pro" oninput="S.listForm.name=this.value">
+    <div class="frow">
+      <div><label class="flbl">Kategoria</label><select class="fsel" onchange="S.listForm.cat=this.value">${CATS.filter(c=>c!=='Kaikki').map(c=>`<option value="${c}"${f.cat===c?' selected':''}>${c}</option>`).join('')}</select></div>
+      <div><label class="flbl">Myyjätyyppi</label><select class="fsel" onchange="S.listForm.type=this.value"><option value="c2c">Yksityinen (C2C)</option><option value="b2c">Yritys (B2C)</option><option value="b2b">Tukku (B2B)</option></select></div>
+    </div>
+    <div class="frow">
+      <div><label class="flbl">Hinta (€) *</label><input class="finp" type="number" value="${f.price}" placeholder="0" oninput="S.listForm.price=this.value"></div>
+      <div><label class="flbl">Badge</label><input class="finp" value="${f.badge}" placeholder="esim. -20%" oninput="S.listForm.badge=this.value"></div>
+    </div>
+    <label class="flbl">Kuvaus</label><textarea class="ftarea" oninput="S.listForm.desc=this.value" placeholder="Kerro tuotteesta tarkemmin...">${f.desc}</textarea>
+    <label class="flbl">Valitse kuva (demo)</label>
+    <div class="img-picker">${PICKLIST.map(url=>`<div class="img-pick-cell${f.img===url?' sel':''}" onclick="S.listForm.img='${url}';renderAll()"><img src="${url}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>`).join('')}</div>
+    <button class="form-btn sky" onclick="if(!S.listForm.name||!S.listForm.price){alert('Täytä pakolliset kentät');}else{submitListing()}">Julkaise ilmoitus →</button>
+  </div>`;
+}
+
+/* ══════════════ DASHBOARD ══════════════ */
+function renderDashboard(){
+  if(!S.user){$('page-root').innerHTML=`<div class="page"><div class="empty-st"><div class="empty-icon">🔐</div><div class="empty-title">Kirjaudu ensin</div><button class="empty-btn" onclick="openModal('login')">Kirjaudu →</button></div></div>`;return;}
+  const tabs=['yhteenveto','ilmoitukset','tulot','asetukset'];
+  const tabL={yhteenveto:'Yhteenveto',ilmoitukset:'Ilmoitukset',tulot:'Tulot',asetukset:'Asetukset'};
+  const myProds=PRODUCTS.filter(p=>p.sid==='s2').slice(0,4);
+  let body='';
+  if(S.dashTab==='yhteenveto'){
+    body=`<div class="dash-kpi">
+      <div class="kpi-card"><div class="kpi-lbl">Kuukauden tulot</div><div class="kpi-val">1 842 €</div><div class="kpi-chg up">▲ +24 %</div><div class="kpi-bar"><div class="kpi-fill" style="width:72%"></div></div></div>
+      <div class="kpi-card"><div class="kpi-lbl">Myyntiä yhteensä</div><div class="kpi-val">47</div><div class="kpi-chg up">▲ +8 tällä kk</div><div class="kpi-bar"><div class="kpi-fill" style="width:58%"></div></div></div>
+      <div class="kpi-card"><div class="kpi-lbl">Aktiiviset ilm.</div><div class="kpi-val">${myProds.length}</div><div class="kpi-chg" style="color:var(--text3)">Kaikki aktiivisia</div></div>
+      <div class="kpi-card"><div class="kpi-lbl">Arvosana</div><div class="kpi-val">4.5 ⭐</div><div class="kpi-chg" style="color:var(--text3)">8 arvostelua</div></div>
+    </div>
+    <div style="background:#fff;border:1px solid var(--ice);border-radius:12px;padding:14px;box-shadow:var(--sh)">
+      <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:12px">Viimeisimmät myynnit</div>
+      ${[['iPhone 15 Pro','18.4.',1299,'st-d'],['Nike Air Max 2024','16.4.',129,'st-s'],['MacBook Air M2','14.4.',890,'st-d']].map(([n,d,p,cls])=>`<div class="list-row"><div style="flex:1"><div style="font-size:13.5px;font-weight:600;color:var(--text)">${n}</div><div style="font-size:11.5px;color:var(--text3)">${d}</div></div><span style="font-size:13.5px;font-weight:700;color:var(--night);margin-right:10px">${p} €</span><span class="ord-status ${cls}">${cls==='st-d'?'Toimitettu':'Lähetetty'}</span></div>`).join('')}
+    </div>`;
+  } else if(S.dashTab==='ilmoitukset'){
+    body=`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><span style="font-size:14px;font-weight:600;color:var(--text)">${myProds.length} ilmoitusta</span><button onclick="navigate('list')" style="background:var(--night);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans)">+ Uusi ilmoitus</button></div>
+    ${myProds.map(p=>`<div class="list-row"><img src="${p.img}" class="list-img" onerror="this.style.opacity=0"><div style="flex:1;min-width:0"><div style="font-size:13.5px;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.name}</div><div style="font-size:11.5px;color:var(--text3)">${p.cat} · ${p.price} €</div></div><span class="tag c2c">Aktiivinen</span></div>`).join('')}`;
+  } else if(S.dashTab==='tulot'){
+    body=`<div style="background:#fff;border:1px solid var(--ice);border-radius:12px;padding:14px;box-shadow:var(--sh)">
+      <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:14px">Tulokehitys 2025</div>
+      ${[['Huhtikuu','1 842 €','+18%',72],['Maaliskuu','1 561 €','+7%',61],['Helmikuu','1 459 €','-3%',57],['Tammikuu','1 504 €','+22%',59]].map(([kk,s,m,w])=>`<div class="list-row"><div style="flex:1"><div style="font-size:13.5px;font-weight:600;color:var(--text)">${kk} 2025</div><div class="kpi-bar" style="margin-top:5px;max-width:160px"><div class="kpi-fill" style="width:${w}%"></div></div></div><span style="font-size:12px;font-weight:600;color:${m.startsWith('+')?'var(--green)':'var(--red)'};margin-right:12px">${m}</span><span style="font-size:13.5px;font-weight:700;color:var(--night)">${s}</span></div>`).join('')}
+    </div>`;
+  } else {
+    body=`<div style="background:#fff;border:1px solid var(--ice);border-radius:12px;padding:14px;box-shadow:var(--sh)">
+      <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:14px">Profiiliasetukset</div>
+      <label class="flbl">Nimi</label><input class="finp" value="${S.user.name}" oninput="S.user.name=this.value">
+      <label class="flbl">Sähköposti</label><input class="finp" value="${S.user.email}" type="email">
+      <label class="flbl">Kuvaus</label><textarea class="ftarea" placeholder="Kerro itsestäsi..."></textarea>
+      <button class="form-btn dark" onclick="alert('Tallennettu!')">Tallenna muutokset</button>
+      <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--ice)">
+        <button onclick="logout()" style="background:none;border:1.5px solid var(--red);color:var(--red);border-radius:8px;padding:8px 20px;font-size:13px;cursor:pointer;font-family:var(--sans);font-weight:600">Kirjaudu ulos</button>
+      </div>
+    </div>`;
+  }
+  $('page-root').innerHTML=`<div class="page">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:1.25rem">
+      <div style="width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#60A5FA,#0F2472);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff">${S.user.name.split(' ').map(x=>x[0]).join('').slice(0,2)}</div>
+      <div><div style="font-family:var(--serif);font-size:20px;font-weight:700;color:var(--night)">${S.user.name}</div><div style="font-size:12.5px;color:var(--text3)">${S.user.email}</div></div>
+    </div>
+    <div style="display:flex;gap:7px;margin-bottom:1.25rem;overflow-x:auto;scrollbar-width:none">
+      ${tabs.map(t=>`<button class="chip${S.dashTab===t?' on':''}" onclick="S.dashTab='${t}';renderAll()">${tabL[t]}</button>`).join('')}
+    </div>
+    ${body}
+  </div>`;
+}
+
+/* ══════════════ CART PANEL ══════════════ */
+function renderCart(){
+  const ov=$('cart-overlay'),panel=$('cart-panel');
+  if(!S.cartOpen){ov.style.display='none';panel.style.display='none';return;}
+  ov.style.display='block';panel.style.display='flex';
+  const cnt=S.cart.reduce((a,b)=>a+b.qty,0),tot=S.cart.reduce((a,b)=>a+b.price*b.qty,0);
+  panel.innerHTML=`<div class="cp-hdr"><div class="cp-title">Ostoskori (${cnt})</div><button class="cp-close" onclick="closeCart()">✕</button></div>
+    <div class="c-items">${!S.cart.length?`<div class="cp-empty"><div class="cp-empty-icon">🛒</div><div style="font-size:14px;font-weight:600;color:var(--text)">Kori on tyhjä</div><div style="font-size:13px;color:var(--text3);margin-top:5px">Lisää tuotteita etusivulta</div></div>`:S.cart.map(it=>`<div class="c-item"><div class="ci-img">${img(it.img,it.name)}</div><div class="ci-info"><div class="ci-name">${it.name}</div><div class="ci-sel">${it.seller}</div><div class="ci-bot"><span class="ci-price">${fp(it.price*it.qty)}</span><div style="display:flex;align-items:center;gap:6px"><span style="font-size:11.5px;color:var(--text3)">x${it.qty}</span><button class="ci-rm" onclick="rmCart(${it.id})">Poista</button></div></div></div></div>`).join('')}</div>
+    ${S.cart.length?`<div class="cp-foot"><div class="cp-tot-row"><span class="cp-tot-l">Yhteensä</span><span class="cp-tot-v">${fp(tot)}</span></div><button class="cp-chk-btn" onclick="navigate('checkout');S.chkStep=1">Siirry kassalle →</button></div>`:''}`;
+}
+
+/* ══════════════ MODAL ══════════════ */
+function renderModal(){
+  const el=$('modal-overlay');
+  if(!S.modal){el.style.display='none';return;}
+  el.style.display='flex';
+  const isL=S.modal==='login';
+  el.innerHTML=`<div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">${isL?'Tervetuloa takaisin':'Luo tili'}</div>
+    <div class="modal-sub">${isL?'Kirjaudu FocusForge.Shop-tilillesi':'Liity FocusForge.Shopiin ilmaiseksi'}</div>
+    <div class="auth-tabs">
+      <button class="auth-tab${isL?' on':''}" onclick="S.modal='login';renderAll()">Kirjaudu</button>
+      <button class="auth-tab${!isL?' on':''}" onclick="S.modal='register';renderAll()">Rekisteröidy</button>
+    </div>
+    ${!isL?`<label class="flbl">Nimi</label><input class="finp" id="reg-n" placeholder="Matti Meikäläinen">`:''}
+    <label class="flbl">Sähköposti</label><input class="finp" id="auth-e" type="email" placeholder="sinä@email.com">
+    <label class="flbl">Salasana</label><input class="finp" id="auth-p" type="password" placeholder="••••••••" style="margin-bottom:16px">
+    <button class="form-btn dark" onclick="${isL?'doLogin()':'doRegister()'}">
+      ${isL?'Kirjaudu sisään →':'Luo tili ilmaiseksi →'}
+    </button>
+    <div style="font-size:12.5px;color:var(--text3);text-align:center;margin-top:12px">
+      ${isL?`Ei tiliä? <button onclick="S.modal='register';renderAll()" style="background:none;border:none;cursor:pointer;color:var(--blue);font-family:var(--sans);font-size:12.5px">Rekisteröidy</button>`:`Minulla on jo tili. <button onclick="S.modal='login';renderAll()" style="background:none;border:none;cursor:pointer;color:var(--blue);font-family:var(--sans);font-size:12.5px">Kirjaudu</button>`}
+    </div>
+  </div>`;
+}
+
+/* ══════════════ BOTTOM NAV ══════════════ */
+function renderBnav(){
+  const msgUnread=S.convs.filter(x=>x.unread).length;
+  const pages=[
+    {k:'home',l:'Etusivu',icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`},
+    {k:'messages',l:'Viestit',icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,badge:msgUnread>0},
+    {k:'wishlist',l:'Toivelista',icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`},
+    {k:'orders',l:'Tilaukset',icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`},
+    {k:'dashboard',l:'Paneeli',icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`},
+  ];
+  $('bnav-root').innerHTML=`<nav class="bnav">${pages.map(p=>`<button class="bnav-btn${S.page===p.k?' on':''}" onclick="navigate('${p.k}')">${p.icon}${p.l}${p.badge?`<span class="bnav-badge"></span>`:''}</button>`).join('')}</nav>`;
+}
+
+/* ══════════════ MASTER RENDER ══════════════ */
+function renderAll(){
+  renderHeader();
+  const pg=S.page;
+  if(pg==='home')renderHome();
+  else if(pg==='product')renderProduct();
+  else if(pg==='seller')renderSeller();
+  else if(pg==='wishlist')renderWishlist();
+  else if(pg==='messages')renderMessages();
+  else if(pg==='notifications')renderNotifications();
+  else if(pg==='orders')renderOrders();
+  else if(pg==='checkout')renderCheckout();
+  else if(pg==='list')renderListing();
+  else if(pg==='dashboard')renderDashboard();
+  renderCart();renderModal();renderBnav();
+}
+
+renderAll();
 </script>
 </body>
 </html>
