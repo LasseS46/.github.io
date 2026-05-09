@@ -2,6 +2,7 @@
 <html lang="fi">
 <head>
 <meta charset="UTF-8">
+<meta name="verify-admitad" content="2b9b5f010e" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FocusForge.Shop – Premium Store</title>
 <meta name="description" content="FocusForge.Shop – Suomen monipuolisin verkkokauppaalusta. B2C, C2C ja B2B yhdessä paikassa. Nopea toimitus, turvallinen maksaminen.">
@@ -401,70 +402,16 @@ const TI={b2c:{label:'Yritys',color:'#2E8DC8'},c2c:{label:'Yksityinen',color:'#1
 const STMAP={processing:{cls:'st-p',l:'Käsitellään'},shipped:{cls:'st-s',l:'Lähetetty'},delivered:{cls:'st-d',l:'Toimitettu'}};
 
 let PRODUCTS=[
-  {id:1,name:'iPhone 15 Pro',price:1299,origPrice:1499,seller:'TechStore Oy',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:342,img:IMGS.iphone,inStock:true,badge:'-13%',desc:'Tehokas iPhone 15 Pro titaniumrungolla ja A17 Pro -prosessorilla. 48 MP kamerajärjestelmä, USB-C-liitäntä ja Action-painike. Saatavilla 128–1TB.'},
-  {id:2,name:'MacBook Air M2 – käytetty',price:890,seller:'Mikko K.',sid:'s2',type:'c2c',cat:'Elektroniikka',rating:4.5,reviews:12,img:IMGS.macbook,inStock:true,desc:'Erittäin hyväkuntoinen MacBook Air M2, ostettu 2023. Akun kapasiteetti 94%. Mukana alkuperäinen laturi. Naarmu vasemmassa kulmassa, toimii täydellisesti.'},
-  {id:3,name:'Teollisuusrobotti ARM-500 (50 kpl)',price:45000,seller:'RobotiikkaFin Oy',sid:'s3',type:'b2b',cat:'Teollisuus',rating:4.9,reviews:8,img:IMGS.robot,inStock:true,badge:'Tukku',desc:'Tukkulot 50 kpl teollisuusrobotteja kokoonpanolinjalle. Kantavuus 5 kg, toimintasäde 900 mm. Sisältää asennuksen ja koulutuksen. ISO 10218-sertifioitu.'},
-  {id:4,name:'Nike Air Max 2024',price:129,origPrice:159,seller:'SportShop Finland',sid:'s4',type:'b2c',cat:'Urheilu',rating:4.6,reviews:89,img:IMGS.nike,inStock:true,badge:'-19%',desc:'Uusi Nike Air Max 2024 -juoksukenkä maksimoidulla ilmatyynyllä. Täydellinen päivittäiseen treenaamiseen. Saatavilla koot 38–47.'},
-  {id:5,name:'IKEA Kallax 4×4 hylly',price:79,seller:'Anna M.',sid:'s5',type:'c2c',cat:'Koti & Sisustus',rating:4.3,reviews:5,img:IMGS.shelf,inStock:true,desc:'Valkoinen IKEA Kallax 147×147 cm. Erittäin hyvässä kunnossa, alle 2 vuotta vanha. Noudettavissa Helsingistä, Käpylä.'},
-  {id:6,name:'Specialty Coffee – kuukausitilaus',price:9,seller:'Kahvila Artisan',sid:'s6',type:'b2c',cat:'Ruoka & Juoma',rating:4.9,reviews:203,img:IMGS.coffee,inStock:true,badge:'Suosittu',desc:'Kuukausitilaus erikoiskahveille. Joka kuukausi uusi single origin -paahto. 250 g / kk. Peruutettavissa milloin tahansa.'},
-  {id:7,name:'Toimistotarvike-erä 500 kpl',price:1200,seller:'OfficeSupply Pro',sid:'s7',type:'b2b',cat:'Toimisto',rating:4.7,reviews:34,img:IMGS.office,inStock:true,badge:'B2B',desc:'Kattava toimistopaketti 500 kappaletta: kynät, vihkot, mapit, niittikoneet, tussit. Soveltuu 20–30 hengen yrityksille.'},
-  {id:8,name:'Vintage kitara – Fender 1975',price:2400,seller:'Jari H.',sid:'s8',type:'c2c',cat:'Musiikki',rating:5.0,reviews:3,img:IMGS.guitar,inStock:true,badge:'Harvinainen',desc:'Alkuperäinen Fender Stratocaster vuodelta 1975, sunburst-väri. Kaikki osat alkuperäisiä. Sisältää tweed-kotelon.'},
-  {id:9,name:'Samsung 4K OLED 65"',price:1599,origPrice:1899,seller:'ElektroniikkaMaailma',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.7,reviews:156,img:IMGS.tv,inStock:false,desc:'Samsung S90C 65" QD-OLED. 4K 120Hz, Dolby Atmos, HDR10+, Google TV.'},
-  {id:10,name:'Lasten talvitakki 128 cm',price:45,seller:'Eeva S.',sid:'s9',type:'c2c',cat:'Vaatteet',rating:4.4,reviews:7,img:IMGS.jacket,inStock:true,desc:'Reima-lasten talvitakki, koko 128. Käytetty yhden talvikauden. Vedenpitävä. Noudettavissa Tampereelta.'},
-  {id:11,name:'Teollisuuskuitu – sopimustoimitus',price:15000,seller:'PaperCo Finland',sid:'s10',type:'b2b',cat:'Teollisuus',rating:4.8,reviews:12,img:IMGS.factory,inStock:true,desc:'Kuukausittainen paperikuitutoimitus tehtaille. FSC- ja PEFC-sertifioitu. Minimierä 5 tn/kk.'},
-  {id:12,name:'Kindle Paperwhite 2023',price:149,origPrice:179,seller:'KirjaShop',sid:'s11',type:'b2c',cat:'Kirjat & Media',rating:4.6,reviews:67,img:IMGS.kindle,inStock:true,desc:'6,8" näyttö, 300 ppi, vedenpitävä IPX8. USB-C-lataus. 16 Gt.'},
-  {id:13,name:'Trek Marlin 5 maastopyörä',price:599,origPrice:749,seller:'PyrätPlus',sid:'s12',type:'b2c',cat:'Urheilu',rating:4.7,reviews:41,img:IMGS.bike,inStock:true,badge:'-20%',desc:'Trek Marlin 5, koko M, 2023. 21-vaihteinen, levyjarrut. Erittäin hyvässä kunnossa.'},
-  {id:14,name:'Apple Watch Series 9',price:449,seller:'TechStore Oy',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.8,reviews:88,img:IMGS.watch,inStock:true,desc:'Apple Watch Series 9, 45mm, GPS, alumiini/urheiluranneke.'},
-  {id:15,name:'Sony WH-1000XM5 kuulokkeet',price:299,origPrice:379,seller:'ElektroniikkaMaailma',sid:'s1',type:'b2c',cat:'Elektroniikka',rating:4.9,reviews:201,img:IMGS.headphones,inStock:true,badge:'-21%',desc:'Maailman paras aktiivinen melunvaimennus. 30h akunkesto. USB-C.'},
-  {id:16,name:'Sony A7 IV kamera',price:2699,seller:'Lauri V.',sid:'s13',type:'c2c',cat:'Elektroniikka',rating:4.8,reviews:6,img:IMGS.camera,inStock:true,badge:'Lähes uusi',desc:'Sony A7 IV täyskenno, alle 3000 laukaisua. Ilman objektiivia.'},
-  /* ── 3 REAL ALIEXPRESS AFFILIATE PRODUCTS ── */
-  {id:50,name:'Mouse Pad Gel Rannetuki Ergonominen',price:1.02,origPrice:1.59,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.6,reviews:8420,img:'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=375&fit=crop',inStock:true,badge:'-36%',desc:'Ergonominen hiirimatto geelitueella. Anti-slip pohja, pehmeä rannetuki. Sopii PC ja laptop. Estää rannevaivat.',affiliateUrl:'https://s.click.aliexpress.com/e/_c4DWW97H'},
-  {id:51,name:'LED Pöytälamppu USB Ladattava',price:2.88,origPrice:15.40,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Koti & Sisustus',rating:4.7,reviews:12300,img:'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=375&fit=crop',inStock:true,badge:'-81%',desc:'LED pöytälamppu USB-latauksella. Silmäystävällinen valaistus, yövalotila. Sopii opiskeluun ja lukemiseen.',affiliateUrl:'https://s.click.aliexpress.com/e/_c3uCrCXD'},
-  {id:52,name:'4x Toner Brother TN-243 CMYK Setti',price:24.69,seller:'AliExpress',sid:'s_ali',type:'b2c',cat:'Toimisto',rating:4.5,reviews:3210,img:'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=500&h=375&fit=crop',inStock:true,badge:'Ali',desc:'4 kappaleen värikasettisetti Brother-tulostimelle. Musta, syaani, magenta ja keltainen. TN-243 yhteensopiva.',affiliateUrl:'https://s.click.aliexpress.com/e/_c4oqnW7v'},
-  /* ── ASOS Products via Sovrn ── */
-  {id:60,name:'Adidas Originals Samba OG Tennarit',price:92,seller:'ASOS',sid:'s_asos',type:'b2c',cat:'Vaatteet',rating:4.8,reviews:5931,img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=375&fit=crop',inStock:true,badge:'ASOS',desc:'Adidas Originals Samba OG tennarit mustana ja valkoisena. Ikoninen design, nahkapinnoite, kumipohja. Erittäin suosittu malli.',affiliateUrl:'https://sovrn.co/yh3z4fs'},
-  {id:61,name:'Topman Retro Cardigan Tummanvihreä',price:69,seller:'ASOS',sid:'s_asos',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:420,img:'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&h=375&fit=crop',inStock:true,badge:'ASOS',desc:'Topman klassinen retro-cardigan tummanvihreänä. Rento fit, pehmeä materiaali, nappikiinnitys. Täydellinen casual-tyyliin.',affiliateUrl:'https://sovrn.co/mkn7o7s'},
-  /* ── Mavely Products ── */
   {id:70,name:'Bausch + Lomb ULTRA Piilolinssit 6kpl',price:55,origPrice:68,seller:'1-800 Contacts',sid:'s_1800',type:'b2c',cat:'Terveys',rating:4.9,reviews:28400,img:'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=500&h=375&fit=crop',inStock:true,badge:'Mavely',desc:'Bausch + Lomb ULTRA piilolinssit MoistureSeal-teknologialla. 6kpl paketti, 6 kuukauden tarjonta. Ilmainen toimitus ja palautus. Sama merkki kuin lääkärilläsi. Hinta noin $59.19 USD.',affiliateUrl:'https://mavely.app.link/QPOcYH3HZ2b'},
   {id:71,name:'66°30 Premium Anti-Aging Protocol Miehille',price:135,origPrice:145,seller:'66°30 Skincare',sid:'s_6630',type:'b2c',cat:'Terveys',rating:5.0,reviews:2,img:'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=375&fit=crop',inStock:true,badge:'Mavely',desc:'Tehokas anti-aging protokolla miehille. Sisältää 3 tuotetta: seerumi, silmävoide ja yövoide. Bio-sertifioitu, EcoCert, Made in France, PETA. Anti-wrinkle, kosteuttava, ravitseva.',affiliateUrl:'https://mavely.app.link/bycm3K4IZ2b'},
 ];
 const SELLERS={
-  s1:{name:'TechStore Oy',type:'b2c',rating:4.8,sales:1842,joined:'Tammikuu 2020',desc:'Suomen johtava verkkoelektroniikka. 24 kk takuu, 30 vrk palautusoikeus.',av:'TS',abg:'#dbeafe',ac:'#1d4ed8'},
-  s2:{name:'Mikko K.',type:'c2c',rating:4.5,sales:8,joined:'Maaliskuu 2023',desc:'Yksityinen myyjä Helsingistä. Hinnat neuvoteltavissa.',av:'MK',abg:'#d1fae5',ac:'#059669'},
-  s3:{name:'RobotiikkaFin Oy',type:'b2b',rating:4.9,sales:94,joined:'Kesäkuu 2018',desc:'Teollisuusrobotiikan johtava toimittaja Pohjoismaissa. ISO-sertifioitu.',av:'RF',abg:'#ede9fe',ac:'#7c3aed'},
-  s4:{name:'SportShop Finland',type:'b2c',rating:4.6,sales:3241,joined:'Elokuu 2019',desc:'Urheilun erikoisliike. Nike, Adidas, Salomon.',av:'SF',abg:'#dbeafe',ac:'#1d4ed8'},
-  s5:{name:'Anna M.',type:'c2c',rating:4.3,sales:15,joined:'Tammikuu 2024',desc:'Käytettyjä huonekaluja. Nouto Helsingistä.',av:'AM',abg:'#d1fae5',ac:'#059669'},
-  s6:{name:'Kahvila Artisan',type:'b2c',rating:4.9,sales:876,joined:'Huhtikuu 2021',desc:'Oma paahtiamo Kalliossa. Cup of Excellence -tason kahvit.',av:'KA',abg:'#fef3c7',ac:'#92400e'},
-  s7:{name:'OfficeSupply Pro',type:'b2b',rating:4.7,sales:412,joined:'Maaliskuu 2017',desc:'B2B toimistotarvikkeet yrityksille. Lasku 30 pv.',av:'OP',abg:'#ede9fe',ac:'#7c3aed'},
-  s8:{name:'Jari H.',type:'c2c',rating:5.0,sales:4,joined:'Lokakuu 2022',desc:'Keräilijä 30+ vuotta. Vain aitoja instrumentteja.',av:'JH',abg:'#d1fae5',ac:'#059669'},
-  s9:{name:'Eeva S.',type:'c2c',rating:4.4,sales:23,joined:'Kesäkuu 2023',desc:'Lasten vaatteet. Nopeat toimitukset.',av:'ES',abg:'#d1fae5',ac:'#059669'},
-  s10:{name:'PaperCo Finland',type:'b2b',rating:4.8,sales:201,joined:'Helmikuu 2015',desc:'Paperikuitutoimittaja teollisuudelle. FSC/PEFC.',av:'PC',abg:'#ede9fe',ac:'#7c3aed'},
-  s11:{name:'KirjaShop',type:'b2c',rating:4.6,sales:567,joined:'Syyskuu 2020',desc:'Kirjat ja e-lukijat. Ilmainen toimitus 30 €+.',av:'KS',abg:'#dbeafe',ac:'#1d4ed8'},
-  s12:{name:'PyrätPlus',type:'b2c',rating:4.7,sales:312,joined:'Helmikuu 2021',desc:'Pyörien erikoisliike. Trek, Giant, Specialized.',av:'PP',abg:'#dbeafe',ac:'#1d4ed8'},
-  s13:{name:'Lauri V.',type:'c2c',rating:4.8,sales:6,joined:'Marraskuu 2023',desc:'Valokuvaaja myymässä kalustoaan.',av:'LV',abg:'#d1fae5',ac:'#059669'},
-  s_ali:{name:'AliExpress',type:'b2c',rating:4.6,sales:2500000,joined:'Tammikuu 2010',desc:'Affiliate-kumppani. Tuotteet toimitetaan suoraan AliExpressistä. Klikkaa ostopainiketta siirtyäksesi AliExpressiin.',av:'AE',abg:'#fee2e2',ac:'#e11d48'},
-  s_asos:{name:'ASOS',type:'b2c',rating:4.8,sales:980000,joined:'Tammikuu 2000',desc:'ASOS on maailman johtava muotikauppa. Nike, Adidas, Topman, Tommy Hilfiger ja tuhansia muita merkkejä. Ilmainen toimitus yli $75 tilauksista.',av:'AS',abg:'#fef9c3',ac:'#854d0e'},
   s_1800:{name:'1-800 Contacts',type:'b2c',rating:4.9,sales:15000000,joined:'Tammikuu 1995',desc:'Maailman suurin piilolinssikauppa. Yli 15 miljoonaa linssiä varastossa. Sama merkki kuin lääkärilläsi, ilmainen toimitus ja palautus. Parhaan hinnan takuu.',av:'1C',abg:'#e0e7ff',ac:'#3730a3'},
   s_6630:{name:'66°30 Skincare',type:'b2c',rating:5.0,sales:12000,joined:'Tammikuu 2015',desc:'Ranskalainen premium-ihonhoitobrändi miehille. Bio-sertifioitu, EcoCert-hyväksytty, Made in France, PETA-hyväksytty. Korkealaatuiset anti-aging tuotteet.',av:'66',abg:'#f0f9ff',ac:'#0369a1'},
 };
-const REVS={
-  1:[{n:'Petri V.',r:5,t:'Loistava puhelin, kamera on huikea! Toimitus nopeaa.',d:'15.3.2025'},{n:'Liisa M.',r:5,t:'Titaniumrunko tuntuu laadukkaalta. Suosittelen.',d:'2.2.2025'}],
-  4:[{n:'Sari P.',r:5,t:'Täydellinen juoksukenkä! Iskunvaimennus upea.',d:'20.3.2025'}],
-  6:[{n:'Aino H.',r:5,t:'Etiopian single origin oli parasta kahvia ikinä!',d:'18.3.2025'},{n:'Matti K.',r:5,t:'Suosittelen kovasti!',d:'1.3.2025'}],
-  8:[{n:'Eero N.',r:5,t:'Täysin aito ja erinomaisessa kunnossa.',d:'22.1.2025'}],
-  15:[{n:'Kaisa T.',r:5,t:'Paras melunvaimennus mitä olen kuullut!',d:'10.3.2025'}],
-};
-const NOTIFS=[
-  {id:1,icon:'📦',title:'Tilaus lähetetty',sub:'Tilauksesi #NS-48291 on matkalla. Arvioitu saapuminen 2 vrk.',time:'Tänään 10:42',read:false},
-  {id:2,icon:'💬',title:'Uusi viesti',sub:'Mikko K. vastasi: "Kyllä, laturi on mukana."',time:'Eilen 16:20',read:false},
-  {id:3,icon:'❤️',title:'Toivelistahälytys',sub:'Nike Air Max 2024 hinta laski 159 € → 129 €.',time:'Eilen 09:05',read:true},
-  {id:4,icon:'⭐',title:'Arvostele ostoksesi',sub:'Mitä mieltä olit iPhone 15 Pro -ostoksestasi?',time:'2 pv sitten',read:true},
-  {id:5,icon:'🏷️',title:'Tarjous hyväksytty',sub:'Myyjä hyväksyi tarjouksesi IKEA Kallax -hyllystä.',time:'3 pv sitten',read:true},
-];
-const CONVS=[
-  {id:'c1',with:'Mikko K.',sid:'s2',prod:'MacBook Air M2',av:'MK',abg:'#d1fae5',ac:'#059669',unread:true,msgs:[{me:false,txt:'Hei! Onko laturi vielä mukana?',t:'Eilen 15:55'},{me:true,txt:'Kyllä, alkuperäinen laturi on mukana.',t:'Eilen 16:10'},{me:false,txt:'Mahtavaa!',t:'Eilen 16:20'}]},
-  {id:'c2',with:'Jari H.',sid:'s8',prod:'Vintage kitara Fender 1975',av:'JH',abg:'#d1fae5',ac:'#059669',unread:false,msgs:[{me:true,txt:'Onko kitarassa alkuperäiset virityskoneistot?',t:'3 pv sitten'},{me:false,txt:'Kyllä, kaikki alkuperäistä!',t:'3 pv sitten'}]},
-];
+const REVS={};
+const NOTIFS=[];
+const CONVS=[];
 
 /* ══════════════ STATE ══════════════ */
 let nextId=200;
