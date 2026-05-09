@@ -94,7 +94,11 @@ img{display:block;max-width:100%}
 .hstat-l{font-size:11px;color:var(--text3)}
 
 /* ─── CATS ─── */
-.cats{display:flex;gap:8px;overflow-x:auto;margin-bottom:1.5rem;padding-bottom:2px;scrollbar-width:none}
+.cats-wrap{position:relative;display:flex;align-items:center;margin-bottom:1.5rem;gap:4px}
+.cats-arrow{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#fff;border:1px solid var(--ice);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--sh);transition:all .15s;color:var(--text2);font-size:14px}
+.cats-arrow:hover{background:var(--night);color:#fff;border-color:var(--night)}
+.cats-arrow:disabled{opacity:.3;cursor:default;pointer-events:none}
+.cats{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;flex:1}
 .cats::-webkit-scrollbar{display:none}
 .cat-btn{flex-shrink:0;border:1px solid var(--ice);border-radius:99px;padding:6px 16px;font-size:12.5px;font-family:var(--sans);background:#fff;color:var(--text2);transition:all .15s;white-space:nowrap}
 .cat-btn:hover{border-color:var(--blue);color:var(--blue)}
@@ -601,7 +605,11 @@ function renderHome(){
       <div class="hstat"><span class="hstat-icon">👥</span><div><div class="hstat-v">2 847</div><div class="hstat-l">Myyjiä</div></div></div>
       <div class="hstat"><span class="hstat-icon">🚚</span><div><div class="hstat-v">1 204</div><div class="hstat-l">Toimitusta/pv</div></div></div>
     </div>`:''}
-    <div class="cats">${CATS.map(c=>`<button class="cat-btn${S.cat===c?' on':''}" onclick="S.cat='${c}';S.page='home';renderAll()">${c}</button>`).join('')}</div>
+    <div class="cats-wrap">
+      <button class="cats-arrow" id="cats-prev" onclick="document.getElementById('cats-scroll').scrollBy({left:-200,behavior:'smooth'})">&#8249;</button>
+      <div class="cats" id="cats-scroll">${CATS.map(c=>`<button class="cat-btn${S.cat===c?' on':''}" onclick="S.cat='${c}';S.page='home';renderAll()">${c}</button>`).join('')}</div>
+      <button class="cats-arrow" id="cats-next" onclick="document.getElementById('cats-scroll').scrollBy({left:200,behavior:'smooth'})">&#8250;</button>
+    </div>
     <div class="sort-row">
       <span class="results-lbl">${filt.length} tuotetta${S.search?` – "${S.search}"`:''}${S.cat!=='Kaikki'?` · ${S.cat}`:''}</span>
       <div class="sort-chips">
