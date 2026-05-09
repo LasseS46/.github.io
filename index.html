@@ -425,7 +425,8 @@ let PRODUCTS=[
   {id:60,name:'Adidas Originals Samba OG Tennarit',price:92,seller:'ASOS',sid:'s_asos',type:'b2c',cat:'Vaatteet',rating:4.8,reviews:5931,img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=375&fit=crop',inStock:true,badge:'ASOS',desc:'Adidas Originals Samba OG tennarit mustana ja valkoisena. Ikoninen design, nahkapinnoite, kumipohja. Erittäin suosittu malli.',affiliateUrl:'https://sovrn.co/yh3z4fs'},
   {id:61,name:'Topman Retro Cardigan Tummanvihreä',price:69,seller:'ASOS',sid:'s_asos',type:'b2c',cat:'Vaatteet',rating:4.6,reviews:420,img:'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=500&h=375&fit=crop',inStock:true,badge:'ASOS',desc:'Topman klassinen retro-cardigan tummanvihreänä. Rento fit, pehmeä materiaali, nappikiinnitys. Täydellinen casual-tyyliin.',affiliateUrl:'https://sovrn.co/mkn7o7s'},
   /* ── Mavely Products ── */
-  {id:70,name:'Bausch + Lomb ULTRA Piilolinssit 6kpl',price:54,origPrice:68,seller:'1-800 Contacts',sid:'s_1800',type:'b2c',cat:'Terveys',rating:4.9,reviews:28400,img:'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=500&h=375&fit=crop',inStock:true,badge:'Mavely',desc:'Bausch + Lomb ULTRA piilolinssit MoistureSeal-teknologialla. 6 kuukauden tarjonta, päivittäiseen käyttöön. Ilmainen toimitus ja palautus. Sama merkki kuin lääkärilläsi.',affiliateUrl:'https://mavely.app.link/QPOcYH3HZ2b'},
+  {id:70,name:'Bausch + Lomb ULTRA Piilolinssit 6kpl',price:55,origPrice:68,seller:'1-800 Contacts',sid:'s_1800',type:'b2c',cat:'Terveys',rating:4.9,reviews:28400,img:'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=500&h=375&fit=crop',inStock:true,badge:'Mavely',desc:'Bausch + Lomb ULTRA piilolinssit MoistureSeal-teknologialla. 6kpl paketti, 6 kuukauden tarjonta. Ilmainen toimitus ja palautus. Sama merkki kuin lääkärilläsi. Hinta noin $59.19 USD.',affiliateUrl:'https://mavely.app.link/QPOcYH3HZ2b'},
+  {id:71,name:'66°30 Premium Anti-Aging Protocol Miehille',price:135,origPrice:145,seller:'66°30 Skincare',sid:'s_6630',type:'b2c',cat:'Terveys',rating:5.0,reviews:2,img:'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=375&fit=crop',inStock:true,badge:'Mavely',desc:'Tehokas anti-aging protokolla miehille. Sisältää 3 tuotetta: seerumi, silmävoide ja yövoide. Bio-sertifioitu, EcoCert, Made in France, PETA. Anti-wrinkle, kosteuttava, ravitseva.',affiliateUrl:'https://mavely.app.link/bycm3K4IZ2b'},
 ];
 const SELLERS={
   s1:{name:'TechStore Oy',type:'b2c',rating:4.8,sales:1842,joined:'Tammikuu 2020',desc:'Suomen johtava verkkoelektroniikka. 24 kk takuu, 30 vrk palautusoikeus.',av:'TS',abg:'#dbeafe',ac:'#1d4ed8'},
@@ -444,6 +445,7 @@ const SELLERS={
   s_ali:{name:'AliExpress',type:'b2c',rating:4.6,sales:2500000,joined:'Tammikuu 2010',desc:'Affiliate-kumppani. Tuotteet toimitetaan suoraan AliExpressistä. Klikkaa ostopainiketta siirtyäksesi AliExpressiin.',av:'AE',abg:'#fee2e2',ac:'#e11d48'},
   s_asos:{name:'ASOS',type:'b2c',rating:4.8,sales:980000,joined:'Tammikuu 2000',desc:'ASOS on maailman johtava muotikauppa. Nike, Adidas, Topman, Tommy Hilfiger ja tuhansia muita merkkejä. Ilmainen toimitus yli $75 tilauksista.',av:'AS',abg:'#fef9c3',ac:'#854d0e'},
   s_1800:{name:'1-800 Contacts',type:'b2c',rating:4.9,sales:15000000,joined:'Tammikuu 1995',desc:'Maailman suurin piilolinssikauppa. Yli 15 miljoonaa linssiä varastossa. Sama merkki kuin lääkärilläsi, ilmainen toimitus ja palautus. Parhaan hinnan takuu.',av:'1C',abg:'#e0e7ff',ac:'#3730a3'},
+  s_6630:{name:'66°30 Skincare',type:'b2c',rating:5.0,sales:12000,joined:'Tammikuu 2015',desc:'Ranskalainen premium-ihonhoitobrändi miehille. Bio-sertifioitu, EcoCert-hyväksytty, Made in France, PETA-hyväksytty. Korkealaatuiset anti-aging tuotteet.',av:'66',abg:'#f0f9ff',ac:'#0369a1'},
 };
 const REVS={
   1:[{n:'Petri V.',r:5,t:'Loistava puhelin, kamera on huikea! Toimitus nopeaa.',d:'15.3.2025'},{n:'Liisa M.',r:5,t:'Titaniumrunko tuntuu laadukkaalta. Suosittelen.',d:'2.2.2025'}],
@@ -666,8 +668,14 @@ function renderProduct(){
         ${p.origPrice?`<div class="pd-orig">${p.origPrice} € &nbsp;·&nbsp; Säästät ${p.origPrice-p.price} €</div>`:''}
         <div class="pd-stock ${p.inStock?'in-s':'out-s'}">${p.inStock?'✓ Varastossa – tilaa heti':'✗ Loppunut'}</div>
         ${p.affiliateUrl
-          ? `<a class="big-btn primary" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#e8472a,#ff6a00);border-color:transparent;color:#fff">🛍️ Osta AliExpressistä →</a>
-             <div style="font-size:11px;color:#6b8fa8;margin-top:6px;text-align:center;padding:6px 8px;background:#fff7f5;border-radius:6px;border:1px solid #fde4dd">Affiliate-linkki – avautuu AliExpressiin. Tilaus ja maksu tapahtuu AliExpressissa.</div>`
+          ? p.badge==='ASOS'
+            ? `<a class="big-btn primary" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;text-decoration:none;background:#000;border-color:transparent;color:#fff">🛍️ Osta ASOS:ista →</a>
+               <div style="font-size:11px;color:#6b8fa8;margin-top:6px;text-align:center;padding:6px 8px;background:#f9f9f9;border-radius:6px;border:1px solid #eee">Affiliate-linkki – avautuu ASOS:iin. Tilaus ja maksu tapahtuu ASOS:issa.</div>`
+            : p.badge==='Mavely'
+            ? `<a class="big-btn primary" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#3730a3,#6d28d9);border-color:transparent;color:#fff">🛍️ Osta nyt →</a>
+               <div style="font-size:11px;color:#6b8fa8;margin-top:6px;text-align:center;padding:6px 8px;background:#f5f3ff;border-radius:6px;border:1px solid #ede9fe">Affiliate-linkki – avautuu kauppiaan sivulle. Tilaus ja maksu tapahtuu kauppiaan sivustolla.</div>`
+            : `<a class="big-btn primary" href="${p.affiliateUrl}" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;text-decoration:none;background:linear-gradient(135deg,#e8472a,#ff6a00);border-color:transparent;color:#fff">🛍️ Osta AliExpressistä →</a>
+               <div style="font-size:11px;color:#6b8fa8;margin-top:6px;text-align:center;padding:6px 8px;background:#fff7f5;border-radius:6px;border:1px solid #fde4dd">Affiliate-linkki – avautuu AliExpressiin. Tilaus ja maksu tapahtuu AliExpressissa.</div>`
           : p.inStock?`<div class="qty-row">
           <span class="qty-label">Määrä</span>
           <div class="qty-ctrl">
