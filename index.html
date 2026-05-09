@@ -404,7 +404,7 @@ const STMAP={processing:{cls:'st-p',l:'Käsitellään'},shipped:{cls:'st-s',l:'L
 let PRODUCTS=[
   {id:70,name:'Bausch + Lomb ULTRA Piilolinssit 6kpl',price:55,origPrice:68,seller:'1-800 Contacts',sid:'s_1800',type:'b2c',cat:'Terveys',rating:4.9,reviews:28400,img:'https://images.unsplash.com/photo-1585435557343-3b092031a831?w=500&h=375&fit=crop',inStock:true,badge:'Mavely',desc:'Bausch + Lomb ULTRA piilolinssit MoistureSeal-teknologialla. 6kpl paketti, 6 kuukauden tarjonta. Ilmainen toimitus ja palautus. Sama merkki kuin lääkärilläsi. Hinta noin $59.19 USD.',affiliateUrl:'https://mavely.app.link/QPOcYH3HZ2b'},
   {id:71,name:'66°30 Premium Anti-Aging Protocol Miehille',price:135,origPrice:145,seller:'66°30 Skincare',sid:'s_6630',type:'b2c',cat:'Terveys',rating:5.0,reviews:2,img:'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=375&fit=crop',inStock:true,badge:'Mavely',desc:'Tehokas anti-aging protokolla miehille. Sisältää 3 tuotetta: seerumi, silmävoide ja yövoide. Bio-sertifioitu, EcoCert, Made in France, PETA. Anti-wrinkle, kosteuttava, ravitseva.',affiliateUrl:'https://mavely.app.link/bycm3K4IZ2b'},
-  {id:72,name:'BioTrust Brain Bright Aivojen Tehostaja',price:31,origPrice:45,seller:'BioTrust',sid:'s_biotrust',type:'b2c',cat:'Terveys',rating:4.8,reviews:1240,img:'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=375&fit=crop',inStock:true,badge:'Mavely',desc:'BioTrust Brain Bright – päivittäinen aivojen tehostaja. Parantaa keskittymistä, muistia ja vireyttä. Kofeiiniton, puhtaat ainesosat. 60 päivän rahat takaisin -takuu.',affiliateUrl:'https://mavely.app.link/gYvZhmE5Z2b'},
+  {id:72,name:'BioTrust Brain Bright Aivojen Tehostaja',price:31,origPrice:45,seller:'BioTrust',sid:'s_biotrust',type:'b2c',cat:'Terveys',rating:4.8,reviews:1240,img:'https://www.biotrust.com/cdn/shop/files/BrainBrightPackShot.png?v=1762457076&width=720',imgs:['https://www.biotrust.com/cdn/shop/files/BrainBrightPackShot.png?v=1762457076&width=720','https://www.biotrust.com/cdn/shop/files/Brain_Bright-5.jpg?v=1758725323&width=720','https://www.biotrust.com/cdn/shop/files/BrainBrightLeftPanel.png?v=1758725202&width=720','https://www.biotrust.com/cdn/shop/files/BrainBrightRightPanel.png?v=1758725202&width=720','https://www.biotrust.com/cdn/shop/files/BB_Supp_Facts.png?v=1758725202&width=720'],inStock:true,badge:'Mavely',desc:'BioTrust Brain Bright – nopeavaikutteinen päivittäinen aivojen tehostaja. Kliinisesti tutkittu enXtra®-yhdistelmä parantaa keskittymistä, muistia ja vireyttä ilman kofeiinia. 60 kapselia / pullo. 60 päivän rahat takaisin -takuu.',affiliateUrl:'https://mavely.app.link/gYvZhmE5Z2b'},
 ];
 const SELLERS={
   s_1800:{name:'1-800 Contacts',type:'b2c',rating:4.9,sales:15000000,joined:'Tammikuu 1995',desc:'Maailman suurin piilolinssikauppa. Yli 15 miljoonaa linssiä varastossa. Sama merkki kuin lääkärilläsi, ilmainen toimitus ja palautus. Parhaan hinnan takuu.',av:'1C',abg:'#e0e7ff',ac:'#3730a3'},
@@ -604,7 +604,13 @@ function renderProduct(){
   $('page-root').innerHTML=`<div class="page">
     <button class="back-btn" onclick="goBack()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>Takaisin</button>
     <div class="pd-grid">
-      <div class="pd-img-wrap">${img(p.img,p.name)}</div>
+      <div>
+        <div class="pd-img-wrap" id="pd-main-img">${img(p.imgs?p.imgs[0]:p.img,p.name)}</div>
+        ${p.imgs&&p.imgs.length>1?`
+        <div style="display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:4px">
+          ${p.imgs.map((im,i)=>`<img src="${im}" alt="${p.name}" onclick="document.querySelector('#pd-main-img img').src='${im}'" style="width:72px;height:72px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid ${i===0?'var(--sky)':'var(--border)'};flex-shrink:0;transition:border-color .15s" onmouseover="this.style.borderColor='var(--sky)'" onmouseout="this.style.borderColor='${i===0?'var(--sky)':'var(--border)'}'">`).join('')}
+        </div>`:''}
+      </div>
       <div>
         <div class="pd-tag-row">
           <span class="tag ${p.type}">${t.label}</span>
