@@ -144,8 +144,8 @@ img{display:block;max-width:100%}
 
 /* ─── PRODUCT DETAIL ─── */
 .pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem}
-.pd-img-wrap{border-radius:14px;overflow:hidden;background:var(--snow);aspect-ratio:4/3}
-.pd-img-wrap img{width:100%;height:100%;object-fit:cover}
+.pd-img-wrap{border-radius:14px;overflow:hidden;background:var(--snow);aspect-ratio:1/1;max-height:480px}
+.pd-img-wrap img{width:100%;height:100%;object-fit:contain}
 .pd-tag-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
 .tag{display:inline-block;border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600}
 .tag.b2c{background:rgba(91,184,245,.15);color:var(--blue)}
@@ -631,6 +631,7 @@ function renderHome(){
 
 /* ══════════════ PRODUCT DETAIL ══════════════ */
 function renderProduct(){
+  window._currentP = PRODUCTS.find(x=>x.id===S.pid);
   const p=PRODUCTS.find(x=>x.id===S.selProd);if(!p)return;
   const t=TI[p.type],sel=SELLERS[p.sid],revs=REVS[p.id]||[],inW=S.wishlist.includes(p.id);
   $('page-root').innerHTML=`<div class="page">
@@ -655,7 +656,7 @@ function renderProduct(){
         ${p.origPrice?`<div class="pd-orig">${p.origPrice} € &nbsp;·&nbsp; Säästät ${p.origPrice-p.price} €</div>`:''}
         <div class="pd-stock ${p.inStock?'in-s':'out-s'}">${p.inStock?'✓ Varastossa – tilaa heti':'✗ Loppunut'}</div>
         ${p.affiliateUrl
-          ? `<button class="big-btn primary" onclick="showAffiliateRedirect('${p.affiliateUrl}','${p.name.replace(/'/g,String.fromCharCode(39))}','${p.seller}','${p.imgs?p.imgs[0]:p.img}')" style="background:linear-gradient(135deg,#3730a3,#6d28d9);border-color:transparent;color:#fff;width:100%;font-size:16px;cursor:pointer">🛍️ Osta nyt →</button>`
+          ? `<button class="big-btn primary" onclick="buyCurrentProduct()" style="background:linear-gradient(135deg,#3730a3,#6d28d9);border-color:transparent;color:#fff;width:100%;font-size:16px;cursor:pointer">🛍️ Osta nyt →</button>`
           : p.inStock?`<div class="qty-row">
           <span class="qty-label">Määrä</span>
           <div class="qty-ctrl">
@@ -959,6 +960,11 @@ function renderBnav(){
 }
 
 /* ══════════════ MASTER RENDER ══════════════ */
+function buyCurrentProduct(){
+  const p = window._currentP;
+  if(!p || !p.affiliateUrl) return;
+  showAffiliateRedirect(p.affiliateUrl, p.name, p.seller, p.imgs?p.imgs[0]:p.img);
+}
 function showAffiliateRedirect(url, productName, sellerName, imgUrl) {
   const ov = document.createElement('div');
   ov.className = 'aff-overlay';
