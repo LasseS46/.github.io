@@ -584,7 +584,8 @@ function cardHTML(p){
       </div>
       <div class="pc-name">${p.name}</div>
       <div class="pc-stars">${stars(p.rating,12)}<span class="pc-rv">${p.rating}</span><span class="pc-rc">(${p.reviews})</span></div>
-      <div class="pc-price-row"><span class="pc-price">${p.price.toLocaleString('fi-FI')} €</span>${p.origPrice?`<span class="pc-orig">${p.origPrice} €</span>`:''}</div>
+      <div class="pc-price-row"><span class="pc-price">${p.affiliateUrl?'~':''}${p.price.toLocaleString('fi-FI')} €</span>${p.origPrice?`<span class="pc-orig">${p.origPrice} €</span>`:''}</div>
+      ${p.affiliateUrl?`<div style="font-size:10px;color:#94a3b8;margin-top:-6px;margin-bottom:4px">USD-hinta kauppiaan sivulla</div>`:''}
       ${p.affiliateUrl
         ? `<button class="pc-add av" onclick="event.stopPropagation();showAffiliateRedirect('${p.affiliateUrl}','${p.name.replace(/'/g,"\\'").replace(/`/g,'\\`')}','${p.seller}','${p.img}')" style="background:linear-gradient(135deg,#3730a3,#6d28d9);color:#fff;border-color:transparent;font-weight:600">🛍️ Osta nyt</button>`
         : `<button class="pc-add ${p.inStock?'av':'na'}" onclick="event.stopPropagation();${p.inStock?`addCart(${p.id})`:''}">
@@ -654,10 +655,18 @@ function renderProduct(){
         </div>
         <div class="pd-title">${p.name}</div>
         <div class="pd-stars">${stars(p.rating,15)}<span style="font-size:13px;font-weight:600;color:var(--text);margin-left:4px">${p.rating}</span><span style="font-size:12px;color:var(--text3)">&nbsp;(${p.reviews} arvostelua)</span></div>
-        <div class="pd-price">${p.price.toLocaleString('fi-FI')} €</div>
-        ${p.origPrice?`<div class="pd-orig">${p.origPrice} € &nbsp;·&nbsp; Säästät ${p.origPrice-p.price} €</div>`:''}
+        ${p.affiliateUrl
+          ? `<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+               <span class="pd-price">~${p.price.toLocaleString('fi-FI')} €</span>
+               <span style="font-size:13px;color:#64748b;background:#f1f5f9;padding:2px 8px;border-radius:20px;font-weight:500">≈ $${Math.round(p.price*1.09)} USD</span>
+             </div>
+             <div style="font-size:11px;color:#94a3b8;margin-top:2px;margin-bottom:4px">
+               EUR-arvio perustuu USD-listahintaan (1€ ≈ 1,09 $). Kauppiaan sivulla hinta näkyy USD:nä.
+             </div>`
+          : `<div class="pd-price">${p.price.toLocaleString('fi-FI')} €</div>`}
+        ${p.origPrice?`<div class="pd-orig">${p.origPrice} € &nbsp;·&nbsp; <span style="color:#16a34a;font-style:normal;font-weight:600">Säästät ${p.origPrice-p.price} €</span></div>`:''}
         <div class="pd-stock ${p.inStock?'in-s':'out-s'}">${p.inStock?'✓ Varastossa – tilaa heti':'✗ Loppunut'}</div>
-        ${p.affiliateUrl?'<div style="font-size:11px;color:#94a3b8;margin-top:2px;margin-bottom:4px">💱 Hinnat USD→EUR-arvio. Tarkista ajantasainen hinta kauppiaan sivulta.</div>':''}
+
         ${p.affiliateUrl
           ? `<button class="big-btn primary" onclick="buyCurrentProduct()" style="background:linear-gradient(135deg,#3730a3,#6d28d9);border-color:transparent;color:#fff;width:100%;font-size:16px;cursor:pointer">🛍️ Osta nyt →</button>`
           : p.inStock?`<div class="qty-row">
