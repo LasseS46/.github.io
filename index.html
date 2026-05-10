@@ -986,10 +986,6 @@ function showAffiliateRedirect(url, productName, sellerName, imgUrl) {
     const bar = document.getElementById('aff-progress');
     if(bar) bar.style.width = '100%';
   }, 50);
-  setTimeout(() => {
-    const btn = document.getElementById('aff-go');
-    if(btn) { btn.click(); ov.remove(); }
-  }, 2500);
 }
 
 function renderAll(){
