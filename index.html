@@ -631,8 +631,8 @@ function renderHome(){
 
 /* ══════════════ PRODUCT DETAIL ══════════════ */
 function renderProduct(){
-  window._currentP = PRODUCTS.find(x=>x.id===S.pid);
   const p=PRODUCTS.find(x=>x.id===S.selProd);if(!p)return;
+  window._currentP = p;
   const t=TI[p.type],sel=SELLERS[p.sid],revs=REVS[p.id]||[],inW=S.wishlist.includes(p.id);
   $('page-root').innerHTML=`<div class="page">
     <button class="back-btn" onclick="goBack()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>Takaisin</button>
